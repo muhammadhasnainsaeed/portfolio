@@ -3,12 +3,14 @@ import Image from "next/image";
 import { DashedLine } from "../dashed-line";
 
 import { cn } from "@/lib/utils";
+import { Badge } from "../ui/badge";
+import { Pizza } from "lucide-react";
 
 const topItems = [
   {
-    title: "Reusable issue templates.",
+    title: "01 — Understand.",
     description:
-      "Draft lightning-fast documents with our Smart Instructions and Templates.",
+      "Get clear on the problem, goals, and users.",
     images: [
       {
         src: "/resource-allocation/templates.webp",
@@ -22,8 +24,8 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "Simplify your stack.",
-    description: "No more Confluence, SharePoint, or Microsoft Word.",
+    title: "02 — Stack Selection.",
+    description: "Choose technologies that fit the product and its future needs.",
     images: [
       { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
       { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
@@ -62,9 +64,9 @@ const topItems = [
 
 const bottomItems = [
   {
-    title: "Graveyard it.",
+    title: "03 — Plan.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
+      "Turn requirements into a clear and practical roadmap.",
     images: [
       {
         src: "/resource-allocation/graveyard.webp",
@@ -78,9 +80,9 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Task discussions.",
+    title: "04 — Build.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Write clean code and bring the product to life.",
     images: [
       {
         src: "/resource-allocation/discussions.webp",
@@ -94,9 +96,9 @@ const bottomItems = [
     fade: [""],
   },
   {
-    title: "Notifications.",
+    title: "05 — Refine & Ship.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Test, optimize, and deliver a polished experience.",
     images: [
       {
         src: "/resource-allocation/notifications.webp",
@@ -118,9 +120,13 @@ export const ResourceAllocation = () => {
       className="overflow-hidden pb-28 lg:pb-32"
     >
       <div className="">
-        <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Mainline your resource allocation and execution
-        </h2>
+        <div className="container text-center">
+        <Badge variant={"default"} className="tracking-wide mb-5" ><Pizza /> HOW I BUILD</Badge>
+        <h2 className=" text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
+          From idea to production, with a thoughtful approach.
+          </h2>
+        </div>
+
 
         <div className="mt-8 md:mt-12 lg:mt-20">
           <DashedLine

@@ -16,70 +16,70 @@ type Company = {
 export const Logos = () => {
   const topRowCompanies = [
     {
-      name: "Mercury",
-      logo: "/logos/mercury.svg",
+      name: "Typescript",
+      logo: "/logos/typescript.svg",
       width: 143,
       height: 26,
       href: "https://mercury.com",
     },
     {
-      name: "Watershed",
-      logo: "/logos/watershed.svg",
+      name: "Next.js",
+      logo: "/logos/nextjs.svg",
       width: 154,
       height: 31,
-      href: "https://watershed.com",
+      href: "https://nextjs.org/",
     },
     {
-      name: "Retool",
-      logo: "/logos/retool.svg",
+      name: "Node.js",
+      logo: "/logos/nodejs.svg",
       width: 113,
       height: 22,
-      href: "https://retool.com",
+      href: "https://nodejs.org",
     },
     {
-      name: "Descript",
-      logo: "/logos/descript.svg",
+      name: "Nest.js",
+      logo: "/logos/nestjs.svg",
       width: 112,
       height: 27,
-      href: "https://descript.com",
+      href: "https://nestjs.com/",
     },
   ];
 
   const bottomRowCompanies = [
     {
-      name: "Perplexity",
-      logo: "/logos/perplexity.svg",
+      name: "Reactjs",
+      logo: "/logos/reactjs.svg",
       width: 141,
       height: 32,
-      href: "https://perplexity.com",
+      href: "https://react.dev/",
     },
     {
-      name: "Monzo",
-      logo: "/logos/monzo.svg",
+      name: "aws",
+      logo: "/logos/aws.svg",
       width: 104,
       height: 18,
-      href: "https://monzo.com",
+      href: "https://aws.amazon.com/",
     },
     {
-      name: "Ramp",
-      logo: "/logos/ramp.svg",
+      name: "docker",
+      logo: "/logos/docker.svg",
       width: 105,
       height: 28,
-      href: "https://ramp.com",
+      href: "https://www.docker.com/",
     },
     {
-      name: "Raycast",
-      logo: "/logos/raycast.svg",
-      width: 128,
-      height: 33,
-      href: "https://raycast.com",
+      name: "kubernetes",
+      logo: "/logos/kubernetes.svg",
+      width: 125,
+      height: 30,
+      href: "https://kubernetes.io/",
     },
     {
-      name: "Arc",
-      logo: "/logos/arc.svg",
+      name: "posrtgresql",
+      logo: "/logos/postgresql.svg",
       width: 90,
       height: 28,
-      href: "https://arc.com",
+      href: "https://www.postgresql.org/",
     },
   ];
 
@@ -88,10 +88,10 @@ export const Logos = () => {
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
           <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
-            Powering the world's best product teams.
+            Building modern digital experiences.
             <br className="max-md:hidden" />
             <span className="text-muted-foreground">
-              From next-gen startups to established enterprises.
+              Powered by the technologies I know and love.
             </span>
           </h2>
         </div>

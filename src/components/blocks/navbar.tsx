@@ -21,25 +21,25 @@ import {
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
-  {
-    label: "Features",
-    href: "#features",
-    dropdownItems: [
-      {
-        title: "Modern product teams",
-        href: "/#feature-modern-teams",
-        description:
-          "Mainline is built on the habits that make the best product teams successful",
-      },
-      {
-        title: "Resource Allocation",
-        href: "/#resource-allocation",
-        description: "Mainline your resource allocation and execution",
-      },
-    ],
-  },
+  // {
+  //   label: "Features",
+  //   href: "#features",
+  //   dropdownItems: [
+  //     {
+  //       title: "Modern product teams",
+  //       href: "/#feature-modern-teams",
+  //       description:
+  //         "Mainline is built on the habits that make the best product teams successful",
+  //     },
+  //     {
+  //       title: "Resource Allocation",
+  //       href: "/#resource-allocation",
+  //       description: "Mainline your resource allocation and execution",
+  //     },
+  //   ],
+  // },
+  { label: "Projects", href: "/projects" },
   { label: "About Us", href: "/about" },
-  { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
@@ -61,8 +61,8 @@ export const Navbar = () => {
           <Image
             src="/logo.svg"
             alt="logo"
-            width={94}
-            height={18}
+            width={95}
+            height={20}
             className="dark:invert"
           />
         </Link>
@@ -126,7 +126,7 @@ export const Navbar = () => {
             </Button>
           </Link>
           <a
-            href="https://github.com/shadcnblocks/mainline-nextjs-template"
+            href="https://github.com/muhammadhasnainsaeed"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <Github className="size-4" />
@@ -139,7 +139,7 @@ export const Navbar = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <span className="sr-only">Open main menu</span>
-            <div className="absolute top-1/2 left-1/2 block w-[18px] -translate-x-1/2 -translate-y-1/2">
+            <div className="absolute top-1/2 left-1/2 block w-4.5 -translate-x-1/2 -translate-y-1/2">
               <span
                 aria-hidden="true"
                 className={`absolute block h-0.5 w-full rounded-full bg-current transition duration-500 ease-in-out ${isMenuOpen ? "rotate-45" : "-translate-y-1.5"}`}

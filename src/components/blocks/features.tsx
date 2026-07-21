@@ -1,23 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ChevronRight } from "lucide-react";
+import { Bolt, ChevronRight } from "lucide-react";
 
 import { DashedLine } from "../dashed-line";
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "../ui/badge";
 
 const items = [
   {
-    title: "Purpose-built for product development",
+    title: "Build with Purpose",
+    des: "Every line of code should solve a real problem.",
     image: "/features/triage-card.svg",
   },
   {
-    title: "Manage projects end-to-end",
+    title: "Think Beyond Code",
+    des: "Great products come from understanding people, not just technology.",
     image: "/features/cycle-card.svg",
   },
   {
-    title: "Build momentum and healthy habits",
+    title: "Keep Improving",
+    des: "Always learning, experimenting, and finding better ways to build.",
     image: "/features/overview-card.svg",
   },
 ];
@@ -31,18 +35,19 @@ export const Features = () => {
           <DashedLine className="text-muted-foreground" />
           <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
             MEASURE TWICE. CUT ONCE.
+            {/*HOW I WORK*/}
           </span>
         </div>
 
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
-          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Made for modern product teams
-          </h2>
+            <Badge variant={"default"} className="tracking-wide col-span-2 mb-5" ><Bolt /> HOW I WORK</Badge>
+            <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+            Building with a focus on quality, performance, and impact.
+            </h2>
+
           <p className="text-muted-foreground leading-snug">
-            Mainline is built on the habits that make the best product teams
-            successful: staying focused, moving quickly, and always aiming for
-            high-quality work.
+            I care about the details that turn good products into great experiences — from clean architecture and thoughtful interfaces to performance and maintainability.
           </p>
         </div>
 
@@ -68,11 +73,18 @@ export const Features = () => {
                       "group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
                     }
                   >
+                    <div>
+
                     <h3 className="font-display max-w-60 text-2xl leading-tight font-bold tracking-tight">
                       {item.title}
                     </h3>
+                    <p className="text-muted-foreground mt-2 text-sm leading-snug">
+                      {item.des}
+                      </p>
+                    </div>
+
                     <div className="rounded-full border p-2">
-                      <ChevronRight className="size-6 transition-transform group-hover:translate-x-1 lg:size-9" />
+                      <ChevronRight className="size-4 transition-transform group-hover:translate-x-1 lg:size-6" />
                     </div>
                   </Link>
                 </div>
