@@ -10,52 +10,47 @@ import { cn } from "@/lib/utils";
 
 const categories = [
   {
-    title: "Support",
+    title: "About Me",
     questions: [
       {
-        question: "How do I update my account without breaking my laptop?",
+        question: "What kind of software do you build?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "I build modern web applications, scalable backend systems, and digital products focused on performance and user experience.",
       },
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "What technologies do you work with?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-      {
-        question: "Are you going to be subsumed by AI?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "I work with modern JavaScript and TypeScript technologies across frontend, backend, databases, and cloud platforms.",
       },
     ],
   },
   {
-    title: "Your account",
+    title: "How I Work",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "How do you approach a new project?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "I start by understanding the problem, then plan the solution, choose the right stack, build, and refine before shipping.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "Do you work with existing teams and codebases?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Yes. I can collaborate with existing teams, adapt to established workflows, and contribute to ongoing products and codebases.",
       },
     ],
   },
   {
-    title: "Other questions",
+    title: "Working Together",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "Are you available for freelance projects?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "I'm open to select freelance and collaborative opportunities that align with my skills and interests.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "How can we work together?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Have a project, idea, or opportunity in mind? Get in touch and let's talk about how I can help.",
       },
     ],
   },
@@ -85,7 +80,7 @@ export const FAQ = ({
               </h2>
             )}
             <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto">
-              If you can't find what you're looking for,{" "}
+              A few things you might want to know about me and my work,{" "}
               <Link href="/contact" className="underline underline-offset-4">
                 get in touch
               </Link>

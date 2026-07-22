@@ -35,7 +35,6 @@ export const Features = () => {
           <DashedLine className="text-muted-foreground" />
           <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
             MEASURE TWICE. CUT ONCE.
-            {/*HOW I WORK*/}
           </span>
         </div>
 
@@ -62,7 +61,7 @@ export const Features = () => {
                       src={item.image}
                       alt={`${item.title} interface`}
                       fill
-                      className="object-cover object-left-top ps-4 pt-2"
+                      className="object-cover object-top-left ps-4 pt-2"
                     />
                     <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
                   </div>
