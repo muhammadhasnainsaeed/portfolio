@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Bolt, ChevronRight } from "lucide-react";
+import { ChevronRight, Workflow } from "lucide-react";
 
 import { DashedLine } from "../dashed-line";
 
@@ -12,17 +12,17 @@ const items = [
   {
     title: "Build with Purpose",
     des: "Every line of code should solve a real problem.",
-    image: "/features/triage-card.svg",
+    image: "/features/warrior-shield.png",
   },
   {
     title: "Think Beyond Code",
     des: "Great products come from understanding people, not just technology.",
-    image: "/features/cycle-card.svg",
+    image: "/features/moon-landing.png",
   },
   {
     title: "Keep Improving",
     des: "Always learning, experimenting, and finding better ways to build.",
-    image: "/features/overview-card.svg",
+    image: "/features/spaceship.png",
   },
 ];
 
@@ -40,7 +40,7 @@ export const Features = () => {
 
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
-            <Badge variant={"default"} className="tracking-wide col-span-2 mb-5" ><Bolt /> HOW I WORK</Badge>
+            <Badge variant={"default"} className="tracking-wide col-span-2 mb-5" ><Workflow /> HOW I WORK</Badge>
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Building with a focus on quality, performance, and impact.
             </h2>
@@ -61,7 +61,7 @@ export const Features = () => {
                       src={item.image}
                       alt={`${item.title} interface`}
                       fill
-                      className="object-cover object-top-left ps-4 pt-2"
+                      className="object-cover dark:invert opacity-75 object-top-left ps-4 pt-2"
                     />
                     <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
                   </div>

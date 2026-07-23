@@ -21,7 +21,7 @@ export function Footer() {
   const legal = [{ name: "Privacy Policy", href: "/privacy" }];
 
   return (
-    <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32">
+    <footer className="flex flex-col items-center gap-14 py-28 lg:py-32">
       <div className="container space-y-3 text-center">
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
           Let's build something great together.
@@ -75,7 +75,7 @@ export function Footer() {
         </ul>
       </nav>
 
-      <div className="text-primary mt-10 w-full md:mt-14 lg:mt-20">
+      {/*<div className="text-primary mt-10 w-full md:mt-14 lg:mt-20">
         <svg
           width="1570"
           height="293"
@@ -104,7 +104,7 @@ export function Footer() {
             </linearGradient>
           </defs>
         </svg>
-      </div>
+      </div>*/}
     </footer>
   );
 }

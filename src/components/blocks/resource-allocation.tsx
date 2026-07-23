@@ -4,7 +4,7 @@ import { DashedLine } from "../dashed-line";
 
 import { cn } from "@/lib/utils";
 import { Badge } from "../ui/badge";
-import { Pizza } from "lucide-react";
+import { Code2 } from "lucide-react";
 
 const topItems = [
   {
@@ -13,10 +13,10 @@ const topItems = [
       "Get clear on the problem, goals, and users.",
     images: [
       {
-        src: "/resource-allocation/templates.webp",
+        src: "/resource-allocation/understand.svg",
         alt: "Issue template interface",
-        width: 495,
-        height: 186,
+        width: 250,
+        height: 250,
       },
     ],
     className:
@@ -27,34 +27,34 @@ const topItems = [
     title: "02 — Stack Selection.",
     description: "Choose technologies that fit the product and its future needs.",
     images: [
-      { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
-      { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
+      { src: "/logos/typescript_short.svg", alt: "Typecript logo", width: 48, height: 48 },
+      { src: "/logos/next_short.svg", alt: "Next logo", width: 48, height: 48 },
       {
-        src: "/logos/notion.svg",
-        alt: "Notion logo",
+        src: "/logos/nest_short.svg",
+        alt: "Nest.js logo",
         width: 48,
         height: 48,
       },
-      { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
+      { src: "/logos/notion.svg", alt: "notion logo", width: 48, height: 48 },
       {
-        src: "/logos/monday.svg",
-        alt: "Monday logo",
-        width: 48,
-        height: 48,
-      },
-      {
-        src: "/logos/drive.svg",
-        alt: "Google Drive logo",
+        src: "/logos/rust.svg",
+        alt: "rust logo",
         width: 48,
         height: 48,
       },
       {
-        src: "/logos/jira.svg",
-        alt: "Jira logo",
+        src: "/logos/golang.svg",
+        alt: "golang logo",
         width: 48,
         height: 48,
       },
-      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
+      {
+        src: "/logos/python.svg",
+        alt: "python logo",
+        width: 48,
+        height: 48,
+      },
+      { src: "/logos/javascript.svg", alt: "javascript logo", width: 48, height: 48 },
     ],
     className:
       "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
@@ -69,10 +69,10 @@ const bottomItems = [
       "Turn requirements into a clear and practical roadmap.",
     images: [
       {
-        src: "/resource-allocation/graveyard.webp",
+        src: "/resource-allocation/planning.svg",
         alt: "Graveyard interface",
-        width: 305,
-        height: 280,
+        width: 150,
+        height: 150,
       },
     ],
     className:
@@ -85,14 +85,14 @@ const bottomItems = [
       "Write clean code and bring the product to life.",
     images: [
       {
-        src: "/resource-allocation/discussions.webp",
+        src: "/resource-allocation/building.svg",
         alt: "Task discussions interface",
-        width: 320,
-        height: 103,
+        width: 150,
+        height: 150,
       },
     ],
     className:
-      "justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0 [&>.image-container]:flex-1 md:[&>.image-container]:place-items-center md:[&>.image-container]:-translate-y-3",
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
     fade: [""],
   },
   {
@@ -101,10 +101,10 @@ const bottomItems = [
       "Test, optimize, and deliver a polished experience.",
     images: [
       {
-        src: "/resource-allocation/notifications.webp",
+        src: "/resource-allocation/launching.svg",
         alt: "Notifications interface",
-        width: 305,
-        height: 280,
+        width: 150,
+        height: 150,
       },
     ],
     className:
@@ -121,7 +121,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <div className="container text-center">
-        <Badge variant={"default"} className="tracking-wide mb-5" ><Pizza /> HOW I BUILD</Badge>
+        <Badge variant={"default"} className="tracking-wide mb-5" ><Code2 /> HOW I BUILD</Badge>
         <h2 className=" text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
           From idea to production, with a thoughtful approach.
           </h2>
@@ -152,7 +152,7 @@ export const ResourceAllocation = () => {
                 key={i}
                 item={item}
                 isLast={i === bottomItems.length - 1}
-                className="md:pb-0"
+                className=""
               />
             ))}
           </div>
@@ -176,7 +176,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
   return (
     <div
       className={cn(
-        "relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8",
+        "relative flex flex-col justify-between  px-0 py-6 md:px-6 md:py-8",
         className,
         item.className,
       )}
@@ -204,7 +204,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                     alt={image.alt}
                     width={image.width}
                     height={image.height}
-                    className="object-contain object-left-top"
+                    className="object-contain dark:invert opacity-75 object-left-top"
                   />
                   <div className="from-muted/80 absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
                 </div>
@@ -222,7 +222,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                     alt={image.alt}
                     width={image.width}
                     height={image.height}
-                    className="object-contain object-left-top"
+                    className="object-contain dark:invert opacity-75 object-left-top"
                   />
                   <div className="from-muted absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
                 </div>
@@ -239,7 +239,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
               alt={image.alt}
               width={image.width}
               height={image.height}
-              className="object-contain object-left-top"
+              className="object-contain dark:invert opacity-75 object-left-top"
             />
           ))}
         </div>
