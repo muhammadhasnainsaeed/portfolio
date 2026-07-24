@@ -9,8 +9,7 @@ import { Code2 } from "lucide-react";
 const topItems = [
   {
     title: "01 — Understand.",
-    description:
-      "Get clear on the problem, goals, and users.",
+    description: "Get clear on the problem, goals, and users.",
     images: [
       {
         src: "/resource-allocation/understand.svg",
@@ -25,9 +24,15 @@ const topItems = [
   },
   {
     title: "02 — Stack Selection.",
-    description: "Choose technologies that fit the product and its future needs.",
+    description:
+      "Choose technologies that fit the product and its future needs.",
     images: [
-      { src: "/logos/typescript_short.svg", alt: "Typecript logo", width: 48, height: 48 },
+      {
+        src: "/logos/typescript_short.svg",
+        alt: "Typecript logo",
+        width: 48,
+        height: 48,
+      },
       { src: "/logos/next_short.svg", alt: "Next logo", width: 48, height: 48 },
       {
         src: "/logos/nest_short.svg",
@@ -54,7 +59,12 @@ const topItems = [
         width: 48,
         height: 48,
       },
-      { src: "/logos/javascript.svg", alt: "javascript logo", width: 48, height: 48 },
+      {
+        src: "/logos/javascript.svg",
+        alt: "javascript logo",
+        width: 48,
+        height: 48,
+      },
     ],
     className:
       "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
@@ -65,8 +75,7 @@ const topItems = [
 const bottomItems = [
   {
     title: "03 — Plan.",
-    description:
-      "Turn requirements into a clear and practical roadmap.",
+    description: "Turn requirements into a clear and practical roadmap.",
     images: [
       {
         src: "/resource-allocation/planning.svg",
@@ -81,8 +90,7 @@ const bottomItems = [
   },
   {
     title: "04 — Build.",
-    description:
-      "Write clean code and bring the product to life.",
+    description: "Write clean code and bring the product to life.",
     images: [
       {
         src: "/resource-allocation/building.svg",
@@ -97,8 +105,7 @@ const bottomItems = [
   },
   {
     title: "05 — Refine & Ship.",
-    description:
-      "Test, optimize, and deliver a polished experience.",
+    description: "Test, optimize, and deliver a polished experience.",
     images: [
       {
         src: "/resource-allocation/launching.svg",
@@ -121,12 +128,13 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <div className="container text-center">
-        <Badge variant={"default"} className="tracking-wide mb-5" ><Code2 /> HOW I BUILD</Badge>
-        <h2 className=" text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          From idea to production, with a thoughtful approach.
+          <Badge variant={"default"} className="mb-5 tracking-wide">
+            <Code2 /> HOW I BUILD
+          </Badge>
+          <h2 className="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
+            From idea to production, with a thoughtful approach.
           </h2>
         </div>
-
 
         <div className="mt-8 md:mt-12 lg:mt-20">
           <DashedLine
@@ -176,7 +184,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
   return (
     <div
       className={cn(
-        "relative flex flex-col justify-between  px-0 py-6 md:px-6 md:py-8",
+        "relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8",
         className,
         item.className,
       )}
@@ -204,7 +212,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                     alt={image.alt}
                     width={image.width}
                     height={image.height}
-                    className="object-contain dark:invert opacity-75 object-left-top"
+                    className="object-contain object-top-left opacity-75 dark:invert"
                   />
                   <div className="from-muted/80 absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
                 </div>
@@ -222,7 +230,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                     alt={image.alt}
                     width={image.width}
                     height={image.height}
-                    className="object-contain dark:invert opacity-75 object-left-top"
+                    className="object-contain object-top-left opacity-75 dark:invert"
                   />
                   <div className="from-muted absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
                 </div>
@@ -239,7 +247,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
               alt={image.alt}
               width={image.width}
               height={image.height}
-              className="object-contain dark:invert opacity-75 object-left-top"
+              className="object-contain object-top-left opacity-75 dark:invert"
             />
           ))}
         </div>

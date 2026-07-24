@@ -2,42 +2,84 @@ import React from "react";
 
 import Link from "next/link";
 
-import { Facebook, Linkedin, Twitter } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  Twitch,
+  Twitter,
+} from "lucide-react";
 
 import { ContactForm } from "@/components/blocks/contact-form";
 import { DashedLine } from "@/components/dashed-line";
+import Image from "next/image";
 
-const contactInfo = [
+const socialIcons = [
   {
-    title: "Corporate office",
-    content: (
-      <p className="text-muted-foreground mt-3">
-        1 Carlsberg Close
-        <br />
-        1260 Hillview, Australia
-      </p>
-    ),
+    name: "facebook",
+    link: "https://www.facebook.com/muhammadhassnainsaeed",
+    icon: "/logos/contact/facebook-mono.svg",
   },
   {
-    title: "Email us",
+    name: "instgram",
+    link: "https://www.instagram.com/m_hasnain_saeed/",
+    icon: "/logos/contact/instagram-mono.svg",
+  },
+  {
+    name: "twitter",
+    link: "https://x.com/m_hasnain_saeed",
+    icon: "/logos/contact/x-mono.svg",
+  },
+  {
+    name: "twitch",
+    link: "https://www.twitch.tv/mhasnainsaeed",
+    icon: "/logos/contact/twitch-mono.svg",
+  },
+  {
+    name: "linkedin",
+    link: "https://www.linkedin.com/in/muhammadhasnainsaeed/",
+    icon: "/logos/contact/linkedin-mono.svg",
+  },
+  {
+    name: "github",
+    link: "https://github.com/muhammadhasnainsaeed",
+    icon: "/logos/contact/github-mono.svg",
+  },
+  {
+    name: "devdotto",
+    link: "https://dev.to/muhammadhasnainsaeed",
+    icon: "/logos/contact/devdotto-mono.svg",
+  },
+  {
+    name: "fiverr",
+    link: "https://www.fiverr.com/hasnainsaeed_22",
+    icon: "/logos/contact/fiverr-mono.svg",
+  },
+  // {name: "upwork", link: "", icon: "/logos/contact/upwork-mono.svg"},
+];
+const contactInfo = [
+  // {
+  //   title: "Corporate office",
+  //   content: (
+  //     <p className="text-muted-foreground mt-3">
+  //       1 Carlsberg Close
+  //       <br />
+  //       1260 Hillview, Australia
+  //     </p>
+  //   ),
+  // },
+  {
+    title: "Email",
     content: (
       <div className="mt-3">
         <div>
-          <p className="">Careers</p>
           <Link
-            href="mailto:careers@example.com"
-            className="text-muted-foreground hover:text-foreground"
+            href="mailto:ihasnain4@gmail.com"
+            className="text-muted-foreground hover:text-foreground inline-flex gap-2"
           >
-            careers@example.com
-          </Link>
-        </div>
-        <div className="mt-1">
-          <p className="">Press</p>
-          <Link
-            href="mailto:press@example.com"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            press@example.com
+            <Mail className="size-5" />
+            ihasnain4@gmail.com
           </Link>
         </div>
       </div>
@@ -46,19 +88,22 @@ const contactInfo = [
   {
     title: "Follow us",
     content: (
-      <div className="mt-3 flex gap-6 lg:gap-10">
-        <Link href="#" className="text-muted-foreground hover:text-foreground">
-          <Facebook className="size-5" />
-        </Link>
-        <Link
-          href="https://x.com/ausrobdev"
-          className="text-muted-foreground hover:text-foreground"
-        >
-          <Twitter className="size-5" />
-        </Link>
-        <Link href="#" className="text-muted-foreground hover:text-foreground">
-          <Linkedin className="size-5" />
-        </Link>
+      <div className="mt-3 flex flex-wrap gap-6 lg:gap-10">
+        {socialIcons.map((social) => (
+          <Link
+            key={social.name}
+            href={social.link}
+            className="opacity-65 hover:opacity-100"
+          >
+            <Image
+              src={social.icon}
+              alt={social.name}
+              width={36}
+              height={36}
+              className="size-9 dark:invert"
+            />
+          </Link>
+        ))}
       </div>
     ),
   },
@@ -72,7 +117,8 @@ export default function Contact() {
           Contact us
         </h1>
         <p className="text-muted-foreground mt-4 text-center leading-snug font-medium lg:mx-auto">
-          Hopefully this form gets through our spam filters.
+          Have a question or want to work with us? Send us a message and we'll
+          get back to you soon.
         </p>
 
         <div className="mt-10 flex justify-between gap-8 max-sm:flex-col md:mt-14 lg:mt-20 lg:gap-12">
@@ -88,7 +134,7 @@ export default function Contact() {
 
         {/* Inquiry Form */}
         <div className="mx-auto">
-          <h2 className="mb-4 text-lg font-semibold">Inquiries</h2>
+          <h2 className="mb-4 text-lg font-semibold">Get in Touch</h2>
           <ContactForm />
         </div>
       </div>

@@ -10,10 +10,8 @@ export default function AboutPage() {
       <div className="py-28 lg:py-32 lg:pt-44">
         <AboutHero />
 
-        <About />
         <div className="pt-28 lg:pt-32">
-          <DashedLine className="container max-w-5xl scale-x-115" />
-          <Investors />
+          <About />
         </div>
       </div>
     </Background>

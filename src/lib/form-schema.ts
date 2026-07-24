@@ -9,10 +9,23 @@ export interface ActionResponse<T = unknown> {
   inputs?: T;
 }
 export const formSchema = z.object({
-  name: z.string({ message: "This field is required" }),
-  email: z.string({ message: "This field is required" }),
-  company: z.string({ message: "This field is required" }).optional(),
-  employees: z.string().min(1, "Please select an item").optional(),
-  message: z.string({ message: "This field is required" }),
-  agree: z.literal(true, { message: "This field is required" }),
+  name: z.string().min(1, "This field is required"),
+
+  email: z
+    .string()
+    .min(1, "This field is required")
+    .email("Please enter a valid email address"),
+
+  phone: z
+    .string()
+    .regex(
+      /^\+[1-9]\d{7,14}$/,
+      "Please enter a valid phone number with country code",
+    )
+    .optional()
+    .or(z.literal("")),
+
+  subject: z.string().min(1, "This field is required"),
+
+  message: z.string().min(1, "This field is required"),
 });

@@ -36,11 +36,10 @@ export function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
-      company: "",
-      employees: "",
+      phone: "",
+      subject: "",
       message: "",
-      agree: false,
-    } as unknown as Schema,
+    },
   });
   const formAction = useAction(serverAction, {
     onSuccess: () => {
@@ -101,7 +100,7 @@ export function ContactForm() {
           rules={{ required: true }}
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormLabel>Full name * </FormLabel>
+              <FormLabel>Name * </FormLabel>
               <FormControl>
                 <Input
                   type="text"
@@ -143,20 +142,20 @@ export function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="company"
+          name="phone"
           rules={{ required: false }}
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormLabel>Company name </FormLabel>
+              <FormLabel>Phone number </FormLabel>
               <FormControl>
                 <Input
-                  type="text"
+                  type="tel"
                   value={field.value}
                   onChange={(e) => {
                     const val = e.target.value;
                     field.onChange(val);
                   }}
-                  placeholder="Company name"
+                  placeholder="Contact number"
                 />
               </FormControl>
 
@@ -167,37 +166,26 @@ export function ContactForm() {
 
         <FormField
           control={form.control}
-          rules={{ required: false }}
-          name="employees"
-          render={({ field }) => {
-            const options = [
-              { value: "1", label: "1" },
-              { value: "2-10", label: "2-10" },
-              { value: "11-50", label: "11-50" },
-              { value: "51-500", label: "51-500" },
-            ];
-            return (
-              <FormItem className="w-full">
-                <FormLabel>Number of employees </FormLabel>
-                <Select onValueChange={field.onChange} value={field.value}>
-                  <FormControl>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="e.g. 11-50" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {options.map(({ label, value }) => (
-                      <SelectItem key={value} value={value}>
-                        {label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+          name="subject"
+          rules={{ required: true }}
+          render={({ field }) => (
+            <FormItem className="w-full">
+              <FormLabel>Subject * </FormLabel>
+              <FormControl>
+                <Input
+                  type="text"
+                  value={field.value}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    field.onChange(val);
+                  }}
+                  placeholder="Subject"
+                />
+              </FormControl>
 
-                <FormMessage />
-              </FormItem>
-            );
-          }}
+              <FormMessage />
+            </FormItem>
+          )}
         />
 
         <FormField
@@ -216,27 +204,6 @@ export function ContactForm() {
               </FormControl>
 
               <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          rules={{ required: true }}
-          name="agree"
-          render={({ field }) => (
-            <FormItem className="flex flex-row items-start space-y-0 space-x-1">
-              <FormControl>
-                <Checkbox
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                  required
-                />
-              </FormControl>
-              <div className="space-y-1 leading-none">
-                <FormLabel>I agree to the terms and conditions</FormLabel>
-
-                <FormMessage />
-              </div>
             </FormItem>
           )}
         />

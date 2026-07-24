@@ -40,13 +40,17 @@ export const Features = () => {
 
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
-            <Badge variant={"default"} className="tracking-wide col-span-2 mb-5" ><Workflow /> HOW I WORK</Badge>
-            <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+          <Badge variant={"default"} className="col-span-2 mb-5 tracking-wide">
+            <Workflow /> HOW I WORK
+          </Badge>
+          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Building with a focus on quality, performance, and impact.
-            </h2>
+          </h2>
 
           <p className="text-muted-foreground leading-snug">
-            I care about the details that turn good products into great experiences — from clean architecture and thoughtful interfaces to performance and maintainability.
+            I care about the details that turn good products into great
+            experiences — from clean architecture and thoughtful interfaces to
+            performance and maintainability.
           </p>
         </div>
 
@@ -61,7 +65,7 @@ export const Features = () => {
                       src={item.image}
                       alt={`${item.title} interface`}
                       fill
-                      className="object-cover dark:invert opacity-75 object-top-left ps-4 pt-2"
+                      className="object-cover object-top-left ps-4 pt-2 opacity-75 dark:invert"
                     />
                     <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
                   </div>
@@ -73,12 +77,11 @@ export const Features = () => {
                     }
                   >
                     <div>
-
-                    <h3 className="font-display max-w-60 text-2xl leading-tight font-bold tracking-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-muted-foreground mt-2 text-sm leading-snug">
-                      {item.des}
+                      <h3 className="font-display max-w-60 text-2xl leading-tight font-bold tracking-tight">
+                        {item.title}
+                      </h3>
+                      <p className="text-muted-foreground mt-2 text-sm leading-snug">
+                        {item.des}
                       </p>
                     </div>
 

@@ -31,9 +31,7 @@ export function Footer() {
         </p>
         <div>
           <Button size="lg" className="mt-4" asChild>
-            <Link href="/contact">
-              Let's Talk
-            </Link>
+            <Link href="/contact">Let's Talk</Link>
           </Button>
         </div>
       </div>

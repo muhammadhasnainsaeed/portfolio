@@ -17,7 +17,8 @@ import { Badge } from "../ui/badge";
 const features = [
   {
     title: "Modern Tech Stack",
-    description: "Building with modern technologies to create fast, scalable, and reliable products.",
+    description:
+      "Building with modern technologies to create fast, scalable, and reliable products.",
     icon: Code2,
   },
   {
@@ -43,7 +44,7 @@ export const Hero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <Badge className="-mb-1 border-secondary-foreground border-dashed">
+          <Badge className="border-secondary-foreground -mb-1 border-dashed">
             <Zap />
             SOFTWARE ENGINEER • FULL-STACK DEVELOPER
           </Badge>
@@ -52,7 +53,9 @@ export const Hero = () => {
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-2xl">
-            I design and build fast, reliable, and scalable web applications — turning ideas into polished products that are built to perform and grow.
+            I design and build fast, reliable, and scalable web applications —
+            turning ideas into polished products that are built to perform and
+            grow.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
