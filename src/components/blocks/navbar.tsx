@@ -77,7 +77,7 @@ export const Navbar = () => {
                     {link.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="w-[400px] space-y-2 p-4">
+                    <ul className="w-100 space-y-2 p-4">
                       {link.dropdownItems.map((item) => (
                         <li key={item.title}>
                           <NavigationMenuLink asChild>
@@ -194,7 +194,7 @@ export const Navbar = () => {
                   className={cn(
                     "overflow-hidden transition-all duration-300",
                     openDropdown === link.label
-                      ? "mt-4 max-h-[1000px] opacity-100"
+                      ? "mt-4 max-h-250 opacity-100"
                       : "max-h-0 opacity-0",
                   )}
                 >
