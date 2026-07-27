@@ -1,4 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import { Badge } from "../ui/badge";
+import { buttonVariants } from "../ui/button";
 import {
   Card,
   CardAction,
@@ -8,9 +12,6 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { Badge } from "../ui/badge";
-import { buttonVariants } from "../ui/button";
-import Link from "next/link";
 
 interface Project {
   title: string;

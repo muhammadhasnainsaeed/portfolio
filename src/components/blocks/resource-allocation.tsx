@@ -1,10 +1,11 @@
 import Image from "next/image";
 
+import { Code2 } from "lucide-react";
+
 import { DashedLine } from "../dashed-line";
+import { Badge } from "../ui/badge";
 
 import { cn } from "@/lib/utils";
-import { Badge } from "../ui/badge";
-import { Code2 } from "lucide-react";
 
 const topItems = [
   {

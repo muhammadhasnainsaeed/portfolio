@@ -1,6 +1,7 @@
-import { Badge } from "../ui/badge";
-import { DashedLine } from "../dashed-line";
 import { ToolCase } from "lucide-react";
+
+import { DashedLine } from "../dashed-line";
+import { Badge } from "../ui/badge";
 
 const experience = [
   {

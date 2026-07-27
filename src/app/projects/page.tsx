@@ -1,7 +1,8 @@
+import { FolderKanban } from "lucide-react";
+
 import { Background } from "@/components/background";
 import ProjectCard from "@/components/blocks/project-card";
 import { Badge } from "@/components/ui/badge";
-import { FolderKanban, LaptopMinimalCheck } from "lucide-react";
 const projects = [
   {
     title: "Velocity — CI/CD Platform",

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import {
   ArrowRight,
   Code2,
@@ -10,9 +8,10 @@ import {
   Zap,
 } from "lucide-react";
 
-import { DashedLine } from "@/components/dashed-line";
-import { Button, buttonVariants } from "@/components/ui/button";
 import { Badge } from "../ui/badge";
+
+import { DashedLine } from "@/components/dashed-line";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {

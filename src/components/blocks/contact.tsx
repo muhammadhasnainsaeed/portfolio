@@ -1,19 +1,12 @@
 import React from "react";
 
+import Image from "next/image";
 import Link from "next/link";
 
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  Twitch,
-  Twitter,
-} from "lucide-react";
+import { Mail } from "lucide-react";
 
 import { ContactForm } from "@/components/blocks/contact-form";
 import { DashedLine } from "@/components/dashed-line";
-import Image from "next/image";
 
 const socialIcons = [
   {

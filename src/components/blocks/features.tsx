@@ -4,9 +4,9 @@ import Link from "next/link";
 import { ChevronRight, Workflow } from "lucide-react";
 
 import { DashedLine } from "../dashed-line";
+import { Badge } from "../ui/badge";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "../ui/badge";
 
 const items = [
   {

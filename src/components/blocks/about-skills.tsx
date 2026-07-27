@@ -1,7 +1,8 @@
-import { Card, CardContent } from "../ui/card";
-import { Badge } from "../ui/badge";
 import { ToolCase } from "lucide-react";
+
 import { DashedLine } from "../dashed-line";
+import { Badge } from "../ui/badge";
+import { Card, CardContent } from "../ui/card";
 
 const skillsData = [
   {
@@ -94,7 +95,7 @@ function AboutSkills() {
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-5 md:mt-12 md:grid-cols-2">
-          {skillsData.map((skill, i) => (
+          {skillsData.map((skill) => (
             <Card key={skill.category}>
               <CardContent className="space-y-4 px-6 py-4">
                 <p className="text-lg font-medium text-balance uppercase">

@@ -1,7 +1,11 @@
-import { DashedLine } from "@/components/dashed-line";
-import Image from "next/image";
-import { Badge } from "../ui/badge";
 import React from "react";
+
+import Image from "next/image";
+
+import { Badge } from "../ui/badge";
+
+import { DashedLine } from "@/components/dashed-line";
+
 const stats = [
   {
     value: "4+",

@@ -1,8 +1,10 @@
-import { ArrowRight, LaptopMinimalCheck, Workflow } from "lucide-react";
-import ProjectCard from "./project-card";
 import Link from "next/link";
-import { buttonVariants } from "../ui/button";
+
+import { ArrowRight, LaptopMinimalCheck } from "lucide-react";
+
+import ProjectCard from "./project-card";
 import { Badge } from "../ui/badge";
+import { buttonVariants } from "../ui/button";
 
 const projects = [
   {

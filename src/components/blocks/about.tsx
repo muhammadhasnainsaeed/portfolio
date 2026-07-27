@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import AboutExp from "./about-exp";
+import AboutSkills from "./about-skills";
+
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import AboutSkills from "./about-skills";
-import AboutExp from "./about-exp";
 
 const About = () => {
   return (
