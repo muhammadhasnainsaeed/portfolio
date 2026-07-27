@@ -22,9 +22,9 @@ interface Project {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="relative mx-auto w-full overflow-hidden max-w-sm pt-0">
+    <Card className="relative mx-auto w-full max-w-sm overflow-hidden pt-0">
       <Image
-        src={project.image || '/placeholder.webp'}
+        src={project.image || "/placeholder.webp"}
         alt={project.title}
         width={1024}
         height={576}

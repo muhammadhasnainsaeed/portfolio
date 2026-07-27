@@ -41,7 +41,7 @@ const features = [
 export const Hero = () => {
   return (
     <section className="py-28 lg:py-32 lg:pt-44">
-      <div className="container max-w-5xl flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
+      <div className="container flex max-w-5xl flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
           <Badge className="border-secondary-foreground mb-4 border-dashed">

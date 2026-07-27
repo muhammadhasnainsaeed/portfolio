@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { ChevronRight, Github } from "lucide-react";
+import { ChevronRight, Download, Github } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -39,7 +39,7 @@ const ITEMS = [
   //   ],
   // },
   { label: "Projects", href: "/projects" },
-  { label: "About Us", href: "/about" },
+  { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
@@ -120,9 +120,13 @@ export const Navbar = () => {
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
-          <Link href="/login" className="max-lg:hidden">
+          <Link
+            href="https://uzfnhqxt01hltmw6.public.blob.vercel-storage.com/Hasnain-saeed.pdf?download=1"
+            className="max-lg:hidden"
+          >
             <Button variant="outline">
-              <span className="relative z-10">Login</span>
+              <span className="relative z-10">Resume</span>
+              <Download />
             </Button>
           </Link>
           <a

@@ -127,7 +127,7 @@ export const ResourceAllocation = () => {
       className="overflow-hidden pb-28 lg:pb-32"
     >
       <div className="container max-w-5xl">
-        <div className=" text-center">
+        <div className="text-center">
           <Badge variant={"default"} className="mb-5 tracking-wide">
             <Code2 /> HOW I BUILD
           </Badge>
@@ -137,21 +137,15 @@ export const ResourceAllocation = () => {
         </div>
 
         <div className="mt-8 md:mt-12 lg:mt-20">
-          <DashedLine
-            orientation="horizontal"
-            className=" scale-x-105"
-          />
+          <DashedLine orientation="horizontal" className="scale-x-105" />
 
           {/* Top Features Grid - 2 items */}
-          <div className="relative  flex max-md:flex-col">
+          <div className="relative flex max-md:flex-col">
             {topItems.map((item, i) => (
               <Item key={i} item={item} isLast={i === topItems.length - 1} />
             ))}
           </div>
-          <DashedLine
-            orientation="horizontal"
-            className=" scale-x-110"
-          />
+          <DashedLine orientation="horizontal" className="scale-x-110" />
 
           {/* Bottom Features Grid - 3 items */}
           <div className="relative grid max-w-7xl md:grid-cols-3">
@@ -165,10 +159,7 @@ export const ResourceAllocation = () => {
             ))}
           </div>
         </div>
-        <DashedLine
-          orientation="horizontal"
-          className=" scale-x-110"
-        />
+        <DashedLine orientation="horizontal" className="scale-x-110" />
       </div>
     </section>
   );

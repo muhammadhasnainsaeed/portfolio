@@ -34,16 +34,17 @@ const projects = [
 function SelectedProject() {
   return (
     <section id="projects" className="container max-w-5xl pb-28 lg:pb-32">
-      <div className="lg:mb-20 mb-8 flex items-end justify-between">
+      <div className="mb-8 flex items-end justify-between lg:mb-20">
         <div>
           <Badge variant={"default"} className="col-span-2 mb-4 tracking-wide">
             <LaptopMinimalCheck /> Featured work
           </Badge>
-          <h2 className="text-3xl tracking-tight text-balance mb-5 sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="mb-5 text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
             Things I've Built
           </h2>
           <p className="text-muted-foreground max-w-2xl leading-snug">
-            A collection of software projects and digital experiences focused on solving real problems through thoughtful engineering.
+            A collection of software projects and digital experiences focused on
+            solving real problems through thoughtful engineering.
           </p>
         </div>
         <Link
