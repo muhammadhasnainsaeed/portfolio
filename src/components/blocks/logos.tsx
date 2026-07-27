@@ -85,7 +85,7 @@ export const Logos = () => {
 
   return (
     <section className="overflow-hidden pb-28 lg:pb-32">
-      <div className="container space-y-10 lg:space-y-16">
+      <div className="container max-w-6xl space-y-10 lg:space-y-16">
         <div className="text-center">
           <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
             Building modern digital experiences.
@@ -96,7 +96,7 @@ export const Logos = () => {
           </h2>
         </div>
 
-        <div className="flex w-full flex-col items-center gap-8">
+        <div className="flex w-full flex-col items-center gap-5">
           {/* Top row - 4 logos */}
           <LogoRow companies={topRowCompanies} gridClassName="grid-cols-4" />
 
@@ -125,7 +125,7 @@ const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
       <div className="hidden md:block">
         <div
           className={cn(
-            "grid items-center justify-items-center gap-x-20 lg:gap-x-28",
+            "grid items-center justify-items-center gap-x-16 lg:gap-x-20",
             gridClassName,
           )}
         >

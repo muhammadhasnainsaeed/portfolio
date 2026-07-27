@@ -41,10 +41,10 @@ const features = [
 export const Hero = () => {
   return (
     <section className="py-28 lg:py-32 lg:pt-44">
-      <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
+      <div className="container max-w-5xl flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <Badge className="border-secondary-foreground -mb-1 border-dashed">
+          <Badge className="border-secondary-foreground mb-4 border-dashed">
             <Zap />
             SOFTWARE ENGINEER • FULL-STACK DEVELOPER
           </Badge>
@@ -82,7 +82,7 @@ export const Hero = () => {
         </div>
 
         {/* Right side - Features */}
-        <div className="relative flex flex-1 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
+        <div className="relative flex min-w-96 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
           <DashedLine
             orientation="vertical"
             className="absolute top-0 left-0 max-lg:hidden"

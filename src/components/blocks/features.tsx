@@ -29,7 +29,7 @@ const items = [
 export const Features = () => {
   return (
     <section id="feature-modern-teams" className="pb-28 lg:pb-32">
-      <div className="container">
+      <div className="container max-w-5xl">
         {/* Top dashed line with text */}
         <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
