@@ -84,7 +84,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={handleSubmit}
-        className="w-full grid md:grid-cols-2 grid-cols-1 gap-2 space-y-4 rounded-md"
+        className="grid w-full grid-cols-1 gap-2 space-y-4 rounded-md md:grid-cols-2"
       >
         <FormField
           control={form.control}
@@ -199,7 +199,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <div className="flex w-full items-center justify-end md:col-span-2 pt-3">
+        <div className="flex w-full items-center justify-end pt-3 md:col-span-2">
           <Button className="rounded-lg" size="sm">
             {isExecuting ? "Submitting..." : "Submit"}
             {isExecuting ? <Loader className="animate-spin" /> : <Send />}

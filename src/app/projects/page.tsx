@@ -3,32 +3,7 @@ import { FolderKanban } from "lucide-react";
 import { Background } from "@/components/background";
 import ProjectCard from "@/components/blocks/project-card";
 import { Badge } from "@/components/ui/badge";
-const projects = [
-  {
-    title: "Velocity — CI/CD Platform",
-    year: "2024",
-    image: "",
-    description:
-      "A developer-first continuous integration platform with real-time pipeline visualization, automated rollbacks, and Slack notifications.",
-    tags: ["Next.js", "Go", "Kubernetes", "PostgreSQL"],
-  },
-  {
-    title: "Beacon — Observability Tool",
-    year: "2023",
-    image: "/about/1.webp",
-    description:
-      "Full-stack observability dashboard for distributed services. Real-time log streaming, error tracing, and latency heatmaps.",
-    tags: ["React", "ClickHouse", "Grafana", "gRPC"],
-  },
-  {
-    title: "Folio — Open Source CMS",
-    year: "2023",
-    image: "/about/1.webp",
-    description:
-      "Headless CMS built for developer speed — type-safe schemas, REST + GraphQL APIs, and a Notion-like editing experience.",
-    tags: ["TypeScript", "Prisma", "GraphQL", "React"],
-  },
-];
+import { projects } from "@/data/projects";
 const page = () => {
   return (
     <Background>
@@ -38,7 +13,7 @@ const page = () => {
             <div>
               <Badge
                 variant={"default"}
-                className="col-span-2 mb-4 tracking-wide"
+                className="text-muted-foreground col-span-2 mb-2 text-xs font-semibold tracking-widest uppercase"
               >
                 <FolderKanban /> All Projects
               </Badge>

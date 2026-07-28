@@ -129,7 +129,10 @@ export const ResourceAllocation = () => {
     >
       <div className="container max-w-5xl">
         <div className="text-center">
-          <Badge variant={"default"} className="mb-5 tracking-wide">
+          <Badge
+            variant={"default"}
+            className="text-muted-foreground mb-2 text-xs font-semibold tracking-widest uppercase"
+          >
             <Code2 /> HOW I BUILD
           </Badge>
           <h2 className="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">

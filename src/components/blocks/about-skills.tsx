@@ -80,7 +80,6 @@ function AboutSkills() {
       <div className="container max-w-5xl">
         <div className="mx-auto text-center">
           <Badge
-
             variant={"default"}
             className="text-muted-foreground mb-2 text-xs font-semibold tracking-widest uppercase"
           >

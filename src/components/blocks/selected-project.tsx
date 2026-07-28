@@ -5,40 +5,17 @@ import { ArrowRight, LaptopMinimalCheck } from "lucide-react";
 import ProjectCard from "./project-card";
 import { Badge } from "../ui/badge";
 import { buttonVariants } from "../ui/button";
-
-const projects = [
-  {
-    title: "Velocity — CI/CD Platform",
-    year: "2024",
-    image: "",
-    description:
-      "A developer-first continuous integration platform with real-time pipeline visualization, automated rollbacks, and Slack notifications.",
-    tags: ["Next.js", "Go", "Kubernetes", "PostgreSQL"],
-  },
-  {
-    title: "Beacon — Observability Tool",
-    year: "2023",
-    image: "/about/1.webp",
-    description:
-      "Full-stack observability dashboard for distributed services. Real-time log streaming, error tracing, and latency heatmaps.",
-    tags: ["React", "ClickHouse", "Grafana", "gRPC"],
-  },
-  {
-    title: "Folio — Open Source CMS",
-    year: "2023",
-    image: "/about/1.webp",
-    description:
-      "Headless CMS built for developer speed — type-safe schemas, REST + GraphQL APIs, and a Notion-like editing experience.",
-    tags: ["TypeScript", "Prisma", "GraphQL", "React"],
-  },
-];
+import { selectedProject } from "@/data/projects";
 
 function SelectedProject() {
   return (
     <section id="projects" className="container max-w-5xl pb-28 lg:pb-32">
       <div className="mb-8 flex items-end justify-between lg:mb-20">
         <div>
-          <Badge variant={"default"} className="col-span-2 mb-4 tracking-wide">
+          <Badge
+            variant={"default"}
+            className="text-muted-foreground col-span-2 mb-2 text-xs font-semibold tracking-widest uppercase"
+          >
             <LaptopMinimalCheck /> Featured work
           </Badge>
           <h2 className="mb-5 text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
@@ -60,7 +37,7 @@ function SelectedProject() {
         </Link>
       </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {projects.map((project) => (
+        {selectedProject.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>

@@ -38,7 +38,8 @@ const ITEMS = [
       {
         title: "Skills",
         href: "/about#skills",
-        description: "The technologies and tools I use to build great products.",
+        description:
+          "The technologies and tools I use to build great products.",
       },
     ],
   },
@@ -77,7 +78,12 @@ export const Navbar = () => {
               link.dropdownItems ? (
                 <NavigationMenuItem key={link.label} className="">
                   <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
-                    <NavigationMenuLink href={link.href} className={cn("relative bg-transparent text-sm font-medium transition-opacity hover:opacity-75", )}>
+                    <NavigationMenuLink
+                      href={link.href}
+                      className={cn(
+                        "relative bg-transparent text-sm font-medium transition-opacity hover:opacity-75",
+                      )}
+                    >
                       {link.label}
                     </NavigationMenuLink>
                   </NavigationMenuTrigger>

@@ -15,8 +15,9 @@ import {
 
 interface Project {
   title: string;
-  year: string;
+  action: string;
   image: string;
+  link: string;
   description: string;
   tags: string[];
 }
@@ -33,7 +34,7 @@ function ProjectCard({ project }: { project: Project }) {
       />
       <CardHeader>
         <CardAction>
-          <Badge variant="ghost">{project.year}</Badge>
+          <Badge variant="ghost">{project.action}</Badge>
         </CardAction>
         <CardTitle>{project.title}</CardTitle>
       </CardHeader>
@@ -49,7 +50,7 @@ function ProjectCard({ project }: { project: Project }) {
       </CardContent>
       <CardFooter>
         <Link
-          href="#"
+          href={project.link}
           className={buttonVariants({
             variant: "ghost",
             size: "sm",

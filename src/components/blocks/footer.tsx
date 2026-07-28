@@ -14,7 +14,10 @@ export function Footer() {
 
   const social = [
     { name: "Xwitter", href: "https://x.com/m_hasnain_saeed" },
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/muhammadhasnainsaeed/" },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/muhammadhasnainsaeed/",
+    },
   ];
   return (
     <footer className="flex flex-col items-center gap-14 py-28 lg:py-32">

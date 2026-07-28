@@ -40,7 +40,10 @@ export const Features = () => {
 
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
-          <Badge variant={"default"} className="col-span-2 mb-5 tracking-wide">
+          <Badge
+            variant={"default"}
+            className="text-muted-foreground col-span-2 mb-2 text-xs font-semibold tracking-widest uppercase"
+          >
             <Workflow /> HOW I WORK
           </Badge>
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
