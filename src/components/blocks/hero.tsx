@@ -12,6 +12,7 @@ import { Badge } from "../ui/badge";
 
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const features = [
   {
@@ -59,23 +60,23 @@ export const Hero = () => {
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
-              <a href="https://github.com/shadcnblocks/mainline-nextjs-template">
+              <Link href="/projects">
                 View Projects
                 <Projector />
-              </a>
+              </Link>
             </Button>
             <Button
               variant="outline"
               className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
               asChild
             >
-              <a
-                href="https://shadcnblocks.com"
+              <Link
+                href="/contact"
                 className="max-w-56 truncate text-start md:max-w-none"
               >
                 Let's Connect
                 <ArrowRight className="stroke-3" />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>

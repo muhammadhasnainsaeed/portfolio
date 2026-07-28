@@ -1,6 +1,6 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Check } from "lucide-react";
+import { Check, Loader, Send } from "lucide-react";
 import { motion } from "motion/react";
 import { useAction } from "next-safe-action/hooks";
 import { useForm } from "react-hook-form";
@@ -84,7 +84,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={handleSubmit}
-        className="flex w-full flex-col gap-2 space-y-4 rounded-md"
+        className="w-full grid md:grid-cols-2 grid-cols-1 gap-2 space-y-4 rounded-md"
       >
         <FormField
           control={form.control}
@@ -185,7 +185,7 @@ export function ContactForm() {
           name="message"
           rules={{ required: true }}
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="md:col-span-2">
               <FormLabel>Your message * </FormLabel>
               <FormControl>
                 <Textarea
@@ -199,9 +199,10 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <div className="flex w-full items-center justify-end pt-3">
+        <div className="flex w-full items-center justify-end md:col-span-2 pt-3">
           <Button className="rounded-lg" size="sm">
             {isExecuting ? "Submitting..." : "Submit"}
+            {isExecuting ? <Loader className="animate-spin" /> : <Send />}
           </Button>
         </div>
       </form>

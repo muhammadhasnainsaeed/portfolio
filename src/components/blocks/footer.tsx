@@ -6,20 +6,16 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   const navigation = [
-    { name: "Product", href: "/#feature-modern-teams" },
+    { name: "Product", href: "/projects" },
     { name: "About Us", href: "/about" },
-    { name: "Pricing", href: "/pricing" },
     { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ];
 
   const social = [
-    { name: "Xwitter", href: "https://x.com/ausrobdev" },
-    { name: "LinkedIn", href: "#" },
+    { name: "Xwitter", href: "https://x.com/m_hasnain_saeed" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/muhammadhasnainsaeed/" },
   ];
-
-  const legal = [{ name: "Privacy Policy", href: "/privacy" }];
-
   return (
     <footer className="flex flex-col items-center gap-14 py-28 lg:py-32">
       <div className="container space-y-3 text-center">
@@ -55,18 +51,6 @@ export function Footer() {
                 className="flex items-center gap-0.5 font-medium transition-opacity hover:opacity-75"
               >
                 {item.name} <ArrowUpRight className="size-4" />
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <ul className="flex flex-wrap items-center justify-center gap-6">
-          {legal.map((item) => (
-            <li key={item.name}>
-              <Link
-                href={item.href}
-                className="text-muted-foreground text-sm transition-opacity hover:opacity-75"
-              >
-                {item.name}
               </Link>
             </li>
           ))}

@@ -76,10 +76,11 @@ const skillsData = [
 ];
 function AboutSkills() {
   return (
-    <section className="mt-12 pb-28 lg:pb-32">
+    <section id="skills" className="mt-12 pb-28 lg:pb-32">
       <div className="container max-w-5xl">
         <div className="mx-auto text-center">
           <Badge
+
             variant={"default"}
             className="text-muted-foreground mb-2 text-xs font-semibold tracking-widest uppercase"
           >

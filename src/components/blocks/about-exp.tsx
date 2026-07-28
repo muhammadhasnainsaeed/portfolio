@@ -44,7 +44,7 @@ const experience = [
 
 function AboutExp() {
   return (
-    <section className="mt-12">
+    <section id="experience" className="mt-12">
       <div className="container max-w-5xl">
         <Badge
           variant={"default"}

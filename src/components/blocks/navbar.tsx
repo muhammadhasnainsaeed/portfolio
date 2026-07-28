@@ -21,26 +21,29 @@ import {
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
-  // {
-  //   label: "Features",
-  //   href: "#features",
-  //   dropdownItems: [
-  //     {
-  //       title: "Modern product teams",
-  //       href: "/#feature-modern-teams",
-  //       description:
-  //         "Mainline is built on the habits that make the best product teams successful",
-  //     },
-  //     {
-  //       title: "Resource Allocation",
-  //       href: "/#resource-allocation",
-  //       description: "Mainline your resource allocation and execution",
-  //     },
-  //   ],
-  // },
+  {
+    label: "About",
+    href: "/about",
+    dropdownItems: [
+      {
+        title: "Experience",
+        href: "/about#experience",
+        description: "A look at my professional journey and work experience.",
+      },
+      {
+        title: "Education",
+        href: "/about#education",
+        description: "My academic background and educational journey.",
+      },
+      {
+        title: "Skills",
+        href: "/about#skills",
+        description: "The technologies and tools I use to build great products.",
+      },
+    ],
+  },
   { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
-  { label: "FAQ", href: "/faq" },
+  // { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -52,7 +55,7 @@ export const Navbar = () => {
   return (
     <section
       className={cn(
-        "bg-background/70 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
+        "bg-background/70 fixed left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
         "top-5 lg:top-12",
       )}
     >
@@ -74,22 +77,24 @@ export const Navbar = () => {
               link.dropdownItems ? (
                 <NavigationMenuItem key={link.label} className="">
                   <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
-                    {link.label}
+                    <NavigationMenuLink href={link.href} className={cn("relative bg-transparent text-sm font-medium transition-opacity hover:opacity-75", )}>
+                      {link.label}
+                    </NavigationMenuLink>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="w-100 space-y-2 p-4">
+                    <ul className="w-72 space-y-2 p-3">
                       {link.dropdownItems.map((item) => (
                         <li key={item.title}>
                           <NavigationMenuLink asChild>
                             <Link
                               href={item.href}
-                              className="group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex items-center gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none"
+                              className="group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex items-center gap-4 rounded-md p-2 leading-none no-underline outline-hidden transition-colors select-none"
                             >
                               <div className="space-y-1.5 transition-transform duration-300 group-hover:translate-x-1">
-                                <div className="text-sm leading-none font-medium">
+                                <div className="text-xs leading-none font-medium">
                                   {item.title}
                                 </div>
-                                <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+                                <p className="text-muted-foreground line-clamp-2 text-xs leading-snug">
                                   {item.description}
                                 </p>
                               </div>

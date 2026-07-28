@@ -20,7 +20,7 @@ export const Logos = () => {
       logo: "/logos/typescript.svg",
       width: 143,
       height: 26,
-      href: "https://mercury.com",
+      href: "https://www.typescriptlang.org/",
     },
     {
       name: "Next.js",
