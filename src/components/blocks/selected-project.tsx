@@ -5,6 +5,7 @@ import { ArrowRight, LaptopMinimalCheck } from "lucide-react";
 import ProjectCard from "./project-card";
 import { Badge } from "../ui/badge";
 import { buttonVariants } from "../ui/button";
+
 import { selectedProject } from "@/data/projects";
 
 function SelectedProject() {

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   ArrowRight,
   Code2,
@@ -12,7 +14,6 @@ import { Badge } from "../ui/badge";
 
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const features = [
   {
