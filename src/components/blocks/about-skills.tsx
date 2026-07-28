@@ -107,7 +107,7 @@ function AboutSkills() {
                     <Badge
                       key={l}
                       variant={"outline"}
-                      className="rounded-md bg-muted text-[10px] font-semibold tracking-widest uppercase"
+                      className="bg-muted rounded-md text-[10px] font-semibold tracking-widest uppercase"
                     >
                       {l}
                     </Badge>

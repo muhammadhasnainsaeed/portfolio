@@ -42,7 +42,7 @@ function ProjectCard({ project }: { project: Project }) {
         <CardDescription>{project.description}</CardDescription>
         <div className="mt-5 flex flex-wrap gap-2">
           {project.tags.map((t) => (
-            <Badge variant={"outline"} className="rounded bg-muted" key={t}>
+            <Badge variant={"outline"} className="bg-muted rounded" key={t}>
               {t}
             </Badge>
           ))}

@@ -73,7 +73,7 @@ export function AboutHero() {
             loading="lazy"
           />
         </div>
-        <div className="bg-muted border mt-2 rounded-lg p-4">
+        <div className="bg-muted mt-2 rounded-lg border p-4">
           <p className="text-muted-foreground mb-2 text-xs font-semibold tracking-widest uppercase">
             Currently reading
           </p>
