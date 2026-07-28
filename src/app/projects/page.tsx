@@ -13,7 +13,7 @@ const page = () => {
             <div>
               <Badge
                 variant={"default"}
-                className="text-muted-foreground col-span-2 mb-2 text-xs font-semibold tracking-widest uppercase"
+                className="col-span-2 mb-2 text-xs font-semibold tracking-widest uppercase"
               >
                 <FolderKanban /> All Projects
               </Badge>

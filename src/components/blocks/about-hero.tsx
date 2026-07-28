@@ -25,7 +25,7 @@ export function AboutHero() {
   return (
     <section className="container mx-auto flex max-w-5xl flex-col gap-8 pb-28 md:flex-row lg:pb-32">
       <div className="flex-1">
-        <Badge className="text-muted-foreground mb-2 text-xs font-semibold tracking-widest uppercase">
+        <Badge className="mb-2 text-xs font-semibold tracking-widest uppercase">
           About me
         </Badge>
         <h2 className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
@@ -71,7 +71,7 @@ export function AboutHero() {
             loading="lazy"
           />
         </div>
-        <div className="bg-secondary mt-2 rounded-lg p-4">
+        <div className="bg-muted border mt-2 rounded-lg p-4">
           <p className="text-muted-foreground mb-2 text-xs font-semibold tracking-widest uppercase">
             Currently reading
           </p>

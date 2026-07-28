@@ -48,7 +48,7 @@ function AboutExp() {
       <div className="container max-w-5xl">
         <Badge
           variant={"default"}
-          className="text-muted-foreground mb-2 text-xs font-semibold tracking-widest uppercase"
+          className="mb-2 text-xs font-semibold tracking-widest uppercase"
         >
           <ToolCase /> Experience
         </Badge>

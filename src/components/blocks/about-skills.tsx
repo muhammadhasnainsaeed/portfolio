@@ -81,7 +81,7 @@ function AboutSkills() {
         <div className="mx-auto text-center">
           <Badge
             variant={"default"}
-            className="text-muted-foreground mb-2 text-xs font-semibold tracking-widest uppercase"
+            className="mb-2 text-xs font-semibold tracking-widest uppercase"
           >
             <ToolCase /> Skills
           </Badge>
@@ -106,8 +106,8 @@ function AboutSkills() {
                   {skill.list.map((l) => (
                     <Badge
                       key={l}
-                      variant={"secondary"}
-                      className="text-muted-foreground rounded-md text-[10px] font-semibold tracking-widest uppercase"
+                      variant={"outline"}
+                      className="rounded-md bg-muted text-[10px] font-semibold tracking-widest uppercase"
                     >
                       {l}
                     </Badge>
