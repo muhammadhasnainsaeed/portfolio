@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Badge } from "../ui/badge";
 
 import { DashedLine } from "@/components/dashed-line";
+import { CircleUserRound } from "lucide-react";
 
 const stats = [
   {
@@ -12,7 +13,7 @@ const stats = [
     label: "Years of experience",
   },
   {
-    value: "20+",
+    value: "10+",
     label: "Projects shipped",
   },
   {
@@ -26,6 +27,7 @@ export function AboutHero() {
     <section className="container mx-auto flex max-w-5xl flex-col gap-8 pb-28 md:flex-row lg:pb-32">
       <div className="flex-1">
         <Badge className="mb-2 text-xs font-semibold tracking-widest uppercase">
+          <CircleUserRound />
           About me
         </Badge>
         <h2 className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
@@ -63,7 +65,7 @@ export function AboutHero() {
       <div className="w-full md:w-80">
         <div className="overflow-hidden rounded-lg border">
           <Image
-            src={"about/avatar.jpg"}
+            src={"about/avatar.webp"}
             width={320}
             height={500}
             alt="Jordan Lee"

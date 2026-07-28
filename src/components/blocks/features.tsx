@@ -12,17 +12,17 @@ const items = [
   {
     title: "Build with Purpose",
     des: "Every line of code should solve a real problem.",
-    image: "/features/warrior-shield.png",
+    image: "/features/build.svg",
   },
   {
     title: "Think Beyond Code",
     des: "Great products come from understanding people, not just technology.",
-    image: "/features/moon-landing.png",
+    image: "/features/think.svg",
   },
   {
     title: "Keep Improving",
     des: "Always learning, experimenting, and finding better ways to build.",
-    image: "/features/spaceship.png",
+    image: "/features/improving.svg",
   },
 ];
 
@@ -68,9 +68,8 @@ export const Features = () => {
                       src={item.image}
                       alt={`${item.title} interface`}
                       fill
-                      className="object-cover object-top-left ps-4 pt-2 opacity-75 dark:invert"
+                      className="object-cover object-top-left ps-4 pt-2 opacity-75"
                     />
-                    <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
                   </div>
 
                   <Link
