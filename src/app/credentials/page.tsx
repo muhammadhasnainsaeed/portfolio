@@ -1,4 +1,4 @@
-import { Award, GraduationCap, Award as AwardIcon, BookOpen, Sparkles, Shield } from "lucide-react";
+import { Award, GraduationCap, Award as AwardIcon, BookOpen, Sparkles, Shield, Check, Star, Globe, Brain, ArrowRight } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +8,29 @@ import { education, certifications } from "@/data/credentials";
 
 export default function CredentialsPage() {
   return (
-    <div className="container max-w-5xl py-28 lg:py-32 lg:pt-44">
+    <div className="max-w-5xl mx-auto px-4 py-12 lg:py-20">
+      {/* Page Header */}
+      <div className="mx-auto max-w-3xl text-center mb-16 lg:mb-24">
+        <Badge variant="default" className="mb-4 text-xs font-semibold tracking-widest uppercase">
+          <Award className="mr-1.5 size-3" />
+          Credentials
+        </Badge>
+        <h1 className="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
+          Education &{" "}
+          <span className="text-primary">Certifications</span>
+        </h1>
+        <p className="text-muted-foreground mt-6 max-w-2xl mx-auto space-y-4 text-lg text-balance leading-relaxed">
+          <span className="block">
+            A foundation built on rigorous computer science fundamentals, strengthened by continuous
+            learning from industry leaders.
+          </span>
+          <span className="block">
+            From university coursework to specialized certifications from Google, Meta, AWS, and top
+            universities — every credential represents hands-on projects and verified skills.
+          </span>
+        </p>
+      </div>
+
       {/* Education Section */}
       <section id="education" className="mb-16 lg:mb-24">
         <div className="mx-auto max-w-3xl text-center mb-12 lg:mb-16">
@@ -21,12 +43,12 @@ export default function CredentialsPage() {
           </h2>
           <p className="text-muted-foreground mt-6 max-w-2xl mx-auto space-y-4 text-lg text-balance leading-relaxed">
             <span className="block">
-              A strong foundation in computer science principles, algorithms, and software engineering
-              principles built through rigorous academic training.
+              Four years of intensive computer science education covering algorithms, data structures,
+              software engineering principles, and systems programming.
             </span>
             <span className="block">
-              Four years of rigorous coursework, hands-on projects, and collaborative research laid the
-              groundwork for building scalable, maintainable software systems.
+              Coursework included distributed systems, database design, machine learning fundamentals,
+              and full-stack application development.
             </span>
           </p>
         </div>
@@ -36,35 +58,52 @@ export default function CredentialsPage() {
           <ol className="relative space-y-10 lg:space-y-12">
             {education.map((edu, index) => (
               <li key={edu.period} className="relative lg:pl-16">
-                <span className="bg-muted-foreground ring-muted absolute -left-2.5 lg:-left-5 mt-2 flex size-5 items-center justify-center rounded-full ring-4 lg:size-6" />
+                <span className="bg-muted-foreground ring-muted absolute -left-2.5 lg:-left-5 mt-2 flex size-5 items-center justify-center rounded-full ring-4 lg:size-6">
+                  <GraduationCap className="size-3 text-muted-foreground/60" />
+                </span>
                 <p className="text-muted-foreground text-xs font-medium tracking-widest uppercase">
                   {edu.period}
                 </p>
-                <Card className="mt-4 overflow-hidden transition-all hover:border-primary/50 hover:shadow-lg">
+                <Card className="mt-4 overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 group">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <CardHeader className="pb-4">
-                    <CardTitle className="text-xl lg:text-2xl">{edu.degree}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div className="flex items-center gap-3 text-muted-foreground">
-                      <GraduationCap className="size-4 shrink-0 text-muted-foreground/60" />
-                      <span className="font-medium text-foreground">{edu.institution}</span>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                        <GraduationCap className="size-5" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-xl lg:text-2xl">{edu.degree}</CardTitle>
+                        <p className="text-muted-foreground text-sm">{edu.institution}</p>
+                      </div>
                     </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
                     <div className="flex items-center gap-3 text-muted-foreground">
                       <AwardIcon className="size-4 shrink-0 text-muted-foreground/60" />
-                      <span className="font-medium">{edu.details}</span>
+                      <span className="font-medium text-foreground">{edu.details}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-muted-foreground">
+                      <BookOpen className="size-4 shrink-0 text-muted-foreground/60" />
+                      <span className="font-medium">Core Focus Areas</span>
                     </div>
                     <div className="pt-2 border-t flex flex-wrap gap-2">
                       <Badge variant="outline" className="bg-muted text-xs">
-                        Computer Science
+                        Data Structures & Algorithms
                       </Badge>
                       <Badge variant="outline" className="bg-muted text-xs">
                         Software Engineering
                       </Badge>
                       <Badge variant="outline" className="bg-muted text-xs">
-                        Algorithms & Data Structures
+                        Database Systems
                       </Badge>
                       <Badge variant="outline" className="bg-muted text-xs">
-                        Database Systems
+                        Computer Networks
+                      </Badge>
+                      <Badge variant="outline" className="bg-muted text-xs">
+                        Operating Systems
+                      </Badge>
+                      <Badge variant="outline" className="bg-muted text-xs">
+                        Machine Learning Basics
                       </Badge>
                     </div>
                   </CardContent>
@@ -110,7 +149,7 @@ export default function CredentialsPage() {
           {certifications.map((cert, index) => (
             <Card
               key={cert.name}
-              className="relative overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-xl group"
+              className="relative overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 group"
             >
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity" />
               <CardHeader className="pb-3">
@@ -137,41 +176,32 @@ export default function CredentialsPage() {
                 </div>
 
                 <div className="flex flex-wrap gap-2">
-                  {cert.skills.slice(0, 4).map((skill) => (
-                    <Badge
-                      key={skill}
-                      variant="outline"
-                      className="bg-muted/50 hover:bg-primary/10 hover:border-primary/30 hover:text-primary transition-all text-[10px] font-medium"
-                    >
+                  {cert.skills.slice(0, 5).map((skill) => (
+                    <Badge key={skill} variant="outline" className="bg-muted/50 text-xs hover:bg-primary/10 hover:border-primary/20 hover:text-primary transition-all">
                       {skill}
                     </Badge>
                   ))}
-                  {cert.skills.length > 4 && (
-                    <Badge variant="outline" className="bg-muted/50 text-[10px] font-medium">
-                      +{cert.skills.length - 4} more
+                  {cert.skills.length > 5 && (
+                    <Badge variant="outline" className="bg-muted/50 text-xs text-muted-foreground">
+                      +{cert.skills.length - 5} more
                     </Badge>
                   )}
                 </div>
 
                 <div className="pt-2 border-t flex items-center justify-between">
-                  <Badge variant="ghost" className="text-xs gap-1">
-                    <Shield className="size-3" />
-                    Verified
-                  </Badge>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Shield className="size-3.5 text-green-500" />
+                    <span>Verified Credential</span>
+                  </div>
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-xs font-medium gap-1 h-auto px-2 py-1 group-hover:text-primary"
+                    className="group-hover:gap-2 transition-all text-xs font-medium opacity-0 group-hover:opacity-100"
                     asChild
                   >
-                    <a
-                      href={`https://coursera.org/verify/${cert.credentialId}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1"
-                    >
+                    <a href={`https://coursera.org/verify/${cert.credentialId}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
                       Verify
-                      <span className="size-3" />
+                      <Globe className="size-3" />
                     </a>
                   </Button>
                 </div>
@@ -180,72 +210,67 @@ export default function CredentialsPage() {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-12 lg:mt-16 text-center">
-          <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-            Learning never stops. Always exploring new technologies, frameworks, and methodologies
-            to build better products.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="outline" size="lg" asChild>
-              <a href="https://coursera.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                View All Certifications
-                <span className="size-4" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="lg" asChild>
-              <a href="/contact" className="flex items-center gap-2">
-                Let's Collaborate
-                <span className="size-4" />
-              </a>
-            </Button>
+        {/* Stats Summary */}
+        <div className="mt-12 lg:mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="text-center p-6 rounded-2xl bg-muted/50 border">
+            <div className="font-display text-4xl tracking-wide md:text-5xl text-primary font-bold">
+              {certifications.length}+
+            </div>
+            <div className="text-muted-foreground text-sm mt-1">Certifications Earned</div>
+          </div>
+          <div className="text-center p-6 rounded-2xl bg-muted/50 border">
+            <div className="font-display text-4xl tracking-wide md:text-5xl text-primary font-bold">
+              {new Set(certifications.flatMap(c => c.skills)).size}+
+            </div>
+            <div className="text-muted-foreground text-sm mt-1">Unique Skills Verified</div>
+          </div>
+          <div className="text-center p-6 rounded-2xl bg-muted/50 border">
+            <div className="font-display text-4xl tracking-wide md:text-5xl text-primary font-bold">
+              {new Set(certifications.map(c => c.issuer.split("·")[0]?.trim())).size}+
+            </div>
+            <div className="text-muted-foreground text-sm mt-1">Top-Tier Providers</div>
+          </div>
+          <div className="text-center p-6 rounded-2xl bg-muted/50 border">
+            <div className="font-display text-4xl tracking-wide md:text-5xl text-primary font-bold">
+              2022-2024
+            </div>
+            <div className="text-muted-foreground text-sm mt-1">Continuous Learning</div>
           </div>
         </div>
       </section>
 
-      {/* Stats / Summary Section */}
-      <section className="relative">
-        <div className="relative flex items-center justify-center">
-          <DashedLine className="w-full" />
-          <span className="bg-muted text-muted-foreground absolute px-4 font-mono text-xs font-medium tracking-widest">
-            SUMMARY
-          </span>
-        </div>
-
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
-          <div className="text-center p-6 lg:p-8 bg-muted/30 rounded-2xl border">
-            <div className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-              {education.length}+
-            </div>
-            <div className="text-muted-foreground mt-2 text-sm font-medium uppercase tracking-wider">
-              Degrees Earned
-            </div>
-          </div>
-          <div className="text-center p-6 lg:p-8 bg-muted/30 rounded-2xl border">
-            <div className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-              {certifications.length}+
-            </div>
-            <div className="text-muted-foreground mt-2 text-sm font-medium uppercase tracking-wider">
-              Certifications Earned
-            </div>
-          </div>
-          <div className="text-center p-6 lg:p-8 bg-muted/30 rounded-2xl border">
-            <div className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-              {certifications.reduce((acc, c) => acc + c.skills.length, 0)}+
-            </div>
-            <div className="text-muted-foreground mt-2 text-sm font-medium uppercase tracking-wider">
-              Skills Verified
-            </div>
-          </div>
-          <div className="text-center p-6 lg:p-8 bg-muted/30 rounded-2xl border">
-            <div className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-              {new Set(certifications.flatMap((c) => c.issuer.split("·")[0].trim())).size}+
-            </div>
-            <div className="text-muted-foreground mt-2 text-sm font-medium uppercase tracking-wider">
-              Learning Platforms
-            </div>
+      {/* CTA Section */}
+      <section className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/10 via-background to-primary/5 p-8 lg:p-12 text-center">
+        <div className="relative z-10 max-w-2xl mx-auto">
+          <Badge variant="default" className="mb-4 text-xs font-semibold tracking-widest uppercase">
+            <Brain className="mr-1.5 size-3" />
+            Always Learning
+          </Badge>
+          <h3 className="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
+            Currently Exploring
+          </h3>
+          <p className="text-muted-foreground mt-4 max-w-lg mx-auto space-y-4 text-lg text-balance leading-relaxed">
+            <span className="block">
+              Actively pursuing advanced certifications in distributed systems, Kubernetes
+              administration, and LLM application development.
+            </span>
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <Button asChild size="lg">
+              <a href="/contact" className="flex items-center gap-2">
+                Let's Collaborate
+                <ArrowRight className="size-4" />
+              </a>
+            </Button>
+            <Button variant="outline" asChild size="lg">
+              <a href="https://github.com/muhammadhasnainsaeed" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Star className="size-4" />
+                View GitHub
+              </a>
+            </Button>
           </div>
         </div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent opacity-20" />
       </section>
     </div>
   );

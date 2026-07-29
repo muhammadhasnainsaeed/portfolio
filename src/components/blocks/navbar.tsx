@@ -46,6 +46,7 @@ const ITEMS = [
   },
   { label: "Credentials", href: "/credentials" },
   { label: "Projects", href: "/projects" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];
 
