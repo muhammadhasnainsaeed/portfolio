@@ -63,6 +63,7 @@ export function Footer() {
       <div className="mt-10 w-full md:mt-14 lg:mt-16 dark:opacity-30 dark:grayscale">
         <svg
           width="1570"
+          className="mx-auto"
           height="291"
           viewBox="0 0 1570 291"
           fill="none"
