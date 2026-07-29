@@ -2,45 +2,8 @@ import { ToolCase } from "lucide-react";
 
 import { DashedLine } from "../dashed-line";
 import { Badge } from "../ui/badge";
+import { experience } from "@/data/about";
 
-const experience = [
-  {
-    period: "2024 — Present",
-    role: "Senior Full Stack Engineer",
-    company: "Independent / Consulting",
-    summary:
-      "Partner with founders and product teams to design and ship AI-powered SaaS from zero to launch.",
-    highlights: [
-      "Shipped a real-time AI voice translation desktop app (Electron + OpenAI) with sub-second latency.",
-      "Led architecture for a multi-tenant LMS serving thousands of learners and instructors.",
-      "Introduced type-safe end-to-end patterns (TypeScript, tRPC-style RPC, Zod) across client engagements.",
-    ],
-  },
-  {
-    period: "2022 — 2024",
-    role: "Full Stack Engineer",
-    company: "Product Studio",
-    summary:
-      "Built customer-facing products and internal platforms for early-stage startups across EdTech and creator economy.",
-    highlights: [
-      "Designed and shipped Trainerflix — subscription LMS with Stripe billing and instructor dashboards.",
-      "Built TipTube creator platform: video pipeline, memberships and community in one product.",
-      "Reduced p95 API latency by 60% through query optimization, caching and edge deployments.",
-    ],
-  },
-  {
-    period: "2021 — 2022",
-    role: "Software Engineer",
-    company: "Early career",
-    summary:
-      "Frontend-heavy roles across React and React Native. Grew into full-stack ownership of features and services.",
-    highlights: [
-      "Delivered React Native mobile apps used by regional customers in production.",
-      "Owned migration of a legacy jQuery admin to a typed React + Tailwind SPA.",
-      "Introduced CI/CD, automated tests and code review culture on small teams.",
-    ],
-  },
-];
 
 function AboutExp() {
   return (
