@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/components/animate-ui/components/radix/accordion";
 import { cn } from "@/lib/utils";
 
 const categories = [

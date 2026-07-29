@@ -4,7 +4,7 @@ import Link from "next/link";
 import AboutExp from "./about-exp";
 import AboutSkills from "./about-skills";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/animate-ui/components/buttons/button";
 import { cn } from "@/lib/utils";
 
 const About = () => {

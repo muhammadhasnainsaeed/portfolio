@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation";
 
 import { ChevronRight, Download, Github } from "lucide-react";
 
-import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
+import { ThemeTogglerButton } from "../animate-ui/components/buttons/theme-toggler";
+import { Button } from "@/components/animate-ui/components/buttons/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -130,7 +130,7 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
-          <ThemeToggle />
+          <ThemeTogglerButton variant={"outline"} modes={['light', 'dark']} />
           <Link
             href="https://uzfnhqxt01hltmw6.public.blob.vercel-storage.com/Hasnain-saeed.pdf?download=1"
             className="max-lg:hidden"

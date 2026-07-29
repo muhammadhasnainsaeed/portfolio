@@ -13,7 +13,7 @@ import {
 import { Badge } from "../ui/badge";
 
 import { DashedLine } from "@/components/dashed-line";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/animate-ui/components/buttons/button";
 
 const features = [
   {
