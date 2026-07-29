@@ -78,13 +78,13 @@ function AboutExp() {
               <p className="text-muted-foreground mt-1 text-sm font-medium">
                 {role.company}
               </p>
-              <p className="text-secondary-foreground mt-4 max-w-2xl text-lg leading-relaxed text-pretty">
+              <p className="mt-4 max-w-2xl text-lg leading-relaxed text-pretty">
                 {role.summary}
               </p>
               <ul className="text-muted-foreground mt-6 space-y-3">
                 {role.highlights.map((h) => (
                   <li key={h} className="flex gap-3 text-pretty">
-                    <span className="bg-secondary-foreground mt-2 size-1.5 shrink-0 rounded-full" />
+                    <span className="bg-muted-foreground mt-2 size-1.5 shrink-0 rounded-full" />
                     <span>{h}</span>
                   </li>
                 ))}

@@ -45,18 +45,18 @@ export function AboutHero() {
           experiences that actually make an impact.
         </p>
         <DashedLine orientation="horizontal" className="my-8 flex-1 md:my-12" />
-        <div className="mt-6 flex flex-1 items-stretch justify-between gap-4">
+        <div className="mt-6 flex flex-1 items-stretch justify-between md:gap-4">
           {stats.map((stat, i) => (
             <React.Fragment key={stat.label}>
               <div className="flex flex-col gap-1">
                 <div className="font-display text-4xl tracking-wide md:text-5xl">
                   {stat.value}
                 </div>
-                <div className="text-muted-foreground">{stat.label}</div>
+                <div className="text-muted-foreground max-sm:text-xs">{stat.label}</div>
               </div>
 
               {i !== stats.length - 1 && (
-                <div className="bg-border mx-4 w-px" />
+                <DashedLine orientation="vertical" className="mx-4 h-[inherit]" />
               )}
             </React.Fragment>
           ))}
