@@ -44,8 +44,8 @@ const ITEMS = [
       },
     ],
   },
+  { label: "Credentials", href: "/credentials" },
   { label: "Projects", href: "/projects" },
-  // { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 
