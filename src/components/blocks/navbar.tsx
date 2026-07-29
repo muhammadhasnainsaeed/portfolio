@@ -19,6 +19,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { buttonVariants } from "../ui/button";
 
 const ITEMS = [
   {
@@ -56,7 +57,7 @@ export const Navbar = () => {
   return (
     <section
       className={cn(
-        "bg-background/70 fixed left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
+        "bg-background/70 fixed mt-2.5 left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
         "top-5 lg:top-12",
       )}
     >
@@ -191,7 +192,7 @@ export const Navbar = () => {
                       openDropdown === link.label ? null : link.label,
                     )
                   }
-                  className="text-primary flex w-full items-center justify-between text-base font-medium"
+                  className={buttonVariants({ variant: "ghost", className:"flex! w-full! items-center justify-between! px-0! py-0! h-auto! text-base! font-medium!" })}
                 >
                   {link.label}
                   <ChevronRight
@@ -238,10 +239,8 @@ export const Navbar = () => {
               <Link
                 key={link.label}
                 href={link.href}
-                className={cn(
-                  "text-primary hover:text-primary/80 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0",
-                  pathname === link.href && "text-muted-foreground",
-                )}
+
+                  className={buttonVariants({ variant: "ghost", className:"flex! w-full! items-center justify-between! py-4 px-0! h-auto! text-base! font-medium! first:pt-0 last:pb-0" })}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}

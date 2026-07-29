@@ -24,7 +24,7 @@ interface Project {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="relative mx-auto w-full max-w-sm overflow-hidden pt-0">
+    <Card className="relative w-full max-w-md overflow-hidden pt-0">
       <Image
         src={project.image || "/placeholder.webp"}
         alt={project.title}

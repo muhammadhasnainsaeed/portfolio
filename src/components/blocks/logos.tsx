@@ -96,7 +96,7 @@ export const Logos = () => {
           </h2>
         </div>
 
-        <div className="flex w-full flex-col items-center gap-5">
+        <div className="flex w-full flex-col items-center md:gap-5">
           {/* Top row - 4 logos */}
           <LogoRow companies={topRowCompanies} gridClassName="grid-cols-4" />
 
@@ -158,7 +158,7 @@ const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
                 alt={`${company.name} logo`}
                 width={company.width}
                 height={company.height}
-                className="object-contain"
+                className="dark:opacity/100 object-contain opacity-50 transition-opacity hover:opacity-70 dark:invert"
               />
             </Link>
           ))}

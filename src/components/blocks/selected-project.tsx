@@ -11,7 +11,7 @@ import { selectedProject } from "@/data/projects";
 function SelectedProject() {
   return (
     <section id="projects" className="container max-w-5xl pb-28 lg:pb-32">
-      <div className="mb-8 flex items-end justify-between lg:mb-20">
+      <div className="mb-8 flex flex-wrap gap-y-5 items-end justify-between lg:mb-20">
         <div>
           <Badge
             variant={"default"}
@@ -37,7 +37,7 @@ function SelectedProject() {
           All projects <ArrowRight className="h-3 w-3" />
         </Link>
       </div>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2">
         {selectedProject.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}

@@ -39,7 +39,8 @@ export const Features = () => {
         </div>
 
         {/* Content */}
-        <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
+        <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 md:mt-24 md:grid-cols-2">
+          <div>
           <Badge
             variant={"default"}
             className="col-span-2 mb-2 text-xs font-semibold tracking-widest uppercase"
@@ -49,6 +50,7 @@ export const Features = () => {
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Building with a focus on quality, performance, and impact.
           </h2>
+          </div>
 
           <p className="text-muted-foreground leading-snug">
             I care about the details that turn good products into great

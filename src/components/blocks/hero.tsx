@@ -14,6 +14,7 @@ import { Badge } from "../ui/badge";
 
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/animate-ui/components/buttons/button";
+import Image from "next/image";
 
 const features = [
   {
@@ -45,7 +46,7 @@ export const Hero = () => {
       <div className="container flex max-w-5xl flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <Badge className="border-secondary-foreground mb-4 border-dashed">
+          <Badge className="border-secondary-foreground max-sm:text-[11px] sm:mb-4 border-dashed">
             <Zap />
             SOFTWARE ENGINEER • FULL-STACK DEVELOPER
           </Badge>
@@ -83,7 +84,7 @@ export const Hero = () => {
         </div>
 
         {/* Right side - Features */}
-        <div className="relative flex min-w-96 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
+        <div className="relative flex lg:min-w-96 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
           <DashedLine
             orientation="vertical"
             className="absolute top-0 left-0 max-lg:hidden"
@@ -110,17 +111,6 @@ export const Hero = () => {
           })}
         </div>
       </div>
-
-      {/*<div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
-        <div className="relative h-[793px] w-full">
-          <Image
-            src="/hero.webp"
-            alt="hero"
-            fill
-            className="rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
-          />
-        </div>
-      </div>*/}
     </section>
   );
 };
