@@ -1,9 +1,18 @@
-import { Award, GraduationCap, Award as AwardIcon, BookOpen, Sparkles, Shield, Check, Star, Globe, Brain, ArrowRight } from "lucide-react";
+import {
+  Award,
+  GraduationCap,
+  BookOpen,
+  Shield,
+  Sparkles,
+  Globe,
+  ExternalLink,
+  Star,
+} from "lucide-react";
 
-import { DashedLine } from "@/components/dashed-line";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DashedLine } from "@/components/dashed-line";
 import { education, certifications } from "@/data/credentials";
 
 export default function CredentialsPage() {
@@ -25,8 +34,8 @@ export default function CredentialsPage() {
             learning from industry leaders.
           </span>
           <span className="block">
-            From university coursework to specialized certifications from Google, Meta, AWS, and top
-            universities — every credential represents hands-on projects and verified skills.
+            From university coursework to verified certifications by Google, Meta, AWS, and top
+            universities — every credential represents hands-on projects and proven skills.
           </span>
         </p>
       </div>
@@ -67,19 +76,19 @@ export default function CredentialsPage() {
                 <Card className="mt-4 overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 group">
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <CardHeader className="pb-4">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                        <GraduationCap className="size-5" />
+                    <div className="flex items-center gap-4 mb-2">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                        <GraduationCap className="size-6" />
                       </div>
                       <div>
                         <CardTitle className="text-xl lg:text-2xl">{edu.degree}</CardTitle>
-                        <p className="text-muted-foreground text-sm">{edu.institution}</p>
+                        <p className="text-muted-foreground text-sm font-medium">{edu.institution}</p>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-center gap-3 text-muted-foreground">
-                      <AwardIcon className="size-4 shrink-0 text-muted-foreground/60" />
+                      <Award className="size-4 shrink-0 text-muted-foreground/60" />
                       <span className="font-medium text-foreground">{edu.details}</span>
                     </div>
                     <div className="flex items-center gap-3 text-muted-foreground">
@@ -103,7 +112,7 @@ export default function CredentialsPage() {
                         Operating Systems
                       </Badge>
                       <Badge variant="outline" className="bg-muted text-xs">
-                        Machine Learning Basics
+                        Machine Learning
                       </Badge>
                     </div>
                   </CardContent>
@@ -126,7 +135,7 @@ export default function CredentialsPage() {
       <section id="certifications" className="mb-16 lg:mb-24">
         <div className="mx-auto max-w-3xl text-center mb-12 lg:mb-16">
           <Badge variant="default" className="mb-4 text-xs font-semibold tracking-widest uppercase">
-            <AwardIcon className="mr-1.5 size-3" />
+            <Award className="mr-1.5 size-3" />
             Certifications
           </Badge>
           <h2 className="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
@@ -163,7 +172,7 @@ export default function CredentialsPage() {
                     </CardTitle>
                   </div>
                   <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                    <AwardIcon className="size-5" />
+                    <Award className="size-5" />
                   </div>
                 </div>
               </CardHeader>
@@ -243,7 +252,7 @@ export default function CredentialsPage() {
       <section className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/10 via-background to-primary/5 p-8 lg:p-12 text-center">
         <div className="relative z-10 max-w-2xl mx-auto">
           <Badge variant="default" className="mb-4 text-xs font-semibold tracking-widest uppercase">
-            <Brain className="mr-1.5 size-3" />
+            <Award className="mr-1.5 size-3" />
             Always Learning
           </Badge>
           <h3 className="text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl">
@@ -259,7 +268,7 @@ export default function CredentialsPage() {
             <Button asChild size="lg">
               <a href="/contact" className="flex items-center gap-2">
                 Let's Collaborate
-                <ArrowRight className="size-4" />
+                <ExternalLink className="size-4" />
               </a>
             </Button>
             <Button variant="outline" asChild size="lg">

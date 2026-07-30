@@ -1,4 +1,4 @@
-import { Code2, Server, Database, Cloud, Zap, Shield, GitBranch, TestTube } from "lucide-react";
+import { Code2, Server, Database, Cloud, Shield, GitBranch, TestTube, Brain } from "lucide-react";
 
 export const services = [
   {
@@ -7,6 +7,7 @@ export const services = [
     icon: Code2,
     features: ["Responsive, Accessible UIs", "Type-Safe APIs (tRPC, GraphQL, REST)", "Real-time Features (WebSockets, SSE)", "SEO & Performance Optimized"],
     highlight: "Production Ready",
+    illustration: "/features/build.svg",
   },
   {
     title: "Backend Engineering & APIs",
@@ -14,6 +15,7 @@ export const services = [
     icon: Server,
     features: ["PostgreSQL, MongoDB, Redis", "Microservices & Monoliths", "Auth (OAuth, JWT, Magic Links)", "Message Queues & Event Sourcing"],
     highlight: "Scalable Architecture",
+    illustration: "/resource-allocation/building.svg",
   },
   {
     title: "Cloud Infrastructure & DevOps",
@@ -21,6 +23,7 @@ export const services = [
     icon: Cloud,
     features: ["Docker & Kubernetes", "Terraform / Pulumi", "GitHub Actions / GitLab CI", "Observability (Logs, Metrics, Traces)"],
     highlight: "Infrastructure as Code",
+    illustration: "/resource-allocation/launching.svg",
   },
   {
     title: "Database Design & Optimization",
@@ -28,13 +31,15 @@ export const services = [
     icon: Database,
     features: ["Schema Design & Migrations", "Query Tuning & Indexing", "Read Replicas & Sharding", "Data Integrity & Consistency"],
     highlight: "Performance Tuned",
+    illustration: "/resource-allocation/planning.svg",
   },
   {
     title: "AI & ML Integration",
     description: "Integrating LLMs, embeddings, and ML models into production applications. RAG, agents, vector search, and prompt engineering.",
-    icon: Zap,
+    icon: Brain,
     features: ["OpenAI, Anthropic, Local LLMs", "Vector Databases (Pinecone, pgvector)", "RAG Pipelines & Agents", "Prompt Engineering & Evaluation"],
     highlight: "Production AI",
+    illustration: "/features/think.svg",
   },
   {
     title: "Security & Compliance",
@@ -42,6 +47,7 @@ export const services = [
     icon: Shield,
     features: ["OWASP Secure Coding", "Penetration Testing Prep", "GDPR / SOC2 Readiness", "Secrets Management & Rotation"],
     highlight: "Security First",
+    illustration: "/resource-allocation/understand.svg",
   },
   {
     title: "Developer Experience & Tooling",
@@ -49,6 +55,7 @@ export const services = [
     icon: GitBranch,
     features: ["Monorepo Setup (Turborepo, Nx)", "Shared Component Libraries", "Custom CLI Tools", "Documentation & Onboarding"],
     highlight: "Team Velocity",
+    illustration: "/features/improving.svg",
   },
   {
     title: "Testing & Quality Assurance",
@@ -56,5 +63,6 @@ export const services = [
     icon: TestTube,
     features: ["Vitest, Jest, Playwright, Cypress", "Contract Testing (Pact)", "Visual Regression Testing", "Load Testing (k6, Artillery)"],
     highlight: "Quality Gates",
+    illustration: "/features/build.svg",
   },
 ];

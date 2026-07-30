@@ -1,9 +1,9 @@
-import { ArrowRight, CheckCircle, Clock, Code, Rocket, Users } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Code, Rocket, Users, Shield } from "lucide-react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
-import { DashedLine } from "@/components/dashed-line";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "@/components/animate-ui/components/buttons/button";
+import { DashedLine } from "@/components/dashed-line";
 
 const processSteps = [
   {
@@ -12,7 +12,7 @@ const processSteps = [
     description: "Deep dive into your vision, requirements, and constraints. We define scope, tech stack, architecture, and success metrics.",
     icon: Code,
     duration: "1-2 weeks",
-    deliverables: ["Technical Specification", "Architecture Diagram", "Tech Stack Recommendation", "Project Roadmap & Timeline"],
+    deliverables: ["Technical Specification", "Architecture Diagram", "Tech Stack Recommendation", "Project Roadmap"],
   },
   {
     number: "02",
@@ -20,7 +20,7 @@ const processSteps = [
     description: "Transform requirements into tangible designs — from system architecture diagrams to interactive UI prototypes.",
     icon: Users,
     duration: "1-3 weeks",
-    deliverables: ["System Design Docs", "Database Schema", "API Contracts", "UI/UX Prototypes (Figma)"],
+    deliverables: ["System Design Docs", "Database Schema", "API Contracts", "UI/UX Prototypes"],
   },
   {
     number: "03",
@@ -28,7 +28,7 @@ const processSteps = [
     description: "Building the product with clean, tested, documented code. Regular demos, code reviews, and iterative feedback loops.",
     icon: Rocket,
     duration: "4-12+ weeks",
-    deliverables: ["Production-Ready Codebase", "Automated Test Suite", "CI/CD Pipeline", "Documentation & Runbooks"],
+    deliverables: ["Production-Ready Codebase", "Automated Test Suite", "CI/CD Pipeline", "Documentation"],
   },
   {
     number: "04",
@@ -36,7 +36,7 @@ const processSteps = [
     description: "Smooth deployment, monitoring setup, and post-launch support. We measure, learn, and ship improvements fast.",
     icon: CheckCircle,
     duration: "Ongoing",
-    deliverables: ["Production Deployment", "Monitoring & Alerting", "Performance Baselines", "Retrospective & Next Steps"],
+    deliverables: ["Production Deployment", "Monitoring & Alerting", "Performance Baselines", "Retrospective"],
   },
 ];
 
@@ -47,6 +47,7 @@ const engagementModels = [
     bestFor: "Startups, MVPs, New Products",
     features: ["Architecture & Tech Decisions", "Full Implementation", "DevOps & Deployment", "Ongoing Maintenance"],
     cta: "Start a Project",
+    icon: Code,
   },
   {
     title: "Technical Consulting & Architecture",
@@ -54,6 +55,7 @@ const engagementModels = [
     bestFor: "Scaling Teams, Legacy Modernization",
     features: ["System Architecture Review", "Performance Optimization", "Tech Debt Strategy", "Team Mentoring"],
     cta: "Book a Consultation",
+    icon: Shield,
   },
   {
     title: "Staff Augmentation & Team Lead",
@@ -61,6 +63,7 @@ const engagementModels = [
     bestFor: "Capacity Gaps, Critical Projects",
     features: ["Senior Engineering Capacity", "Code Reviews & Mentoring", "Architecture Decisions", "Delivery Acceleration"],
     cta: "Hire Me",
+    icon: Users,
   },
 ];
 
@@ -85,7 +88,7 @@ export function ServicesProcess() {
       <div className="mt-16">
         <ol className="relative">
           <DashedLine orientation="vertical" className="absolute inset-y-0 left-0 h-full lg:left-4" />
-          {processSteps.map((step, index) => (
+          {processSteps.map((step) => (
             <li key={step.number} className="mb-16 ml-8 lg:ml-16 last:mb-0 relative">
               <div className="absolute -left-3 lg:-left-6 top-1 flex size-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-mono font-bold text-sm ring-4 ring-background">
                 {step.number}
@@ -100,8 +103,8 @@ export function ServicesProcess() {
                 {step.description}
               </p>
               <div className="flex flex-wrap gap-2">
-                {step.deliverables.map((deliverable, i) => (
-                  <Badge key={i} variant="outline" className="bg-muted/50 text-xs">
+                {step.deliverables.map((deliverable) => (
+                  <Badge key={deliverable} variant="outline" className="bg-muted/50 text-xs">
                     {deliverable}
                   </Badge>
                 ))}
@@ -119,25 +122,31 @@ export function ServicesProcess() {
       </div>
 
       <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-        {engagementModels.map((model, index) => (
-          <Card key={model.title} className="relative overflow-hidden">
+        {engagementModels.map((model) => (
+          <Card key={model.title} className="relative overflow-hidden group">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity" />
             <CardHeader>
-              <CardTitle className="text-lg">{model.title}</CardTitle>
-              <p className="text-muted-foreground text-sm mt-1">{model.description}</p>
+              <div className="flex items-center gap-3 mb-2">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                  <model.icon className="size-5" />
+                </div>
+                <CardTitle className="text-lg">{model.title}</CardTitle>
+              </div>
+              <p className="text-muted-foreground text-sm">{model.description}</p>
             </CardHeader>
             <CardContent className="space-y-4">
               <Badge variant="secondary" className="text-xs font-medium">
                 Best for: {model.bestFor}
               </Badge>
               <ul className="space-y-2">
-                {model.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                {model.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <CheckCircle className="size-4 text-primary shrink-0" />
                     {feature}
                   </li>
                 ))}
               </ul>
-              <Button variant="outline" className="w-full mt-2" asChild>
+              <Button variant="outline" className="w-full mt-2 group-hover:border-primary group-hover:text-primary transition-all" asChild>
                 <a href="/contact" className="flex items-center justify-center gap-2">
                   {model.cta}
                   <ArrowRight className="size-4" />
