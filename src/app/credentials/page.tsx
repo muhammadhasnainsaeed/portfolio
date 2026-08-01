@@ -18,7 +18,7 @@ import { Background } from "@/components/background";
 
 export default function CredentialsPage() {
   return (
-    <Background>
+    <Background className="via-muted to-muted/80">
       <div className="container max-w-5xl py-28 lg:py-32 lg:pt-44">
         {/* Page Header */}
         <div className="mx-auto mb-16 max-w-3xl text-center lg:mb-24">
@@ -143,9 +143,9 @@ export default function CredentialsPage() {
         </section>
 
         {/* Divider */}
-        <div className="relative my-16 flex items-center justify-center lg:my-24">
-          <DashedLine className="w-full" />
-          <span className="bg-muted text-muted-foreground absolute px-4 font-mono text-xs font-medium tracking-widest">
+        <div className="relative flex items-center justify-center lg:my-24">
+          <DashedLine className="text-muted-foreground" />
+          <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
             CERTIFICATIONS
           </span>
         </div>

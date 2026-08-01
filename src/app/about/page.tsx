@@ -5,7 +5,7 @@ import AboutSkills from "@/components/blocks/about-skills";
 
 export default function AboutPage() {
   return (
-    <Background>
+    <Background className="via-muted to-muted/80">
       <div className="py-28 lg:py-32 lg:pt-44">
         <AboutHero />
         <AboutSkills />

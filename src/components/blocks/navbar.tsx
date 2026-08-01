@@ -28,13 +28,18 @@ const ITEMS = [
     href: "/about",
     dropdownItems: [
       {
+        title: "Introduction",
+        href: "/about",
+        description: "A brief overview of who I am and what I do.",
+      },
+      {
         title: "Experience",
         href: "/about#experience",
         description: "A look at my professional journey and work experience.",
       },
       {
-        title: "Education",
-        href: "/about#education",
+        title: "Credentials",
+        href: "/credentials",
         description: "My academic background and educational journey.",
       },
       {
@@ -45,7 +50,6 @@ const ITEMS = [
       },
     ],
   },
-  { label: "Credentials", href: "/credentials" },
   { label: "Projects", href: "/projects" },
   { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
@@ -59,7 +63,7 @@ export const Navbar = () => {
   return (
     <section
       className={cn(
-        "bg-background/70 fixed left-1/2 z-50 mt-2.5 w-[min(90%,750px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
+        "bg-background/70 fixed left-1/2 z-50 mt-2.5 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
         "top-5 lg:top-12",
       )}
     >
@@ -82,7 +86,6 @@ export const Navbar = () => {
                 <NavigationMenuItem key={link.label} className="">
                   <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
                     <NavigationMenuLink
-                      href={link.href}
                       className={cn(
                         "relative bg-transparent text-sm font-medium transition-opacity hover:opacity-75",
                       )}
@@ -131,7 +134,6 @@ export const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
           <ThemeTogglerButton variant={"outline"} modes={["light", "dark"]} />
           <Link
