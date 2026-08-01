@@ -9,6 +9,8 @@ import { usePathname } from "next/navigation";
 import { ChevronRight, Download, Github } from "lucide-react";
 
 import { ThemeTogglerButton } from "../animate-ui/components/buttons/theme-toggler";
+import { buttonVariants } from "../ui/button";
+
 import { Button } from "@/components/animate-ui/components/buttons/button";
 import {
   NavigationMenu,
@@ -19,7 +21,6 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "../ui/button";
 
 const ITEMS = [
   {
@@ -58,7 +59,7 @@ export const Navbar = () => {
   return (
     <section
       className={cn(
-        "bg-background/70 fixed mt-2.5 left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
+        "bg-background/70 fixed mt-2.5 left-1/2 z-50 w-[min(90%,750px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
         "top-5 lg:top-12",
       )}
     >

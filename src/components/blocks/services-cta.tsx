@@ -3,12 +3,11 @@ import { ArrowRight, Brain } from "lucide-react";
 import { Badge } from "../ui/badge";
 
 import { Button } from "@/components/animate-ui/components/buttons/button";
-import { DashedLine } from "@/components/dashed-line";
 
 export function ServicesCTA() {
   return (
     <section className="container max-w-5xl pb-28 lg:pb-32">
-      <div className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/10 via-background to-primary/5 p-8 lg:p-12 text-center">
+      <div className="relative overflow-hidden rounded-3xl border bg-linear-to-br from-primary/10 via-background to-primary/5 p-8 lg:p-12 text-center">
         <div className="relative z-10 max-w-2xl mx-auto">
           <Badge variant="default" className="mb-4 text-xs font-semibold tracking-widest uppercase">
             <Brain className="mr-1.5 size-3" />

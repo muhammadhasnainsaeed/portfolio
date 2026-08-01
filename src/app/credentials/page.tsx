@@ -14,10 +14,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { education, certifications } from "@/data/credentials";
+import { Background } from "@/components/background";
 
 export default function CredentialsPage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 lg:py-20">
+    <Background>
+    <div className="container max-w-5xl py-28 lg:py-32 lg:pt-44">
       {/* Page Header */}
       <div className="mx-auto max-w-3xl text-center mb-16 lg:mb-24">
         <Badge variant="default" className="mb-4 text-xs font-semibold tracking-widest uppercase">
@@ -65,7 +67,7 @@ export default function CredentialsPage() {
         <div className="relative">
           <DashedLine orientation="vertical" className="absolute inset-y-0 left-0 h-full lg:left-4" />
           <ol className="relative space-y-10 lg:space-y-12">
-            {education.map((edu, index) => (
+            {education.map((edu) => (
               <li key={edu.period} className="relative lg:pl-16">
                 <span className="bg-muted-foreground ring-muted absolute -left-2.5 lg:-left-5 mt-2 flex size-5 items-center justify-center rounded-full ring-4 lg:size-6">
                   <GraduationCap className="size-3 text-muted-foreground/60" />
@@ -155,12 +157,12 @@ export default function CredentialsPage() {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {certifications.map((cert, index) => (
+          {certifications.map((cert) => (
             <Card
               key={cert.name}
               className="relative overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 group"
             >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary/50 via-primary to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity" />
               <CardHeader className="pb-3">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1 min-w-0">
@@ -249,7 +251,7 @@ export default function CredentialsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/10 via-background to-primary/5 p-8 lg:p-12 text-center">
+      <section className="relative overflow-hidden rounded-3xl border bg-linear-to-br from-primary/10 via-background to-primary/5 p-8 lg:p-12 text-center">
         <div className="relative z-10 max-w-2xl mx-auto">
           <Badge variant="default" className="mb-4 text-xs font-semibold tracking-widest uppercase">
             <Award className="mr-1.5 size-3" />
@@ -279,8 +281,9 @@ export default function CredentialsPage() {
             </Button>
           </div>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent opacity-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent opacity-20" />
       </section>
-    </div>
+      </div>
+      </Background>
   );
 }
