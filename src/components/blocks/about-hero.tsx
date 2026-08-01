@@ -2,10 +2,11 @@ import React from "react";
 
 import Image from "next/image";
 
+import { CircleUserRound } from "lucide-react";
+
 import { Badge } from "../ui/badge";
 
 import { DashedLine } from "@/components/dashed-line";
-import { CircleUserRound } from "lucide-react";
 
 const stats = [
   {

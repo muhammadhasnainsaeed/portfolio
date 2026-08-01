@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import {
@@ -12,9 +13,8 @@ import {
 
 import { Badge } from "../ui/badge";
 
-import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/animate-ui/components/buttons/button";
-import Image from "next/image";
+import { DashedLine } from "@/components/dashed-line";
 
 const features = [
   {

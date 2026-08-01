@@ -1,6 +1,7 @@
 import { Code2, ArrowRight } from "lucide-react";
 
 import { Badge } from "../ui/badge";
+
 import { Button } from "@/components/animate-ui/components/buttons/button";
 import { DashedLine } from "@/components/dashed-line";
 

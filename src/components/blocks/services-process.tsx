@@ -2,6 +2,7 @@ import { ArrowRight, CheckCircle, Clock, Code, Rocket, Users, Shield } from "luc
 
 import { Badge } from "../ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+
 import { Button } from "@/components/animate-ui/components/buttons/button";
 import { DashedLine } from "@/components/dashed-line";
 

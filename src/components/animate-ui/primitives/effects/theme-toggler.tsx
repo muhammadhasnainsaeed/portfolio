@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+
 import { flushSync } from "react-dom";
 
 type ThemeSelection = "light" | "dark" | "system";

@@ -9,10 +9,10 @@ import {
   Star,
 } from "lucide-react";
 
+import { DashedLine } from "@/components/dashed-line";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { DashedLine } from "@/components/dashed-line";
 import { education, certifications } from "@/data/credentials";
 
 export default function CredentialsPage() {
@@ -74,7 +74,7 @@ export default function CredentialsPage() {
                   {edu.period}
                 </p>
                 <Card className="mt-4 overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 group">
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary/50 via-primary to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <CardHeader className="pb-4">
                     <div className="flex items-center gap-4 mb-2">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
