@@ -13,14 +13,25 @@ export const certifications = [
     issuer: "Coursera · DeepLearning.AI",
     date: "2024",
     credentialId: "Coursera ML-SPEC-2024",
-    skills: ["Machine Learning", "Neural Networks", "TensorFlow", "Supervised Learning"],
+    skills: [
+      "Machine Learning",
+      "Neural Networks",
+      "TensorFlow",
+      "Supervised Learning",
+    ],
   },
   {
     name: "Google Data Analytics Professional Certificate",
     issuer: "Coursera · Google",
     date: "2023",
     credentialId: "Coursera GDA-2023",
-    skills: ["Data Analysis", "SQL", "Tableau", "R Programming", "Data Visualization"],
+    skills: [
+      "Data Analysis",
+      "SQL",
+      "Tableau",
+      "R Programming",
+      "Data Visualization",
+    ],
   },
   {
     name: "Meta Front-End Developer Professional Certificate",
@@ -34,7 +45,12 @@ export const certifications = [
     issuer: "Coursera · Amazon Web Services",
     date: "2022",
     credentialId: "Coursera AWS-CP-2022",
-    skills: ["Cloud Computing", "AWS Core Services", "Security", "Pricing Models"],
+    skills: [
+      "Cloud Computing",
+      "AWS Core Services",
+      "Security",
+      "Pricing Models",
+    ],
   },
   {
     name: "Python for Everybody Specialization",
@@ -48,6 +64,12 @@ export const certifications = [
     issuer: "Coursera · DeepLearning.AI",
     date: "2024",
     credentialId: "Coursera DL-SPEC-2024",
-    skills: ["Deep Learning", "CNNs", "RNNs", "Transformers", "TensorFlow/Keras"],
+    skills: [
+      "Deep Learning",
+      "CNNs",
+      "RNNs",
+      "Transformers",
+      "TensorFlow/Keras",
+    ],
   },
 ];

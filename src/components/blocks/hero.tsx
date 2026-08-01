@@ -45,7 +45,7 @@ export const Hero = () => {
       <div className="container flex max-w-5xl flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <Badge className="border-secondary-foreground max-sm:text-[11px] sm:mb-4 border-dashed">
+          <Badge className="border-secondary-foreground border-dashed max-sm:text-[11px] sm:mb-4">
             <Zap />
             SOFTWARE ENGINEER • FULL-STACK DEVELOPER
           </Badge>
@@ -83,7 +83,7 @@ export const Hero = () => {
         </div>
 
         {/* Right side - Features */}
-        <div className="relative flex lg:min-w-96 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
+        <div className="relative flex flex-col justify-center space-y-5 max-lg:pt-10 lg:min-w-96 lg:pl-10">
           <DashedLine
             orientation="vertical"
             className="absolute top-0 left-0 max-lg:hidden"

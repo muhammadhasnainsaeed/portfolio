@@ -5,7 +5,6 @@ import { Badge } from "../ui/badge";
 
 import { experience } from "@/data/about";
 
-
 function AboutExp() {
   return (
     <section id="experience" className="mt-12">

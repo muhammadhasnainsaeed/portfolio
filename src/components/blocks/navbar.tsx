@@ -59,7 +59,7 @@ export const Navbar = () => {
   return (
     <section
       className={cn(
-        "bg-background/70 fixed mt-2.5 left-1/2 z-50 w-[min(90%,750px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
+        "bg-background/70 fixed left-1/2 z-50 mt-2.5 w-[min(90%,750px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
         "top-5 lg:top-12",
       )}
     >
@@ -133,7 +133,7 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
-          <ThemeTogglerButton variant={"outline"} modes={['light', 'dark']} />
+          <ThemeTogglerButton variant={"outline"} modes={["light", "dark"]} />
           <Link
             href="https://uzfnhqxt01hltmw6.public.blob.vercel-storage.com/Hasnain-saeed.pdf?download=1"
             className="max-lg:hidden"
@@ -194,7 +194,11 @@ export const Navbar = () => {
                       openDropdown === link.label ? null : link.label,
                     )
                   }
-                  className={buttonVariants({ variant: "ghost", className:"flex! w-full! items-center justify-between! px-0! py-0! h-auto! text-base! font-medium!" })}
+                  className={buttonVariants({
+                    variant: "ghost",
+                    className:
+                      "flex! h-auto! w-full! items-center justify-between! px-0! py-0! text-base! font-medium!",
+                  })}
                 >
                   {link.label}
                   <ChevronRight
@@ -242,7 +246,11 @@ export const Navbar = () => {
                 key={link.label}
                 href={link.href}
 
-                  className={buttonVariants({ variant: "ghost", className:"flex! w-full! items-center justify-between! py-4 px-0! h-auto! text-base! font-medium! first:pt-0 last:pb-0" })}
+                className={buttonVariants({
+                  variant: "ghost",
+                  className:
+                    "flex! h-auto! w-full! items-center justify-between! px-0! py-4 text-base! font-medium! first:pt-0 last:pb-0",
+                })}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}

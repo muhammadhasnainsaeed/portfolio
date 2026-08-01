@@ -53,11 +53,16 @@ export function AboutHero() {
                 <div className="font-display text-4xl tracking-wide md:text-5xl">
                   {stat.value}
                 </div>
-                <div className="text-muted-foreground max-sm:text-xs">{stat.label}</div>
+                <div className="text-muted-foreground max-sm:text-xs">
+                  {stat.label}
+                </div>
               </div>
 
               {i !== stats.length - 1 && (
-                <DashedLine orientation="vertical" className="mx-4 h-[inherit]" />
+                <DashedLine
+                  orientation="vertical"
+                  className="mx-4 h-[inherit]"
+                />
               )}
             </React.Fragment>
           ))}

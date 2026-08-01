@@ -39,17 +39,17 @@ export const Features = () => {
         </div>
 
         {/* Content */}
-        <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 md:mt-24 md:grid-cols-2">
+        <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:mt-24 md:grid-cols-2 md:gap-0">
           <div>
-          <Badge
-            variant={"default"}
-            className="col-span-2 mb-2 text-xs font-semibold tracking-widest uppercase"
-          >
-            <Workflow /> HOW I WORK
-          </Badge>
-          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Building with a focus on quality, performance, and impact.
-          </h2>
+            <Badge
+              variant={"default"}
+              className="col-span-2 mb-2 text-xs font-semibold tracking-widest uppercase"
+            >
+              <Workflow /> HOW I WORK
+            </Badge>
+            <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+              Building with a focus on quality, performance, and impact.
+            </h2>
           </div>
 
           <p className="text-muted-foreground leading-snug">

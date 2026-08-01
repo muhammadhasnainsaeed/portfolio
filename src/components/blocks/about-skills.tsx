@@ -6,7 +6,6 @@ import { Card, CardContent } from "../ui/card";
 
 import { skills } from "@/data/about";
 
-
 function AboutSkills() {
   return (
     <section id="skills" className="mt-12 pb-28 lg:pb-32">
