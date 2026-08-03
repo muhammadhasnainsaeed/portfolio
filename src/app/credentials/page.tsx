@@ -1,7 +1,6 @@
 import {
   Award,
   GraduationCap,
-  BookOpen,
   Shield,
   Sparkles,
   Globe,
@@ -10,12 +9,12 @@ import {
   Book,
 } from "lucide-react";
 
+import { Background } from "@/components/background";
 import { DashedLine } from "@/components/dashed-line";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { education, certifications } from "@/data/credentials";
-import { Background } from "@/components/background";
 
 export default function CredentialsPage() {
   return (
@@ -107,21 +106,11 @@ export default function CredentialsPage() {
                     <Badge variant="secondary">
                       Data Structures & Algorithms
                     </Badge>
-                    <Badge variant="secondary">
-                      Software Engineering
-                    </Badge>
-                    <Badge variant="secondary">
-                      Database Systems
-                    </Badge>
-                    <Badge variant="secondary">
-                      Computer Networks
-                    </Badge>
-                    <Badge variant="secondary">
-                      Operating Systems
-                    </Badge>
-                    <Badge variant="secondary">
-                      Machine Learning
-                    </Badge>
+                    <Badge variant="secondary">Software Engineering</Badge>
+                    <Badge variant="secondary">Database Systems</Badge>
+                    <Badge variant="secondary">Computer Networks</Badge>
+                    <Badge variant="secondary">Operating Systems</Badge>
+                    <Badge variant="secondary">Machine Learning</Badge>
                   </div>
                 </div>
               </div>
@@ -194,7 +183,7 @@ export default function CredentialsPage() {
                       {cert.date}
                     </span>
                     <span className="text-muted-foreground/50">•</span>
-                    <span className="font-mono truncate text-xs">
+                    <span className="truncate font-mono text-xs">
                       {cert.credentialId}
                     </span>
                   </div>
