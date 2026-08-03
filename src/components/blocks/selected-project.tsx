@@ -31,7 +31,7 @@ function SelectedProject() {
           href="/projects"
           className={buttonVariants({
             size: "default",
-            variant: "outline",
+            variant: "secondary",
           })}
         >
           All projects <ArrowRight className="h-3 w-3" />
