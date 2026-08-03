@@ -7,6 +7,7 @@ import {
   Globe,
   ExternalLink,
   Star,
+  Book,
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
@@ -73,72 +74,58 @@ export default function CredentialsPage() {
           </div>
 
           <div className="relative">
-            <DashedLine
-              orientation="vertical"
-              className="absolute inset-y-0 left-0 h-full lg:left-4"
-            />
-            <ol className="relative space-y-10 lg:space-y-12">
-              {education.map((edu) => (
-                <li key={edu.period} className="relative lg:pl-16">
-                  <span className="bg-muted-foreground ring-muted absolute -left-2.5 mt-2 flex size-5 items-center justify-center rounded-full ring-4 lg:-left-5 lg:size-6">
-                    <GraduationCap className="text-muted-foreground/60 size-3" />
-                  </span>
-                  <p className="text-muted-foreground text-xs font-medium tracking-widest uppercase">
+            {education.map((edu) => (
+              <div
+                key={edu.degree + edu.institution}
+                className="flex flex-col gap-3 py-7 md:flex-row md:gap-8"
+              >
+                <div className="shrink-0 md:w-48">
+                  <span className="text-muted-foreground text-sm">
                     {edu.period}
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col gap-2">
+                  <div>
+                    <span className="text-foreground text-2xl font-semibold">
+                      {edu.degree}
+                    </span>
+                    <span className="text-muted-foreground text-base">
+                      {" "}
+                      — {edu.institution}
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground flex items-center gap-1 text-sm leading-relaxed">
+                    <Award className="text-muted-foreground/60 size-4 shrink-0" />
+                    {edu.details}
                   </p>
-                  <Card className="hover:border-primary/50 hover:shadow-primary/5 group mt-4 overflow-hidden transition-all duration-300 hover:shadow-lg">
-                    <div className="from-primary/50 via-primary to-primary/50 absolute top-0 right-0 left-0 h-1 bg-linear-to-r opacity-0 transition-opacity group-hover:opacity-100" />
-                    <CardHeader className="pb-4">
-                      <div className="mb-2 flex items-center gap-4">
-                        <div className="bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground flex h-12 w-12 shrink-0 items-center justify-center rounded-xl transition-all">
-                          <GraduationCap className="size-6" />
-                        </div>
-                        <div>
-                          <CardTitle className="text-xl lg:text-2xl">
-                            {edu.degree}
-                          </CardTitle>
-                          <p className="text-muted-foreground text-sm font-medium">
-                            {edu.institution}
-                          </p>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="text-muted-foreground flex items-center gap-3">
-                        <Award className="text-muted-foreground/60 size-4 shrink-0" />
-                        <span className="text-foreground font-medium">
-                          {edu.details}
-                        </span>
-                      </div>
-                      <div className="text-muted-foreground flex items-center gap-3">
-                        <BookOpen className="text-muted-foreground/60 size-4 shrink-0" />
-                        <span className="font-medium">Core Focus Areas</span>
-                      </div>
-                      <div className="flex flex-wrap gap-2 border-t pt-2">
-                        <Badge variant="outline" className="bg-muted text-xs">
-                          Data Structures & Algorithms
-                        </Badge>
-                        <Badge variant="outline" className="bg-muted text-xs">
-                          Software Engineering
-                        </Badge>
-                        <Badge variant="outline" className="bg-muted text-xs">
-                          Database Systems
-                        </Badge>
-                        <Badge variant="outline" className="bg-muted text-xs">
-                          Computer Networks
-                        </Badge>
-                        <Badge variant="outline" className="bg-muted text-xs">
-                          Operating Systems
-                        </Badge>
-                        <Badge variant="outline" className="bg-muted text-xs">
-                          Machine Learning
-                        </Badge>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </li>
-              ))}
-            </ol>
+                  <div className="text-muted-foreground flex items-center gap-1 text-sm leading-relaxed">
+                    <Book className="text-muted-foreground/60 size-4 shrink-0" />
+                    Core Focus Areas
+                  </div>
+                  <DashedLine />
+                  <div className="mt-1 flex flex-wrap gap-2">
+                    <Badge variant="secondary">
+                      Data Structures & Algorithms
+                    </Badge>
+                    <Badge variant="secondary">
+                      Software Engineering
+                    </Badge>
+                    <Badge variant="secondary">
+                      Database Systems
+                    </Badge>
+                    <Badge variant="secondary">
+                      Computer Networks
+                    </Badge>
+                    <Badge variant="secondary">
+                      Operating Systems
+                    </Badge>
+                    <Badge variant="secondary">
+                      Machine Learning
+                    </Badge>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -207,7 +194,7 @@ export default function CredentialsPage() {
                       {cert.date}
                     </span>
                     <span className="text-muted-foreground/50">•</span>
-                    <span className="font-mono text-xs">
+                    <span className="font-mono truncate text-xs">
                       {cert.credentialId}
                     </span>
                   </div>
@@ -244,7 +231,7 @@ export default function CredentialsPage() {
                       asChild
                     >
                       <a
-                        href={`https://coursera.org/verify/${cert.credentialId}`}
+                        href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1"
@@ -260,7 +247,7 @@ export default function CredentialsPage() {
           </div>
 
           {/* Stats Summary */}
-          <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4 lg:mt-16">
+          {/*<div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4 lg:mt-16">
             <div className="bg-muted/50 rounded-2xl border p-6 text-center">
               <div className="font-display text-primary text-4xl font-bold tracking-wide md:text-5xl">
                 {certifications.length}+
@@ -298,7 +285,7 @@ export default function CredentialsPage() {
                 Continuous Learning
               </div>
             </div>
-          </div>
+          </div>*/}
         </section>
 
         {/* CTA Section */}
