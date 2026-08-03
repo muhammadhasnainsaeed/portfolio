@@ -23,6 +23,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
+  { label: "Projects", href: "/projects" },
   {
     label: "About",
     href: "/about",
@@ -37,11 +38,11 @@ const ITEMS = [
         href: "/about#experience",
         description: "A look at my professional journey and work experience.",
       },
-      {
-        title: "Credentials",
-        href: "/credentials",
-        description: "My academic background and educational journey.",
-      },
+      // {
+      //   title: "Credentials",
+      //   href: "/credentials",
+      //   description: "My academic background and educational journey.",
+      // },
       {
         title: "Skills",
         href: "/about#skills",
@@ -50,8 +51,8 @@ const ITEMS = [
       },
     ],
   },
-  { label: "Projects", href: "/projects" },
-  { label: "Services", href: "/services" },
+  { label: "Credentials", href: "/credentials" },
+  // { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];
 
