@@ -2,8 +2,7 @@ export const selectedProject = [
   {
     title: "Alnafi — Online Learning Platform",
     action: "2022",
-    image:
-      "/projects/alnafi.avif",
+    image: "/projects/alnafi.avif",
     link: "https://alnafi.com/",
     description:
       "A modern EdTech platform that empowers learners with online courses, professional certifications, and career-focused learning experiences.",
@@ -22,8 +21,7 @@ export const selectedProject = [
   {
     title: "TrainerFlix — Online Training Platform",
     action: "2024",
-    image:
-      "/projects/trainerflix.avif",
+    image: "/projects/trainerflix.avif",
     link: "https://trainerflix.app/",
     description:
       "A modern training platform designed to help users discover and access engaging fitness and educational content through a seamless digital experience.",
@@ -39,8 +37,7 @@ export const selectedProject = [
   {
     title: "Victus — Digital Health & Wellness Platform",
     action: "2024",
-    image:
-      "/projects/victus.avif",
+    image: "/projects/victus.avif",
     link: "https://victusapp.com/",
     description:
       "A modern health and wellness platform designed to help users manage their fitness journey, track progress, and build healthier habits through a seamless digital experience.",
@@ -60,8 +57,7 @@ export const projects = [
   {
     title: "Alnafi — Online Learning Platform",
     action: "2022",
-    image:
-      "/projects/alnafi.avif",
+    image: "/projects/alnafi.avif",
     link: "https://alnafi.com/",
     description:
       "A modern EdTech platform that empowers learners with online courses, professional certifications, and career-focused learning experiences.",
@@ -80,8 +76,7 @@ export const projects = [
   {
     title: "TrainerFlix — Online Training Platform",
     action: "2024",
-    image:
-      "/projects/trainerflix.avif",
+    image: "/projects/trainerflix.avif",
     link: "https://trainerflix.app/",
     description:
       "A modern training platform designed to help users discover and access engaging fitness and educational content through a seamless digital experience.",
@@ -97,8 +92,7 @@ export const projects = [
   {
     title: "Victus — Digital Health & Wellness Platform",
     action: "2024",
-    image:
-      "/projects/victus.avif",
+    image: "/projects/victus.avif",
     link: "https://victusapp.com/",
     description:
       "A modern health and wellness platform designed to help users manage their fitness journey, track progress, and build healthier habits through a seamless digital experience.",
@@ -115,8 +109,7 @@ export const projects = [
   {
     title: "TipTube — Video Tipping Platform",
     action: "2023",
-    image:
-      "/projects/tiptube.avif",
+    image: "/projects/tiptube.avif",
     link: "https://tiptube.app/",
     description:
       "A modern platform that enables viewers to support their favorite video creators by sending tips, making it easier for creators to monetize their content and connect with their audience.",
@@ -173,8 +166,7 @@ export const projects = [
   {
     title: "Al Nafi Cloud — Cloud & Emerging Technology Platform",
     action: "2023",
-    image:
-      "/projects/alnafi-cloud.avif",
+    image: "/projects/alnafi-cloud.avif",
     link: "https://alnafi.cloud/",
     description:
       "A hands-on technology learning platform offering real-world labs and practical training in cloud computing, cybersecurity, AI, DevOps, and other emerging technologies to help learners build job-ready skills.",

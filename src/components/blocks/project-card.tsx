@@ -31,7 +31,7 @@ function ProjectCard({ project }: { project: Project }) {
         alt={project.title}
         width={1024}
         height={576}
-        className="relative z-20 aspect-video w-full object-cover"
+        className="relative z-20 aspect-video w-full object-cover object-top-left"
       />
       <CardHeader>
         <CardAction>

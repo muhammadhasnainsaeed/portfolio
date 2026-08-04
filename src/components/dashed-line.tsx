@@ -25,12 +25,12 @@ export const DashedLine = ({
             ? [
                 "h-px w-full",
                 "bg-[repeating-linear-gradient(90deg,transparent,transparent_4px,currentColor_4px,currentColor_10px)]",
-                "[mask-image:linear-gradient(90deg,transparent,black_25%,black_75%,transparent)]",
+                "mask-[linear-gradient(90deg,transparent,black_25%,black_75%,transparent)]",
               ]
             : [
                 "h-full w-px",
                 "bg-[repeating-linear-gradient(180deg,transparent,transparent_4px,currentColor_4px,currentColor_10px)]",
-                "[mask-image:linear-gradient(180deg,transparent,black_25%,black_75%,transparent)]",
+                "mask-[linear-gradient(180deg,transparent,black_25%,black_75%,transparent)]",
               ],
         )}
       />
