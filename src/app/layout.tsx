@@ -63,16 +63,21 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Muhammad Hasnain Saeed - Software Engineer",
-    template: "%s | Muhammad Hasnain Saeed",
+    default: "Muhammad Hasnain Saeed | Software Engineer",
+    template: "%s | Hasnain Saeed",
   },
+
   description:
-    "Muhammad Hasnain Saeed is a Software Engineer who builds modern web applications and digital experiences with thoughtful engineering, clean design, and scalable technologies.",
+    "Muhammad Hasnain Saeed is a Software Engineer and Full-Stack Developer building modern, scalable, and user-focused digital experiences with clean code and thoughtful engineering.",
+
   keywords: [
     "Muhammad Hasnain Saeed",
     "Hasnain Saeed",
+    "Muhammad Hasnain",
+    "mhasnainsaeed",
+    "mhasnain",
     "Software Engineer",
-    "Full Stack Developer",
+    "Full-Stack Developer",
     "Web Developer",
     "Next.js Developer",
     "React Developer",
@@ -82,42 +87,29 @@ export const metadata: Metadata = {
     "Backend Developer",
     "Software Engineer Portfolio",
     "Developer Portfolio",
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "shadcn/ui",
   ],
+
   authors: [
     {
       name: "Muhammad Hasnain Saeed",
       url: "https://github.com/muhammadhasnainsaeed",
     },
   ],
+
   creator: "Muhammad Hasnain Saeed",
   publisher: "Muhammad Hasnain Saeed",
+
   robots: {
     index: true,
     follow: true,
   },
-  icons: {
-    icon: [
-      { url: "/favicon/favicon.ico", sizes: "48x48" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-    ],
-    apple: [
-      {
-        url: "/favicon/apple-touch-icon.png",
-        sizes: "180x180",
-      },
-    ],
-    shortcut: [{ url: "/favicon/favicon.ico" }],
-  },
+
+  // icons...
+
   openGraph: {
-    title: "Muhammad Hasnain Saeed - Software Engineer",
+    title: "Muhammad Hasnain Saeed | Software Engineer",
     description:
-      "A collection of projects, experiments, and digital experiences built with a focus on thoughtful engineering, clean design, and solving real-world problems.",
+      "Software Engineer and Full-Stack Developer building modern, scalable, and user-focused digital experiences with clean code and thoughtful engineering.",
     siteName: "Muhammad Hasnain Saeed",
     type: "website",
     images: [
@@ -125,15 +117,16 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Muhammad Hasnain Saeed - Software Engineer",
+        alt: "Muhammad Hasnain Saeed | Software Engineer",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Hasnain Saeed - Software Engineer",
+    title: "Muhammad Hasnain Saeed | Software Engineer",
     description:
-      "Software Engineer building modern web applications and digital experiences with thoughtful engineering and clean design.",
+      "Software Engineer and Full-Stack Developer building modern, scalable, and user-focused digital experiences.",
     images: ["/og-image.jpg"],
     creator: "@m_hasnain_saeed",
   },
