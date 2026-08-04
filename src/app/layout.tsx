@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 
 import type { Metadata } from "next";
+
 
 import { Footer } from "@/components/blocks/footer";
 import { Navbar } from "@/components/blocks/navbar";
@@ -105,6 +107,21 @@ export const metadata: Metadata = {
     follow: true,
   },
 
+  icons: {
+      icon: [
+        { url: "/favicon/favicon.ico", sizes: "48x48" },
+        { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+        { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      ],
+      apple: [
+        {
+          url: "/favicon/apple-touch-icon.png",
+          sizes: "180x180",
+        },
+      ],
+      shortcut: [{ url: "/favicon/favicon.ico" }],
+    },
+
   openGraph: {
     title: "Muhammad Hasnain Saeed | Software Engineer",
     description:
@@ -132,6 +149,35 @@ export const metadata: Metadata = {
   },
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Muhammad Hasnain Saeed",
+  alternateName: [
+    "Hasnain Saeed",
+    "Muhammad Hasnain",
+    "mhasnainsaeed",
+    "mhasnain",
+    "m_hasnain_saeed",
+  ],
+  url: "https://hasnainsaeed.vercel.app",
+  jobTitle: "Software Engineer",
+  description:
+    "Muhammad Hasnain Saeed is a Software Engineer and Full-Stack Developer building modern, scalable, and user-focused digital experiences.",
+  sameAs: [
+    "https://github.com/muhammadhasnainsaeed",
+    "https://www.linkedin.com/in/muhammadhasnainsaeed",
+    "https://www.facebook.com/muhammadhassnainsaeed",
+    "https://www.instagram.com/m_hasnain_saeed",
+    "https://x.com/m_hasnain_saeed",
+    "https://www.twitch.tv/mhasnainsaeed",
+    "https://dev.to/muhammadhasnainsaeed",
+    "https://www.fiverr.com/hasnainsaeed_22",
+    "https://mhasnainsaeed.medium.com/",
+    "https://medium.com/@mhasnainsaeed",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -147,6 +193,13 @@ export default function RootLayout({
         />
       </head>
       <body className={`${dmSans.variable} ${inter.variable} antialiased`}>
+        <Script
+          id="person-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
