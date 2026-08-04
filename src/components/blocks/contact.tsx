@@ -52,16 +52,6 @@ const socialIcons = [
   // {name: "upwork", link: "", icon: "/logos/contact/upwork-mono.svg"},
 ];
 const contactInfo = [
-  // {
-  //   title: "Corporate office",
-  //   content: (
-  //     <p className="text-muted-foreground mt-3">
-  //       1 Carlsberg Close
-  //       <br />
-  //       1260 Hillview, Australia
-  //     </p>
-  //   ),
-  // },
   {
     title: "Email",
     content: (
@@ -81,21 +71,23 @@ const contactInfo = [
   {
     title: "Follow us",
     content: (
-      <div className="mt-3 flex flex-wrap gap-6 lg:gap-10">
+      <div className="mt-3 max-w-52 flex flex-wrap gap-6">
         {socialIcons.map((social) => (
-          <Link
+          <a
             key={social.name}
+            target="_blank"
+            rel="noopener noreferrer"
             href={social.link}
             className="opacity-65 hover:opacity-100"
           >
             <Image
               src={social.icon}
               alt={social.name}
-              width={36}
-              height={36}
-              className="size-9 dark:invert"
+              width={28}
+              height={28}
+              className="size-7 dark:invert"
             />
-          </Link>
+          </a>
         ))}
       </div>
     ),
@@ -114,7 +106,7 @@ export default function Contact() {
           get back to you soon.
         </p>
 
-        <div className="mt-10 flex justify-between gap-8 max-sm:flex-col md:mt-14 lg:mt-20 lg:gap-12">
+        <div className="mt-10 flex gap-8 max-sm:flex-col md:mt-14 lg:mt-20 lg:gap-12">
           {contactInfo.map((info, index) => (
             <div key={index}>
               <h2 className="font-medium">{info.title}</h2>

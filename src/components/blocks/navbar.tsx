@@ -22,39 +22,78 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
+type DropdownItem = {
+  title: string;
+  href: string;
+  description: string;
+};
+
+type NavItem = {
+  label: string;
+  href: string;
+  dropdownItems?: DropdownItem[];
+};
+
 const ITEMS = [
   { label: "Projects", href: "/projects" },
   {
     label: "About",
     href: "/about",
-    dropdownItems: [
-      {
-        title: "Introduction",
-        href: "/about",
-        description: "A brief overview of who I am and what I do.",
-      },
-      {
-        title: "Experience",
-        href: "/about#experience",
-        description: "A look at my professional journey and work experience.",
-      },
-      // {
-      //   title: "Credentials",
-      //   href: "/credentials",
-      //   description: "My academic background and educational journey.",
-      // },
-      {
-        title: "Skills",
-        href: "/about#skills",
-        description:
-          "The technologies and tools I use to build great products.",
-      },
-    ],
+    // dropdownItems: [
+    //   {
+    //     title: "Introduction",
+    //     href: "/about",
+    //     description: "A brief overview of who I am and what I do.",
+    //   },
+    //   {
+    //     title: "Experience",
+    //     href: "/about#experience",
+    //     description: "A look at my professional journey and work experience.",
+    //   },
+    //   // {
+    //   //   title: "Credentials",
+    //   //   href: "/credentials",
+    //   //   description: "My academic background and educational journey.",
+    //   // },
+    //   {
+    //     title: "Skills",
+    //     href: "/about#skills",
+    //     description:
+    //       "The technologies and tools I use to build great products.",
+    //   },
+    // ],
   },
   { label: "Credentials", href: "/credentials" },
   // { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
-];
+] as NavItem[];
+
+function ListItem({
+  title,
+  children,
+  href,
+  ...props
+}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+  return (
+    <li {...props}>
+      <NavigationMenuLink asChild>
+        <Link
+          href={href}
+          className="group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex items-center gap-4 rounded-md p-2 leading-none no-underline outline-hidden transition-colors select-none"
+        >
+          <div className="space-y-1.5 transition-transform duration-300 group-hover:translate-x-1">
+            <div className="text-xs leading-none font-medium">
+              {title}
+            </div>
+            <p className="text-muted-foreground line-clamp-2 text-xs leading-snug">
+              {children}
+            </p>
+          </div>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  )
+}
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,7 +123,7 @@ export const Navbar = () => {
           <NavigationMenuList>
             {ITEMS.map((link) =>
               link.dropdownItems ? (
-                <NavigationMenuItem key={link.label} className="">
+                <NavigationMenuItem key={link.label}>
                   <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
                     <NavigationMenuLink
                       className={cn(
@@ -97,29 +136,15 @@ export const Navbar = () => {
                   <NavigationMenuContent>
                     <ul className="w-72 space-y-2 p-3">
                       {link.dropdownItems.map((item) => (
-                        <li key={item.title}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href={item.href}
-                              className="group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex items-center gap-4 rounded-md p-2 leading-none no-underline outline-hidden transition-colors select-none"
-                            >
-                              <div className="space-y-1.5 transition-transform duration-300 group-hover:translate-x-1">
-                                <div className="text-xs leading-none font-medium">
-                                  {item.title}
-                                </div>
-                                <p className="text-muted-foreground line-clamp-2 text-xs leading-snug">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
+                        <ListItem key={item.title} title={item.title} href={item.href}>
+                          {item.description}
+                        </ListItem>
                       ))}
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               ) : (
-                <NavigationMenuItem key={link.label} className="">
+                <NavigationMenuItem key={link.label}>
                   <Link
                     href={link.href}
                     className={cn(
@@ -137,17 +162,18 @@ export const Navbar = () => {
 
         <div className="flex items-center gap-2.5">
           <ThemeTogglerButton variant={"outline"} modes={["light", "dark"]} />
-          <Link
+          <a
             href="https://uzfnhqxt01hltmw6.public.blob.vercel-storage.com/Hasnain-saeed.pdf?download=1"
-            className="max-lg:hidden"
+            rel="noopener noreferrer"
+            className={buttonVariants({ variant: "outline", className: "max-lg:hidden" })}
           >
-            <Button variant="outline">
               <span className="relative z-10">Resume</span>
               <Download />
-            </Button>
-          </Link>
+          </a>
           <a
             href="https://github.com/muhammadhasnainsaeed"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <Github className="size-4" />
@@ -191,17 +217,10 @@ export const Navbar = () => {
           {ITEMS.map((link) =>
             link.dropdownItems ? (
               <div key={link.label} className="py-4 first:pt-0 last:pb-0">
-                <button
-                  onClick={() =>
-                    setOpenDropdown(
-                      openDropdown === link.label ? null : link.label,
-                    )
-                  }
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className:
-                      "flex! h-auto! w-full! items-center justify-between! px-0! py-0! text-base! font-medium!",
-                  })}
+                <Button
+                  onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
+                  variant="ghost"
+                  className="flex! h-auto! w-full! items-center justify-between! px-0! py-0! text-base! font-medium!"
                 >
                   {link.label}
                   <ChevronRight
@@ -210,7 +229,7 @@ export const Navbar = () => {
                       openDropdown === link.label ? "rotate-90" : "",
                     )}
                   />
-                </button>
+                </Button>
                 <div
                   className={cn(
                     "overflow-hidden transition-all duration-300",

@@ -15,20 +15,34 @@ import {
 } from "@/components/animate-ui/primitives/effects/theme-toggler";
 import { cn } from "@/lib/utils";
 
-const getIcon = (
-  effective: ThemeSelection,
-  resolved: Resolved,
-  modes: ThemeSelection[],
-) => {
+function ThemeIcon({
+  effective,
+  resolved,
+  modes,
+}: {
+  effective: ThemeSelection;
+  resolved: Resolved;
+  modes: ThemeSelection[];
+}) {
   const theme = modes.includes("system") ? effective : resolved;
-  return theme === "system" ? (
-    <Monitor />
-  ) : theme === "dark" ? (
-    <Moon />
-  ) : (
-    <Sun />
-  );
-};
+
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  switch (theme) {
+    case "system":
+      return <Monitor />;
+    case "dark":
+      return <Moon />;
+    default:
+      return <Sun />;
+  }
+}
 
 const getNextTheme = (
   effective: ThemeSelection,
@@ -58,6 +72,7 @@ function ThemeTogglerButton({
 }: ThemeTogglerButtonProps) {
   const { theme, resolvedTheme, setTheme } = useTheme();
 
+
   return (
     <ThemeTogglerPrimitive
       theme={theme as ThemeSelection}
@@ -76,7 +91,7 @@ function ThemeTogglerButton({
           }}
           {...props}
         >
-          {getIcon(effective, resolved, modes)}
+          <ThemeIcon effective={effective} resolved={resolved} modes={modes} />
         </button>
       )}
     </ThemeTogglerPrimitive>
