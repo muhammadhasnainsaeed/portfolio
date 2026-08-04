@@ -62,6 +62,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hasnainsaeed.vercel.app"),
+
   title: {
     default: "Muhammad Hasnain Saeed | Software Engineer",
     template: "%s | Hasnain Saeed",
@@ -85,7 +87,6 @@ export const metadata: Metadata = {
     "JavaScript Developer",
     "Frontend Developer",
     "Backend Developer",
-    "Software Engineer Portfolio",
     "Developer Portfolio",
   ],
 
@@ -104,14 +105,13 @@ export const metadata: Metadata = {
     follow: true,
   },
 
-  // icons...
-
   openGraph: {
     title: "Muhammad Hasnain Saeed | Software Engineer",
     description:
       "Software Engineer and Full-Stack Developer building modern, scalable, and user-focused digital experiences with clean code and thoughtful engineering.",
     siteName: "Muhammad Hasnain Saeed",
     type: "website",
+    url: "https://hasnainsaeed.vercel.app",
     images: [
       {
         url: "/og-image.jpg",
