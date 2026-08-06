@@ -1,5 +1,6 @@
 "use server";
 import { Resend } from "resend";
+
 import { actionClient } from "./safe-action";
 
 import { formSchema } from "@/lib/form-schema";
@@ -58,8 +59,7 @@ export const serverAction = actionClient
         success: true,
         message: "Message sent successfully!",
       };
-    } catch (error) {
-      console.error("Resend internal execution error:", error);
+    } catch {
       throw new Error(
         "Server was unable to send email. Check API configurations.",
       );

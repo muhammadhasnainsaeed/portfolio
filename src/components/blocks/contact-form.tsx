@@ -4,6 +4,7 @@ import { Check, Loader, Send } from "lucide-react";
 import { motion } from "motion/react";
 import { useAction } from "next-safe-action/hooks";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import * as z from "zod";
 
 import { serverAction } from "@/actions/server-action";
@@ -19,7 +20,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { formSchema } from "@/lib/form-schema";
-import { toast } from "sonner";
 
 type Schema = z.infer<typeof formSchema>;
 
@@ -50,7 +50,6 @@ export function ContactForm() {
         toast.error(error.serverError);
       } else if (error.validationErrors) {
         toast.error("Form input validation failed on backend.");
-        console.error("Validation Details:", error.validationErrors);
       } else {
         toast.error("Failed to submit form due to unknown error.");
       }

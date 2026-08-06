@@ -82,9 +82,7 @@ function ListItem({
           className="group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex items-center gap-4 rounded-md p-2 leading-none no-underline outline-hidden transition-colors select-none"
         >
           <div className="space-y-1.5 transition-transform duration-300 group-hover:translate-x-1">
-            <div className="text-xs leading-none font-medium">
-              {title}
-            </div>
+            <div className="text-xs leading-none font-medium">{title}</div>
             <p className="text-muted-foreground line-clamp-2 text-xs leading-snug">
               {children}
             </p>
@@ -92,7 +90,7 @@ function ListItem({
         </Link>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }
 
 export const Navbar = () => {
@@ -136,7 +134,11 @@ export const Navbar = () => {
                   <NavigationMenuContent>
                     <ul className="w-72 space-y-2 p-3">
                       {link.dropdownItems.map((item) => (
-                        <ListItem key={item.title} title={item.title} href={item.href}>
+                        <ListItem
+                          key={item.title}
+                          title={item.title}
+                          href={item.href}
+                        >
                           {item.description}
                         </ListItem>
                       ))}
@@ -165,10 +167,13 @@ export const Navbar = () => {
           <a
             href="https://uzfnhqxt01hltmw6.public.blob.vercel-storage.com/Hasnain-saeed.pdf?download=1"
             rel="noopener noreferrer"
-            className={buttonVariants({ variant: "outline", className: "max-lg:hidden" })}
+            className={buttonVariants({
+              variant: "outline",
+              className: "max-lg:hidden",
+            })}
           >
-              <span className="relative z-10">Resume</span>
-              <Download />
+            <span className="relative z-10">Resume</span>
+            <Download />
           </a>
           <a
             href="https://github.com/muhammadhasnainsaeed"
@@ -218,7 +223,11 @@ export const Navbar = () => {
             link.dropdownItems ? (
               <div key={link.label} className="py-4 first:pt-0 last:pb-0">
                 <Button
-                  onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
+                  onClick={() =>
+                    setOpenDropdown(
+                      openDropdown === link.label ? null : link.label,
+                    )
+                  }
                   variant="ghost"
                   className="flex! h-auto! w-full! items-center justify-between! px-0! py-0! text-base! font-medium!"
                 >

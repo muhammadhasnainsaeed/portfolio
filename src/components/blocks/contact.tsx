@@ -71,7 +71,7 @@ const contactInfo = [
   {
     title: "Follow us",
     content: (
-      <div className="mt-3 max-w-52 flex flex-wrap gap-6">
+      <div className="mt-3 flex max-w-52 flex-wrap gap-6">
         {socialIcons.map((social) => (
           <a
             key={social.name}

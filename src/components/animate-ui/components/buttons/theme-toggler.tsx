@@ -72,7 +72,6 @@ function ThemeTogglerButton({
 }: ThemeTogglerButtonProps) {
   const { theme, resolvedTheme, setTheme } = useTheme();
 
-
   return (
     <ThemeTogglerPrimitive
       theme={theme as ThemeSelection}
