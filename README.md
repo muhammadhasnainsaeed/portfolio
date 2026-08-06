@@ -1,78 +1,61 @@
-# Mainline Next.js Template
+# Muhammad Hasnain Saeed Portfolio
 
-Mainline is a free template built with shadcn/ui, Tailwind 4 and Next.js 15.
+![OG Image](./public/og-image.jpg)
 
-- [Demo](https://mainline-nextjs-template.vercel.app/)
-- [Documentation](https://docs.shadcnblocks.com/templates/getting-started)
-- [Figma](https://www.figma.com/design/cFCLMj7DFv0sK7EVsqKeTa/Mainline?node-id=23250-13201&t=I1nAdchDpknii5Bd-1)
+Personal portfolio website built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS 4**.
 
-![Mainline NextJS Template screenshot](./public/og-image.jpg)
+## Features
+
+- Home, About, Projects, Services, FAQ, Credentials, and Contact pages
+- Responsive UI
+- Dark/light theme support
+- SEO metadata and Open Graph setup
+- Contact form with email delivery via **Resend**
+- Toast notifications for contact form feedback
+- Animations with `motion`
+- Form validation with `react-hook-form` + `zod`
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- shadcn/ui-style components
+- Resend
+- Sonner
+- Zod
+- React Hook Form
 
 ## Getting Started
 
 ```bash
 npm install
-```
-
-```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-## Features
+## Build
 
-### Core Technology Stack
+```bash
+npm run build
+```
 
-- **Next.js 15** with App Router
-- **Tailwind CSS 4** for styling
-- **shadcn/ui** components
-- **TypeScript** support
-- **React 19**
+## Environment Variables
 
-### Key Features
+Create `.env.local` for local development:
 
-- **Shadcn UI**: uses [shadcn/ui](https://ui.shadcn.com/) core UI components
-- **Theme System**: Dark/light mode with `next-themes`, compatible with [tweakcn](https://tweakcn.com)
-- **Form Handling**: React Hook Form + Zod validation
-- **Server Actions**: Next-safe-action integration for server-side logic
-- **MDX Support**: For content pages
-- **Animations**: Motion library (Framer Motion) integration
-- **ESLint/Prettier**: Pre-configured code formatting and linting
-- **Custom Fonts**: DM Sans font family included
-- **Icons**: Lucide React + React Icons libraries
-- **Styleglide Integration**: For component previews/development
-- **Responsive Design**: Mobile-friendly layout
-- **SEO Ready**: Proper metadata and OG images included
+```env
+RESEND_API_KEY=your_resend_api_key
+RESEND_FROM_EMAIL=onboarding@resend.dev
+CONTACT_RECEIVER_EMAIL=your_email@example.com
+```
 
-### Pre-built Pages
+## Contact Form
 
-- Home/Landing page
-- About page
-- Pricing page
-- FAQ page
-- Contact page with form
-- Login/Signup pages
-
-### Blocks
-
-- Hero section
-- Logo showcase/marquee
-- Features section
-- Resource allocation section
-- Testimonials with carousel
-- Pricing table
-- FAQ with accordion
-- Footer
-- Navigation bar
+The contact form submits to `/server/server-action` and sends emails through Resend.
 
 ## Deployment
 
-Production-ready and tested for deployment on [Vercel](https://vercel.com)
-
-## Credits
-
-- Template by [shadcnblocks.com](https://shadcnblocks.com)
-- Design by [Callum Flack](https://x.com/callumflack)
-- Dev by [Yassine Zaanouni](https://x.com/YassineZaanouni)
-- Produced by [Rob Austin](https://x.com/ausrobdev)
+Ready for deployment on Vercel.
