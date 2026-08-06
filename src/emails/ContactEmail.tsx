@@ -10,7 +10,6 @@ import {
   Button,
   Preview,
 } from "@react-email/components";
-import { backIn } from "motion/react";
 
 interface ContactEmailProps {
   name: string;

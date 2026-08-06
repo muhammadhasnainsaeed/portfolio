@@ -3,8 +3,8 @@ import { Resend } from "resend";
 
 import { actionClient } from "./safe-action";
 
-import { formSchema } from "@/lib/form-schema";
 import ContactEmail from "@/emails/ContactEmail";
+import { formSchema } from "@/lib/form-schema";
 
 const recipientEmail =
   process.env.CONTACT_RECEIVER_EMAIL ?? "ihasnain4@gmail.com";
