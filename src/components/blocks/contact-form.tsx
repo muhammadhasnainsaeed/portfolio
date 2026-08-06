@@ -19,6 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { formSchema } from "@/lib/form-schema";
+import { toast } from "sonner";
 
 type Schema = z.infer<typeof formSchema>;
 
@@ -34,12 +35,25 @@ export function ContactForm() {
     },
   });
   const formAction = useAction(serverAction, {
-    onSuccess: () => {
+    onSuccess: ({ data }) => {
       // TODO: show success message
-      form.reset();
+      if (data?.success) {
+        toast.success(data.message || "Form submitted successfully");
+        form.reset();
+      } else {
+        toast.error("An unexpected status occurred.");
+      }
     },
-    onError: () => {
+    onError: ({ error }) => {
       // TODO: show error message
+      if (error.serverError) {
+        toast.error(error.serverError);
+      } else if (error.validationErrors) {
+        toast.error("Form input validation failed on backend.");
+        console.error("Validation Details:", error.validationErrors);
+      } else {
+        toast.error("Failed to submit form due to unknown error.");
+      }
     },
   });
   const handleSubmit = form.handleSubmit(async (data: Schema) => {

@@ -4,12 +4,12 @@ import Script from "next/script";
 
 import type { Metadata } from "next";
 
-
 import { Footer } from "@/components/blocks/footer";
 import { Navbar } from "@/components/blocks/navbar";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
+import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 
 const dmSans = localFont({
   src: [
@@ -108,19 +108,19 @@ export const metadata: Metadata = {
   },
 
   icons: {
-      icon: [
-        { url: "/favicon/favicon.ico", sizes: "48x48" },
-        { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-        { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      ],
-      apple: [
-        {
-          url: "/favicon/apple-touch-icon.png",
-          sizes: "180x180",
-        },
-      ],
-      shortcut: [{ url: "/favicon/favicon.ico" }],
-    },
+    icon: [
+      { url: "/favicon/favicon.ico", sizes: "48x48" },
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: [
+      {
+        url: "/favicon/apple-touch-icon.png",
+        sizes: "180x180",
+      },
+    ],
+    shortcut: [{ url: "/favicon/favicon.ico" }],
+  },
 
   openGraph: {
     title: "Muhammad Hasnain Saeed | Software Engineer",
@@ -211,6 +211,7 @@ export default function RootLayout({
           <main className="">{children}</main>
           <Footer />
         </ThemeProvider>
+        <SonnerToaster position="bottom-right" />
       </body>
     </html>
   );
