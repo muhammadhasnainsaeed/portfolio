@@ -4,6 +4,7 @@ import { Resend } from "resend";
 import { actionClient } from "./safe-action";
 
 import { formSchema } from "@/lib/form-schema";
+import ContactEmail from "@/emails/ContactEmail";
 
 const recipientEmail =
   process.env.CONTACT_RECEIVER_EMAIL ?? "ihasnain4@gmail.com";
@@ -26,29 +27,7 @@ export const serverAction = actionClient
         to: recipientEmail,
         replyTo: email,
         subject: `Portfolio Contact: ${subject}`,
-        headers: {
-          "X-Priority": "1",
-          "X-MSMail-Priority": "High",
-          Importance: "high",
-        },
-        text: [
-          `Name: ${name}`,
-          `Email: ${email}`,
-          `Phone: ${phone || "N/A"}`,
-          "",
-          message,
-        ].join("\n"),
-        html: `
-          <div>
-            <h2>Message from Portfolio</h2>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone || "N/A"}</p>
-            <p><strong>Subject:</strong> ${subject}</p>
-            <p><strong>Message:</strong></p>
-            <p>${message.replace(/\n/g, "<br />")}</p>
-          </div>
-        `,
+        react: ContactEmail({ name, email, phone, subject, message }),
       });
 
       if (error) {
