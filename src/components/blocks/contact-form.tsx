@@ -11,10 +11,7 @@ import { toast } from "sonner";
 import * as z from "zod";
 
 import { serverAction } from "@/actions/server-action";
-import {
-  Button,
-  buttonVariants,
-} from "@/components/animate-ui/components/buttons/button";
+import { Button } from "@/components/animate-ui/components/buttons/button";
 import {
   Form,
   FormControl,
