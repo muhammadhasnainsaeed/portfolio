@@ -200,12 +200,7 @@ export default function RootLayout({
             __html: JSON.stringify(personSchema),
           }}
         />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
           <StyleGlideProvider />
           <Navbar />
           <main className="">{children}</main>

@@ -163,7 +163,7 @@ export const Navbar = () => {
         </NavigationMenu>
 
         <div className="flex items-center gap-2.5">
-          <ThemeTogglerButton variant={"outline"} modes={["light", "dark"]} />
+          <ThemeTogglerButton variant={"outline"} />
           <a
             href="https://uzfnhqxt01hltmw6.public.blob.vercel-storage.com/Hasnain-saeed.pdf?download=1"
             rel="noopener noreferrer"
@@ -276,7 +276,6 @@ export const Navbar = () => {
               <Link
                 key={link.label}
                 href={link.href}
-
                 className={buttonVariants({
                   variant: "ghost",
                   className:
