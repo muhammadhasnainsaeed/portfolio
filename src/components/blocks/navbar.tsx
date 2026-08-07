@@ -99,17 +99,21 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <section
+    <header
       className={cn(
         "bg-background/70 fixed left-1/2 z-50 mt-2.5 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
         "top-5 lg:top-12",
       )}
     >
       <div className="flex items-center justify-between px-6 py-3">
-        <Link href="/" className="flex shrink-0 items-center gap-2">
+        <Link
+          href="/"
+          aria-label="Go to the home page"
+          className="flex shrink-0 items-center gap-2"
+        >
           <Image
             src="/logo.svg"
-            alt="logo"
+            alt="Muhammad Hasnain Saeed logo"
             width={95}
             height={20}
             className="dark:invert"
@@ -117,50 +121,47 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <NavigationMenu className="max-lg:hidden">
-          <NavigationMenuList>
-            {ITEMS.map((link) =>
-              link.dropdownItems ? (
-                <NavigationMenuItem key={link.label}>
-                  <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
-                    <NavigationMenuLink
+        <nav aria-label="Primary" className="max-lg:hidden">
+          <NavigationMenu>
+            <NavigationMenuList>
+              {ITEMS.map((link) =>
+                link.dropdownItems ? (
+                  <NavigationMenuItem key={link.label}>
+                    <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
+                      {link.label}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="w-72 space-y-2 p-3">
+                        {link.dropdownItems.map((item) => (
+                          <ListItem
+                            key={item.title}
+                            title={item.title}
+                            href={item.href}
+                          >
+                            {item.description}
+                          </ListItem>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                ) : (
+                  <NavigationMenuItem key={link.label}>
+                    <Link
+                      href={link.href}
+                      aria-current={pathname === link.href ? "page" : undefined}
                       className={cn(
-                        "relative bg-transparent text-sm font-medium transition-opacity hover:opacity-75",
+                        "relative bg-transparent px-1.5 text-sm font-medium transition-opacity hover:opacity-75",
+                        pathname === link.href && "text-muted-foreground",
                       )}
                     >
                       {link.label}
-                    </NavigationMenuLink>
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="w-72 space-y-2 p-3">
-                      {link.dropdownItems.map((item) => (
-                        <ListItem
-                          key={item.title}
-                          title={item.title}
-                          href={item.href}
-                        >
-                          {item.description}
-                        </ListItem>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              ) : (
-                <NavigationMenuItem key={link.label}>
-                  <Link
-                    href={link.href}
-                    className={cn(
-                      "relative bg-transparent px-1.5 text-sm font-medium transition-opacity hover:opacity-75",
-                      pathname === link.href && "text-muted-foreground",
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                </NavigationMenuItem>
-              ),
-            )}
-          </NavigationMenuList>
-        </NavigationMenu>
+                    </Link>
+                  </NavigationMenuItem>
+                ),
+              )}
+            </NavigationMenuList>
+          </NavigationMenu>
+        </nav>
 
         <div className="flex items-center gap-2.5">
           <ThemeTogglerButton variant={"outline"} />
@@ -187,10 +188,16 @@ export const Navbar = () => {
 
           {/* Hamburger Menu Button (Mobile Only) */}
           <button
+            type="button"
+            aria-controls="mobile-primary-navigation"
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? "Close main menu" : "Open main menu"}
             className="text-muted-foreground relative flex size-8 lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">
+              {isMenuOpen ? "Close main menu" : "Open main menu"}
+            </span>
             <div className="absolute top-1/2 left-1/2 block w-4.5 -translate-x-1/2 -translate-y-1/2">
               <span
                 aria-hidden="true"
@@ -211,6 +218,7 @@ export const Navbar = () => {
 
       {/*  Mobile Menu Navigation */}
       <div
+        id="mobile-primary-navigation"
         className={cn(
           "bg-background fixed inset-x-0 top-[calc(100%+1rem)] flex flex-col rounded-2xl border p-6 transition-all duration-300 ease-in-out lg:hidden",
           isMenuOpen
@@ -218,11 +226,17 @@ export const Navbar = () => {
             : "invisible -translate-y-4 opacity-0",
         )}
       >
-        <nav className="divide-border flex flex-1 flex-col divide-y">
+        <nav
+          aria-label="Mobile primary"
+          className="divide-border flex flex-1 flex-col divide-y"
+        >
           {ITEMS.map((link) =>
             link.dropdownItems ? (
               <div key={link.label} className="py-4 first:pt-0 last:pb-0">
                 <Button
+                  type="button"
+                  aria-expanded={openDropdown === link.label}
+                  aria-controls={`mobile-dropdown-${link.label.toLowerCase()}`}
                   onClick={() =>
                     setOpenDropdown(
                       openDropdown === link.label ? null : link.label,
@@ -240,6 +254,7 @@ export const Navbar = () => {
                   />
                 </Button>
                 <div
+                  id={`mobile-dropdown-${link.label.toLowerCase()}`}
                   className={cn(
                     "overflow-hidden transition-all duration-300",
                     openDropdown === link.label
@@ -276,6 +291,7 @@ export const Navbar = () => {
               <Link
                 key={link.label}
                 href={link.href}
+                aria-current={pathname === link.href ? "page" : undefined}
                 className={buttonVariants({
                   variant: "ghost",
                   className:
@@ -289,6 +305,6 @@ export const Navbar = () => {
           )}
         </nav>
       </div>
-    </section>
+    </header>
   );
 };

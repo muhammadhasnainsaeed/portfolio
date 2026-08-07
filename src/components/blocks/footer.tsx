@@ -13,7 +13,7 @@ export function Footer() {
   ];
 
   const social = [
-    { name: "Xwitter", href: "https://x.com/m_hasnain_saeed" },
+    { name: "X", href: "https://x.com/m_hasnain_saeed" },
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/muhammadhasnainsaeed/",
@@ -35,7 +35,10 @@ export function Footer() {
         </div>
       </div>
 
-      <nav className="container flex flex-col items-center gap-4">
+      <nav
+        aria-label="Footer navigation"
+        className="container flex flex-col items-center gap-4"
+      >
         <ul className="flex flex-wrap items-center justify-center gap-6">
           {navigation.map((item) => (
             <li key={item.name}>

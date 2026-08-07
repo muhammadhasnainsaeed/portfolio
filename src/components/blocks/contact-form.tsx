@@ -1,4 +1,7 @@
 "use client";
+
+import { useEffect, useRef } from "react";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Check, Loader, Send } from "lucide-react";
 import { motion } from "motion/react";
@@ -8,7 +11,10 @@ import { toast } from "sonner";
 import * as z from "zod";
 
 import { serverAction } from "@/actions/server-action";
-import { Button } from "@/components/animate-ui/components/buttons/button";
+import {
+  Button,
+  buttonVariants,
+} from "@/components/animate-ui/components/buttons/button";
 import {
   Form,
   FormControl,
@@ -24,6 +30,8 @@ import { formSchema } from "@/lib/form-schema";
 type Schema = z.infer<typeof formSchema>;
 
 export function ContactForm() {
+  const successRef = useRef<HTMLDivElement>(null);
+
   const form = useForm<Schema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -60,9 +68,23 @@ export function ContactForm() {
   });
 
   const { isExecuting, hasSucceeded } = formAction;
+
+  useEffect(() => {
+    if (hasSucceeded) {
+      successRef.current?.focus();
+    }
+  }, [hasSucceeded]);
+
   if (hasSucceeded) {
     return (
-      <div className="w-full gap-2 rounded-md border p-2 sm:p-5 md:p-8">
+      <div
+        ref={successRef}
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        tabIndex={-1}
+        className="w-full gap-2 rounded-md border p-2 sm:p-5 md:p-8"
+      >
         <motion.div
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -86,7 +108,7 @@ export function ContactForm() {
             Thank you
           </h2>
           <p className="text-muted-foreground text-center text-lg text-pretty">
-            Form submitted successfully, we will get back to you soon
+            Form submitted successfully, we will get back to you soon.
           </p>
         </motion.div>
       </div>
@@ -108,12 +130,9 @@ export function ContactForm() {
               <FormLabel>Name * </FormLabel>
               <FormControl>
                 <Input
+                  {...field}
                   type="text"
-                  value={field.value}
-                  onChange={(e) => {
-                    const val = e.target.value;
-                    field.onChange(val);
-                  }}
+                  autoComplete="name"
                   placeholder="First and last name"
                 />
               </FormControl>
@@ -131,12 +150,10 @@ export function ContactForm() {
               <FormLabel>Email address * </FormLabel>
               <FormControl>
                 <Input
-                  type="text"
-                  value={field.value}
-                  onChange={(e) => {
-                    const val = e.target.value;
-                    field.onChange(val);
-                  }}
+                  {...field}
+                  type="email"
+                  autoComplete="email"
+                  inputMode="email"
                   placeholder="me@company.com"
                 />
               </FormControl>
@@ -154,12 +171,9 @@ export function ContactForm() {
               <FormLabel>Phone number </FormLabel>
               <FormControl>
                 <Input
+                  {...field}
                   type="tel"
-                  value={field.value}
-                  onChange={(e) => {
-                    const val = e.target.value;
-                    field.onChange(val);
-                  }}
+                  autoComplete="tel"
                   placeholder="Contact number"
                 />
               </FormControl>
@@ -178,12 +192,9 @@ export function ContactForm() {
               <FormLabel>Subject * </FormLabel>
               <FormControl>
                 <Input
+                  {...field}
                   type="text"
-                  value={field.value}
-                  onChange={(e) => {
-                    const val = e.target.value;
-                    field.onChange(val);
-                  }}
+                  autoComplete="off"
                   placeholder="Subject"
                 />
               </FormControl>
@@ -203,6 +214,7 @@ export function ContactForm() {
               <FormControl>
                 <Textarea
                   {...field}
+                  autoComplete="off"
                   placeholder="Write your message"
                   className="resize-none"
                 />

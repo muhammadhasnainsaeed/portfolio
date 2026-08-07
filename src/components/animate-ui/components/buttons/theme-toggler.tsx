@@ -80,19 +80,35 @@ function ThemeTogglerButton({
       direction={direction}
       onImmediateChange={onImmediateChange}
     >
-      {({ effective, resolved, toggleTheme }) => (
-        <button
-          data-slot="theme-toggler-button"
-          className={cn(buttonVariants({ variant, size, className }))}
-          onClick={(e) => {
-            onClick?.(e);
-            toggleTheme(getNextTheme(effective, modes));
-          }}
-          {...props}
-        >
-          <ThemeIcon effective={effective} resolved={resolved} modes={modes} />
-        </button>
-      )}
+      {({ effective, resolved, toggleTheme }) => {
+        const nextTheme = getNextTheme(effective, modes);
+        const nextThemeLabel =
+          nextTheme === "light"
+            ? "light"
+            : nextTheme === "dark"
+              ? "dark"
+              : "system";
+
+        return (
+          <button
+            type="button"
+            aria-label={`Switch to ${nextThemeLabel} theme`}
+            data-slot="theme-toggler-button"
+            className={cn(buttonVariants({ variant, size, className }))}
+            onClick={(e) => {
+              onClick?.(e);
+              toggleTheme(nextTheme);
+            }}
+            {...props}
+          >
+            <ThemeIcon
+              effective={effective}
+              resolved={resolved}
+              modes={modes}
+            />
+          </button>
+        );
+      }}
     </ThemeTogglerPrimitive>
   );
 }

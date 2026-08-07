@@ -6,8 +6,10 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/blocks/footer";
 import { Navbar } from "@/components/blocks/navbar";
+import { RouteAnnouncer } from "@/components/route-announcer";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
+import { buttonVariants } from "@/components/ui/button";
 import "@/styles/globals.css";
 import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 
@@ -202,11 +204,25 @@ export default function RootLayout({
         />
         <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
           <StyleGlideProvider />
+          <a
+            href="#main-content"
+            className={buttonVariants({
+              variant: "default",
+              size: "sm",
+              className:
+                "sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:block focus:px-2! focus:shadow-lg",
+            })}
+          >
+            Skip to main content
+          </a>
           <Navbar />
-          <main className="">{children}</main>
+          <main id="main-content" tabIndex={-1} className="outline-none">
+            {children}
+          </main>
           <Footer />
+          <RouteAnnouncer />
+          <SonnerToaster position="bottom-right" />
         </ThemeProvider>
-        <SonnerToaster position="bottom-right" />
       </body>
     </html>
   );
