@@ -74,9 +74,11 @@ export function AboutHero() {
             src={"about/avatar.webp"}
             width={320}
             height={500}
+            loading="eager"
+            fetchPriority="high"
+            sizes="(max-width: 320px) 100vw, 320px"
             alt="Jordan Lee"
             className="aspect-square w-full object-cover"
-            loading="lazy"
           />
         </div>
         <div className="bg-muted mt-2 rounded-lg border p-4">
