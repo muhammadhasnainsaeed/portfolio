@@ -30,12 +30,13 @@ function ProjectCard({ project }: { project: Project }) {
         <Image
           src={project.image || "/placeholder.webp"}
           alt={project.title}
-          width={1024}
-          height={576}
-          loading="lazy"
-          fetchPriority="auto"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="relative z-20 aspect-video w-full object-cover object-top-left"
+          width={812}
+          height={508}
+          quality={80}
+          loading="eager"
+          fetchPriority="high"
+          sizes="(max-width: 812px) 100vw, 812px"
+          className="relative z-20 aspect-video object-cover object-top-left"
         />
         <CardHeader>
           <CardAction>

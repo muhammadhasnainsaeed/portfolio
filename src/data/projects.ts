@@ -2,7 +2,7 @@ export const selectedProject = [
   {
     title: "Alnafi — Online Learning Platform",
     action: "2022",
-    image: "/projects/alnafi.avif",
+    image: "/projects/alnafi.png",
     link: "https://alnafi.com/",
     description:
       "A modern EdTech platform that empowers learners with online courses, professional certifications, and career-focused learning experiences.",
@@ -21,7 +21,7 @@ export const selectedProject = [
   {
     title: "TrainerFlix — Online Training Platform",
     action: "2024",
-    image: "/projects/trainerflix.avif",
+    image: "/projects/trainerflix.png",
     link: "https://trainerflix.app/",
     description:
       "A modern training platform designed to help users discover and access engaging fitness and educational content through a seamless digital experience.",
@@ -37,7 +37,7 @@ export const selectedProject = [
   {
     title: "Victus — Digital Health & Wellness Platform",
     action: "2024",
-    image: "/projects/victus.avif",
+    image: "/projects/victus.png",
     link: "https://victusapp.com/",
     description:
       "A modern health and wellness platform designed to help users manage their fitness journey, track progress, and build healthier habits through a seamless digital experience.",
@@ -57,7 +57,7 @@ export const projects = [
   {
     title: "Alnafi — Online Learning Platform",
     action: "2022",
-    image: "/projects/alnafi.avif",
+    image: "/projects/alnafi.png",
     link: "https://alnafi.com/",
     description:
       "A modern EdTech platform that empowers learners with online courses, professional certifications, and career-focused learning experiences.",
@@ -76,7 +76,7 @@ export const projects = [
   {
     title: "TrainerFlix — Online Training Platform",
     action: "2024",
-    image: "/projects/trainerflix.avif",
+    image: "/projects/trainerflix.png",
     link: "https://trainerflix.app/",
     description:
       "A modern training platform designed to help users discover and access engaging fitness and educational content through a seamless digital experience.",
@@ -92,7 +92,7 @@ export const projects = [
   {
     title: "Victus — Digital Health & Wellness Platform",
     action: "2024",
-    image: "/projects/victus.avif",
+    image: "/projects/victus.png",
     link: "https://victusapp.com/",
     description:
       "A modern health and wellness platform designed to help users manage their fitness journey, track progress, and build healthier habits through a seamless digital experience.",
@@ -109,7 +109,7 @@ export const projects = [
   {
     title: "TipTube — Video Tipping Platform",
     action: "2023",
-    image: "/projects/tiptube.avif",
+    image: "/projects/tiptube.png",
     link: "https://tiptube.app/",
     description:
       "A modern platform that enables viewers to support their favorite video creators by sending tips, making it easier for creators to monetize their content and connect with their audience.",
@@ -126,7 +126,7 @@ export const projects = [
   {
     title: "ZodiacNest — Astrology & Horoscope Platform",
     action: "2024",
-    image: "/projects/zodiacnest.avif",
+    image: "/projects/zodiacnest.png",
     link: "https://zodiacnest.app/",
     description:
       "A modern astrology platform that offers personalized horoscope insights and zodiac-based experiences through a simple and engaging digital interface.",
@@ -142,7 +142,7 @@ export const projects = [
   {
     title: "GoldenSteps — Subscription Onboarding Experience",
     action: "2025",
-    image: "/projects/goldensteps.avif",
+    image: "/projects/goldensteps.png",
     link: "https://goldensteps.net/",
     description:
       "A streamlined subscription landing experience built to guide users through the onboarding journey and encourage seamless registration and subscription activation.",
@@ -157,7 +157,7 @@ export const projects = [
   {
     title: "Al Nafi Academy — Online Learning Platform",
     action: "2023",
-    image: "/projects/alnafi-academy.avif",
+    image: "/projects/alnafi-academy.png",
     link: "https://alnafi.academy/",
     description:
       "A comprehensive online learning platform built to help O Level and IGCSE students prepare for exams through live classes, recorded lectures, interactive assessments, and expert-led courses.",
@@ -166,7 +166,7 @@ export const projects = [
   {
     title: "Al Nafi Cloud — Cloud & Emerging Technology Platform",
     action: "2023",
-    image: "/projects/alnafi-cloud.avif",
+    image: "/projects/alnafi-cloud.png",
     link: "https://alnafi.cloud/",
     description:
       "A hands-on technology learning platform offering real-world labs and practical training in cloud computing, cybersecurity, AI, DevOps, and other emerging technologies to help learners build job-ready skills.",
@@ -175,7 +175,7 @@ export const projects = [
   {
     title: "Rapid.ai — AI-Powered Platform",
     action: "2025",
-    image: "/projects/rapid-ai.avif",
+    image: "/projects/rapid-ai.png",
     link: "https://rapid-ai-pi.vercel.app/",
     description:
       "An AI-powered web platform designed to deliver intelligent and efficient digital experiences through modern AI technologies and a clean, intuitive interface.",
@@ -194,7 +194,7 @@ export const projects = [
   {
     title: "AI Voice Interpreter — Voice-to-Text Conversion",
     action: "2025",
-    image: "/projects/ai-voice-interpreter.avif",
+    image: "/projects/ai-voice-interpreter.png",
     link: "https://github.com/muhammadhasnainsaeed/urdu-english-interpreter",
     description:
       "Real-time multilingual desktop application built with Electron, React, Node.js and OpenAI — translating speech across languages with sub-second latency.",
