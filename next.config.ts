@@ -4,9 +4,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   images: {
-    unoptimized: true,
+    unoptimized: false,
+  },
+  experimental: {
+    inlineCss: true, // Render-blocking CSS fix karne ke liye
   },
 };
+
 const withMDX = createMDX({
   options: {
     remarkPlugins: [],

@@ -32,6 +32,7 @@ function ProjectCard({ project }: { project: Project }) {
           alt={project.title}
           width={1024}
           height={576}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="relative z-20 aspect-video w-full object-cover object-top-left"
         />
         <CardHeader>
