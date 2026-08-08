@@ -2,8 +2,8 @@
 
 import * as React from "react";
 
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { motion, AnimatePresence, type HTMLMotionProps } from "motion/react";
-import { Accordion as AccordionPrimitive } from "radix-ui";
 
 import { useControlledState } from "@/hooks/use-controlled-state";
 import { getStrictContext } from "@/lib/get-strict-context";
