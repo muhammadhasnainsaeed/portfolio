@@ -7,7 +7,8 @@ const nextConfig: NextConfig = {
     unoptimized: false,
   },
   experimental: {
-    inlineCss: true, // Render-blocking CSS fix karne ke liye
+    inlineCss: true,
+    cssChunking: true,
   },
 };
 
