@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   description:
     "Muhammad Hasnain Saeed is a Software Engineer and Full-Stack Developer building modern, scalable, and user-focused digital experiences with clean code and thoughtful engineering.",
   verification: {
-    google: "X0vMQfzqERNmrAdwHj062aW4T",
+    google: "X0vMQfzqERNmrAdwHj062aW4T-cOc12UejIwEg_lJyk",
   },
   keywords: [
     "Muhammad Hasnain Saeed",
