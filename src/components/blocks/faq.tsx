@@ -91,9 +91,15 @@ export const FAQ = ({
           <div className="grid gap-6 text-start">
             {categories.map((category, categoryIndex) => (
               <div key={category.title} className="">
-                <h3 className="text-muted-foreground border-b py-4">
-                  {category.title}
-                </h3>
+                {headerTag === "h1" ? (
+                  <h2 className="text-muted-foreground border-b py-4">
+                    {category.title}
+                  </h2>
+                ) : (
+                  <h3 className="text-muted-foreground border-b py-4">
+                    {category.title}
+                  </h3>
+                )}
                 <Accordion type="single" collapsible className="w-full">
                   {category.questions.map((item, i) => (
                     <AccordionItem key={i} value={`${categoryIndex}-${i}`}>

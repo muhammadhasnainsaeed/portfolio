@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 const page = () => {
   return (
-    <Background>
+    <Background className="via-muted to-muted/80">
       <section className="py-28 lg:py-32 lg:pt-44">
         <div className="container max-w-5xl">
           <div className="mb-8 flex items-end justify-between lg:mb-20">

@@ -23,12 +23,12 @@ function AboutExp() {
           production systems for SaaS, EdTech and AI-powered products.
         </p>
       </div>
-      <div className="container mt-12 max-w-5xl">
-        <ol className="relative">
-          <DashedLine
-            orientation="vertical"
-            className="absolute inset-y-0 left-0 h-full"
-          />
+      <div className="relative container mt-12 max-w-5xl">
+        <DashedLine
+          orientation="vertical"
+          className="absolute inset-y-0 left-0 h-full"
+        />
+        <ul>
           {experience.map((role) => (
             <li key={role.period} className="mb-16 ml-8 last:mb-0">
               <span className="bg-muted-foreground ring-muted absolute -left-2.5 mt-2 flex size-5 items-center justify-center rounded-full ring-4" />
@@ -54,7 +54,7 @@ function AboutExp() {
               </ul>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     </section>
   );
