@@ -15,12 +15,12 @@ const categories = [
       {
         question: "What kind of software do you build?",
         answer:
-          "I build modern web applications, scalable backend systems, and digital products focused on performance and user experience.",
+          "I build modern web applications — from responsive frontends to backend APIs and databases — focused on performance and user experience.",
       },
       {
         question: "What technologies do you work with?",
         answer:
-          "I work with modern JavaScript and TypeScript technologies across frontend, backend, databases, and cloud platforms.",
+          "Modern JavaScript and TypeScript across the stack — React, Next.js, Vue and Nuxt.js on the frontend, Node.js and Laravel on the backend, with PostgreSQL and MongoDB for data.",
       },
     ],
   },

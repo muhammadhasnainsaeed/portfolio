@@ -48,13 +48,10 @@ export default function CredentialsPage() {
           </h1>
           <p className="text-muted-foreground mx-auto mt-6 max-w-2xl space-y-4 text-lg leading-relaxed text-balance">
             <span className="block">
-              A foundation built on rigorous computer science fundamentals,
-              strengthened by continuous learning from industry leaders.
-            </span>
-            <span className="block">
-              From university coursework to verified certifications by Google,
-              Meta, AWS, and top universities — every credential represents
-              hands-on projects and proven skills.
+              A foundation built on core computer science fundamentals,
+              strengthened by continuous learning through industry-recognized
+              certifications from Meta, IBM, and other leading platforms each
+              representing hands-on projects and verified skills.
             </span>
           </p>
         </div>
@@ -74,14 +71,13 @@ export default function CredentialsPage() {
             </h2>
             <p className="text-muted-foreground mx-auto mt-6 max-w-2xl space-y-4 text-lg leading-relaxed text-balance">
               <span className="block">
-                Four years of intensive computer science education covering
-                algorithms, data structures, software engineering principles,
-                and systems programming.
+                Four years of computer science education covering algorithms,
+                data structures, software engineering principles, and database
+                systems.
               </span>
               <span className="block">
-                Coursework included distributed systems, database design,
-                machine learning fundamentals, and full-stack application
-                development.
+                The foundation I've continued building on through independent
+                projects and industry certifications.
               </span>
             </p>
           </div>
@@ -155,15 +151,14 @@ export default function CredentialsPage() {
             </h2>
             <p className="text-muted-foreground mx-auto mt-6 max-w-2xl space-y-4 text-lg leading-relaxed text-balance">
               <span className="block">
-                Continuous learning is at the core of my growth as an engineer.
-                These certifications represent dedicated deep-dives into
-                specialized domains — from machine learning and cloud
-                architecture to modern frontend development.
+                Continuous learning is part of how I grow as an engineer. These
+                certifications reflect focused study across backend development,
+                cloud fundamentals, DevOps, and agile practices.
               </span>
               <span className="block">
                 Each credential represents weeks of focused study, hands-on
                 projects, and verified assessments from industry leaders like
-                Google, Meta, AWS, and top universities.
+                Meta, IBM, and other verified platforms.
               </span>
             </p>
           </div>

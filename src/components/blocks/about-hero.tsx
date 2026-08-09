@@ -35,9 +35,9 @@ export function AboutHero() {
           The Developer Behind the Code
         </h2>
         <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
-          I'm a Software Engineer passionate about building modern, scalable,
-          and user-focused digital experiences. I enjoy turning complex problems
-          into clean, efficient, and maintainable solutions.
+          I'm a software engineer who leads frontend development on production
+          SaaS and EdTech platforms, and builds full-stack products end-to-end
+          on my own from API design to deployment.
           <br />
           <br />
           My approach combines technical expertise with curiosity and continuous

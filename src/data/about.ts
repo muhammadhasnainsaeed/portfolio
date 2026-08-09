@@ -10,6 +10,7 @@ export const skills = [
       "react",
       "react native",
       "nextjs",
+      "expo go",
       "vue",
       "nuxtjs",
       "GSAP",
@@ -36,6 +37,14 @@ export const skills = [
       "nestjs",
       "laravel",
     ],
+  },
+  {
+    category: "ai/ml",
+    list: ["openai whisper", "mlx-whisper", "opencv", "pillow"],
+  },
+  {
+    category: "desktop",
+    list: ["electron"],
   },
   {
     category: "database",
@@ -78,6 +87,10 @@ export const skills = [
     list: ["jest", "vitest", "playwright", "testinglibrary"],
   },
   {
+    category: "project management",
+    list: ["clickup", "github issues", "github projects"],
+  },
+  {
     category: "tools",
     list: [
       "vscode",
@@ -95,18 +108,18 @@ export const skills = [
       "pnpm",
     ],
   },
-  // {
-  //   category: "ai",
-  //   list: [
-  //     "openai",
-  //     "gemini",
-  //     "claude",
-  //     "opencode",
-  //     "ollama",
-  //     "n8n",
-  //     "langchainjs",
-  //   ],
-  // },
+  {
+    category: "ai",
+    list: [
+      "openai",
+      "gemini",
+      "claude",
+      "opencode",
+      "ollama",
+      // "n8n",
+      // "langchainjs",
+    ],
+  },
 ];
 
 export const experience = [

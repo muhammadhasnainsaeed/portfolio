@@ -47,16 +47,15 @@ export const Hero = () => {
         <div className="flex-1">
           <Badge className="border-secondary-foreground border-dashed max-sm:text-[11px] sm:mb-4">
             <Zap />
-            SOFTWARE ENGINEER • FULL-STACK DEVELOPER
+            SOFTWARE ENGINEER • FULL-STACK ENGINEER
           </Badge>
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
             Building products that scale.
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-2xl">
-            I design and build fast, reliable, and scalable web applications —
-            turning ideas into polished products that are built to perform and
-            grow.
+            I design and build fast, reliable web applications from polished
+            frontends to the backend systems that power them.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
