@@ -1,9 +1,24 @@
 import { FolderKanban } from "lucide-react";
+import { Metadata } from "next";
 
 import { Background } from "@/components/background";
 import ProjectCard from "@/components/blocks/project-card";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Explore a collection of software projects by Muhammad Hasnain Saeed, showcasing full-stack development, clean design, and innovative problem-solving.",
+  keywords: [
+    "Hasnain Saeed projects",
+    "Software Engineer portfolio",
+    "Full-stack development projects",
+    "Web applications showcase",
+    "Open source projects",
+  ],
+};
+
 const page = () => {
   return (
     <Background className="via-muted to-muted/80">

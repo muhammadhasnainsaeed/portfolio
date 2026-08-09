@@ -8,6 +8,7 @@ import {
   Star,
   Book,
 } from "lucide-react";
+import { Metadata } from "next";
 
 import { Background } from "@/components/background";
 import { DashedLine } from "@/components/dashed-line";
@@ -15,6 +16,19 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { education, certifications } from "@/data/credentials";
+
+export const metadata: Metadata = {
+  title: "Credentials",
+  description:
+    "Explore the educational background and verified professional certifications of Muhammad Hasnain Saeed, showcasing expertise in software engineering and cloud technologies.",
+  keywords: [
+    "Hasnain Saeed credentials",
+    "Software Engineering Education",
+    "Professional IT Certifications",
+    "Verified Developer Skills",
+    "Computer Science background",
+  ],
+};
 
 export default function CredentialsPage() {
   return (
