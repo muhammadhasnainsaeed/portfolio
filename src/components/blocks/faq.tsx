@@ -104,7 +104,10 @@ export const FAQ = ({
                   {category.questions.map((item, i) => (
                     <AccordionItem key={i} value={`${categoryIndex}-${i}`}>
                       <AccordionTrigger>{item.question}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
+                      <AccordionContent
+                        keepRendered
+                        className="text-muted-foreground"
+                      >
                         {item.answer}
                       </AccordionContent>
                     </AccordionItem>
