@@ -112,15 +112,15 @@ export const skills = [
 export const experience = [
   {
     period: "Dec 2023 — Nov 2025",
-    role: "Senior Frontend / Full Stack Engineer",
+    role: "Senior Frontend Engineer",
     company: "Absolutely Digital",
     summary:
-      "Built and scaled SaaS and subscription platforms end-to-end using React, Next.js and Vue, with strong backend integration (Node.js, PostgreSQL, MongoDB).",
+      "Built and scaled SaaS and subscription platforms end-to-end on the frontend using React, Next.js and Vue, working closely with backend engineers to integrate Node.js APIs, PostgreSQL, and MongoDB data layers.",
     highlights: [
       "Integrated Stripe billing, authentication and payment systems across multiple production SaaS products.",
       "Improved performance and SEO by 35%+ (Lighthouse) through optimization and modular architecture.",
       "Optimized state management with Zustand and Pinia, and built reusable, scalable component systems.",
-      "Contributed to CI/CD pipelines and Docker-based deployments on AWS.",
+      "Collaborated with backend and DevOps teams on CI/CD pipelines and Docker-based deployments on AWS.",
     ],
   },
   {
@@ -130,10 +130,10 @@ export const experience = [
     summary:
       "Led frontend architecture for SaaS and e-learning platforms built with Nuxt.js and Tailwind, working across Alnafi's product ecosystem (Alnafi Cloud, Academy System, Affiliate, Albaseer Dashboard).",
     highlights: [
-      "Improved UX, onboarding flows and conversion rates across e-learning products.",
-      "Integrated Stripe payments, AWS services and authentication systems.",
+      "Improved UX and onboarding flows across e-learning products, working closely with backend teams on API integration.",
+      "Integrated Stripe payments, AWS services and authentication systems on the frontend.",
       "Collaborated cross-functionally with backend, design and marketing teams to ship features faster.",
-      "Enhanced performance and modularity through cleaner, reusable architecture.",
+      "Enhanced performance and modularity through cleaner, reusable component architecture.",
     ],
   },
 ];

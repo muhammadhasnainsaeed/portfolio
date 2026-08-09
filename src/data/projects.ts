@@ -1,11 +1,30 @@
 export const selectedProject = [
   {
+    title: "Rapid.ai — AI-Powered Platform",
+    action: "2025",
+    image: "/projects/rapid-ai.png",
+    link: "https://rapid-ai-pi.vercel.app/",
+    description:
+      "End-to-end full-stack build — designed and built the Node.js/Express backend and NeonDB data layer, alongside the React frontend, powering AI tools for image generation, resume review, and background/object removal.",
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "Tailwind",
+      "NeonDB",
+      "Image generation",
+      "resume reviewer",
+      "object removal",
+      "background removal",
+    ],
+  },
+  {
     title: "Alnafi — Online Learning Platform",
     action: "2022",
     image: "/projects/alnafi.png",
     link: "https://alnafi.com/",
     description:
-      "A modern EdTech platform that empowers learners with online courses, professional certifications, and career-focused learning experiences.",
+      "Led frontend development with Nuxt.js for this EdTech platform, integrating a Django-powered backend, Strapi CMS, and Stripe payments — working closely with backend engineers on API contracts to deliver courses and certifications to learners.",
     tags: [
       "Nuxt.js",
       "Django",
@@ -16,22 +35,6 @@ export const selectedProject = [
       "Cloudflare",
       "Gtag",
       "sentery",
-    ],
-  },
-  {
-    title: "TrainerFlix — Online Training Platform",
-    action: "2024",
-    image: "/projects/trainerflix.png",
-    link: "https://trainerflix.app/",
-    description:
-      "A modern training platform designed to help users discover and access engaging fitness and educational content through a seamless digital experience.",
-    tags: [
-      "Nuxt.js",
-      "TypeScript",
-      "Laravel",
-      "Tailwind",
-      "OTP-Based Mobile Subscription",
-      "GCP",
     ],
   },
   {
@@ -60,7 +63,7 @@ export const projects = [
     image: "/projects/alnafi.png",
     link: "https://alnafi.com/",
     description:
-      "A modern EdTech platform that empowers learners with online courses, professional certifications, and career-focused learning experiences.",
+      "Led frontend development with Nuxt.js for this EdTech platform, integrating a Django-powered backend, Strapi CMS, and Stripe payments — working closely with backend engineers on API contracts to deliver courses and certifications to learners.",
     tags: [
       "Nuxt.js",
       "Django",
@@ -79,7 +82,7 @@ export const projects = [
     image: "/projects/trainerflix.png",
     link: "https://trainerflix.app/",
     description:
-      "A modern training platform designed to help users discover and access engaging fitness and educational content through a seamless digital experience.",
+      "Built the Nuxt.js/TypeScript frontend for this training platform, integrating a Laravel backend for OTP-based mobile subscriptions and content delivery across fitness and educational content.",
     tags: [
       "Nuxt.js",
       "TypeScript",
@@ -95,7 +98,7 @@ export const projects = [
     image: "/projects/victus.png",
     link: "https://victusapp.com/",
     description:
-      "A modern health and wellness platform designed to help users manage their fitness journey, track progress, and build healthier habits through a seamless digital experience.",
+      "Built the React/TypeScript frontend with GSAP-driven interactions for this health app, integrating a Laravel backend to power fitness tracking, progress logging, and habit-building features.",
     tags: [
       "React",
       "TypeScript",
@@ -112,7 +115,7 @@ export const projects = [
     image: "/projects/tiptube.png",
     link: "https://tiptube.app/",
     description:
-      "A modern platform that enables viewers to support their favorite video creators by sending tips, making it easier for creators to monetize their content and connect with their audience.",
+      "Built the Nuxt.js frontend for this creator monetization platform, integrating a Laravel backend and HLS video streaming to let viewers tip their favorite creators seamlessly.",
     tags: [
       "Nuxt.js",
       "TypeScript",
@@ -129,7 +132,7 @@ export const projects = [
     image: "/projects/zodiacnest.png",
     link: "https://zodiacnest.app/",
     description:
-      "A modern astrology platform that offers personalized horoscope insights and zodiac-based experiences through a simple and engaging digital interface.",
+      "Built the React/TypeScript frontend for this astrology platform, integrating a Laravel backend and OTP-based subscriptions to deliver personalized horoscope content.",
     tags: [
       "React",
       "TypeScript",
@@ -145,7 +148,7 @@ export const projects = [
     image: "/projects/goldensteps.png",
     link: "https://goldensteps.net/",
     description:
-      "A streamlined subscription landing experience built to guide users through the onboarding journey and encourage seamless registration and subscription activation.",
+      "Built a conversion-focused onboarding flow with Vue.js/TypeScript, featuring Recaptcha-protected registration and a streamlined subscription activation journey.",
     tags: [
       "Vue.js",
       "TypeScript",
@@ -160,7 +163,7 @@ export const projects = [
     image: "/projects/alnafi-academy.png",
     link: "https://alnafi.academy/",
     description:
-      "A comprehensive online learning platform built to help O Level and IGCSE students prepare for exams through live classes, recorded lectures, interactive assessments, and expert-led courses.",
+      "Led frontend architecture with Nuxt.js for this exam-prep platform, integrating a Django backend and Stripe payments to deliver live classes, recorded lectures, and assessments to O Level and IGCSE students.",
     tags: ["Nuxt.js", "Django", "Tailwind", "AWS", "Stripe", "Gtag", "sentery"],
   },
   {
@@ -169,7 +172,7 @@ export const projects = [
     image: "/projects/alnafi-cloud.png",
     link: "https://alnafi.cloud/",
     description:
-      "A hands-on technology learning platform offering real-world labs and practical training in cloud computing, cybersecurity, AI, DevOps, and other emerging technologies to help learners build job-ready skills.",
+      "Led frontend development with Nuxt.js for this hands-on tech learning platform, integrating a Django backend and Stripe-based course access to power labs in cloud, cybersecurity, AI, and DevOps.",
     tags: ["Nuxt.js", "Django", "Tailwind", "AWS", "Stripe", "Gtag", "sentery"],
   },
   {
@@ -178,7 +181,7 @@ export const projects = [
     image: "/projects/rapid-ai.png",
     link: "https://rapid-ai-pi.vercel.app/",
     description:
-      "An AI-powered web platform designed to deliver intelligent and efficient digital experiences through modern AI technologies and a clean, intuitive interface.",
+      "End-to-end full-stack build — designed and built the Node.js/Express backend and NeonDB data layer, alongside the React frontend, powering AI tools for image generation, resume review, and background/object removal.",
     tags: [
       "React",
       "Node.js",
@@ -197,7 +200,7 @@ export const projects = [
     image: "/projects/ai-voice-interpreter.png",
     link: "https://github.com/muhammadhasnainsaeed/urdu-english-interpreter",
     description:
-      "Real-time multilingual desktop application built with Electron, React, Node.js and OpenAI — translating speech across languages with sub-second latency.",
+      "End-to-end full-stack build — built the Electron/React desktop frontend and the Node.js backend integrating OpenAI Whisper, achieving sub-second multilingual transcription latency.",
     tags: [
       "JavaScript",
       "Electron",
