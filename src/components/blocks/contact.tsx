@@ -25,11 +25,6 @@ const socialIcons = [
     icon: "/logos/contact/x-mono.svg",
   },
   {
-    name: "twitch",
-    link: "https://www.twitch.tv/mhasnainsaeed",
-    icon: "/logos/contact/twitch-mono.svg",
-  },
-  {
     name: "linkedin",
     link: "https://www.linkedin.com/in/muhammadhasnainsaeed/",
     icon: "/logos/contact/linkedin-mono.svg",
@@ -99,11 +94,10 @@ export default function Contact() {
     <section className="py-28 lg:py-32 lg:pt-44">
       <div className="container max-w-2xl">
         <h1 className="text-center text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-          Contact us
+          Contact me
         </h1>
         <p className="text-muted-foreground mt-4 text-center leading-snug font-medium lg:mx-auto">
-          Have a question or want to work with us? Send us a message and we'll
-          get back to you soon.
+          Have a question? Send me a message and I'll get back to you.
         </p>
 
         <div className="mt-10 flex gap-8 max-sm:flex-col md:mt-14 lg:mt-20 lg:gap-12">

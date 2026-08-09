@@ -6,8 +6,8 @@ import { Button } from "@/components/animate-ui/components/buttons/button";
 
 export function Footer() {
   const navigation = [
-    { name: "Product", href: "/projects" },
-    { name: "About Us", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    { name: "About", href: "/about" },
     { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ];

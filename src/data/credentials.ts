@@ -2,7 +2,8 @@ export const education = [
   {
     period: "2019 — 2023",
     degree: "Bachelor of Science in Computer Science",
-    institution: "Federal University",
+    institution:
+      "Federal Urdu University of Arts, Science & Technology, Karachi.",
     details: "GPA: 3.4",
   },
 ];

@@ -71,13 +71,13 @@ export function AboutHero() {
       <div className="w-full md:w-80">
         <div className="overflow-hidden rounded-lg border">
           <Image
-            src={"about/avatar.webp"}
+            src={"/about/avatar.webp"}
             width={320}
             height={500}
             loading="eager"
             fetchPriority="high"
             sizes="(max-width: 320px) 100vw, 320px"
-            alt="Jordan Lee"
+            alt="Hasnain saeed"
             className="aspect-square w-full object-cover"
           />
         </div>
