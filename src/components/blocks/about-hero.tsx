@@ -71,7 +71,7 @@ export function AboutHero() {
       <div className="w-full md:w-80">
         <div className="overflow-hidden rounded-lg border">
           <Image
-            src={"/about/avatar.webp"}
+            src={"/about/hasnainsaeed.webp"}
             width={320}
             height={500}
             loading="eager"
