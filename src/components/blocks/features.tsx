@@ -74,8 +74,7 @@ export const Features = () => {
                     />
                   </div>
 
-                  <Link
-                    href="#"
+                  <div
                     className={
                       "group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
                     }
@@ -88,11 +87,7 @@ export const Features = () => {
                         {item.des}
                       </p>
                     </div>
-
-                    <div className="rounded-full border p-2">
-                      <ChevronRight className="size-4 transition-transform group-hover:translate-x-1 lg:size-6" />
-                    </div>
-                  </Link>
+                  </div>
                 </div>
                 {i < items.length - 1 && (
                   <div className="relative hidden md:block">
