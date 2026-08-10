@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 
-import { ChevronRight, Workflow } from "lucide-react";
+import { Workflow } from "lucide-react";
 
 import { DashedLine } from "../dashed-line";
 import { Badge } from "../ui/badge";
