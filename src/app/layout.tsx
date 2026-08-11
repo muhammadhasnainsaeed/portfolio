@@ -203,7 +203,12 @@ export default function RootLayout({
             __html: JSON.stringify(personSchema),
           }}
         />
-        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
           <StyleGlideProvider />
           <a
             href="#main-content"

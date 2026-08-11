@@ -31,10 +31,10 @@ export function AboutHero() {
           <CircleUserRound />
           About me
         </Badge>
-        <h2 className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
           The Developer Behind the Code
         </h2>
-        <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
+        <p className="text-muted-foreground mt-5 hidden max-w-lg text-lg text-balance md:block">
           I'm a software engineer who leads frontend development on production
           SaaS and EdTech platforms, and builds full-stack products end-to-end
           on my own from API design to deployment.

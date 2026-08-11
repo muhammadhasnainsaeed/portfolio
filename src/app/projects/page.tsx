@@ -32,10 +32,10 @@ const page = () => {
               >
                 <FolderKanban /> All Projects
               </Badge>
-              <h2 className="mb-5 text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
+              <h2 className="text-foreground mb-5 max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
                 A Collection of My Work
               </h2>
-              <p className="text-muted-foreground max-w-2xl leading-snug">
+              <p className="text-muted-foreground text-1xl mt-5 md:text-2xl">
                 Explore the projects I've built over the years — from
                 production-ready applications to experimental ideas, each
                 crafted with a focus on thoughtful engineering, clean design,
