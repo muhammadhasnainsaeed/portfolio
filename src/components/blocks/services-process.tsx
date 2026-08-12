@@ -17,101 +17,93 @@ import { DashedLine } from "@/components/dashed-line";
 const processSteps = [
   {
     number: "01",
-    title: "Discovery & Strategy",
+    title: "Discovery & Planning",
     description:
-      "Deep dive into your vision, requirements, and constraints. We define scope, tech stack, architecture, and success metrics.",
+      "Understanding your requirements, goals, and constraints. I define scope, recommend the right tech stack, and outline a clear project plan.",
     icon: Code,
-    duration: "1-2 weeks",
+    duration: "3-5 days",
     deliverables: [
-      "Technical Specification",
-      "Architecture Diagram",
+      "Project Scope Document",
       "Tech Stack Recommendation",
-      "Project Roadmap",
+      "Timeline & Milestones",
     ],
   },
   {
     number: "02",
-    title: "Design & Prototyping",
+    title: "Design & Setup",
     description:
-      "Transform requirements into tangible designs — from system architecture diagrams to interactive UI prototypes.",
+      "Turning requirements into a concrete plan — database schema, API structure, and UI direction before development starts.",
     icon: Users,
-    duration: "1-3 weeks",
-    deliverables: [
-      "System Design Docs",
-      "Database Schema",
-      "API Contracts",
-      "UI/UX Prototypes",
-    ],
+    duration: "3-7 days",
+    deliverables: ["Database Schema", "API Structure", "UI/UX Wireframes"],
   },
   {
     number: "03",
-    title: "Development & Implementation",
+    title: "Development",
     description:
-      "Building the product with clean, tested, documented code. Regular demos, code reviews, and iterative feedback loops.",
+      "Building the product with clean, tested code. Regular progress updates and feedback loops throughout.",
     icon: Rocket,
-    duration: "4-12+ weeks",
+    duration: "2-8+ weeks",
     deliverables: [
-      "Production-Ready Codebase",
-      "Automated Test Suite",
-      "CI/CD Pipeline",
-      "Documentation",
+      "Working Codebase",
+      "Core Test Coverage",
+      "Regular Progress Demos",
     ],
   },
   {
     number: "04",
-    title: "Launch & Iterate",
+    title: "Launch & Support",
     description:
-      "Smooth deployment, monitoring setup, and post-launch support. We measure, learn, and ship improvements fast.",
+      "Deployment and a support window after launch to fix issues and make adjustments based on real usage.",
     icon: CheckCircle,
     duration: "Ongoing",
     deliverables: [
       "Production Deployment",
-      "Monitoring & Alerting",
-      "Performance Baselines",
-      "Retrospective",
+      "Post-Launch Bug Fixes",
+      "Handover Documentation",
     ],
   },
 ];
 
 const engagementModels = [
   {
-    title: "Full-Stack Product Development",
+    title: "Full-Stack Project Development",
     description:
-      "End-to-end ownership from idea to launched product. I act as your technical co-founder or lead engineer.",
+      "End-to-end development from idea to launched product — I handle the frontend, backend, and deployment for your project.",
     bestFor: "Startups, MVPs, New Products",
     features: [
-      "Architecture & Tech Decisions",
+      "Tech Stack & Architecture Decisions",
       "Full Implementation",
-      "DevOps & Deployment",
-      "Ongoing Maintenance",
+      "Deployment & Handover",
+      "Post-Launch Support",
     ],
     cta: "Start a Project",
     icon: Code,
   },
   {
-    title: "Technical Consulting & Architecture",
+    title: "Frontend Development & Integration",
     description:
-      "Strategic guidance for your existing team — architecture reviews, tech stack decisions, performance audits.",
-    bestFor: "Scaling Teams, Legacy Modernization",
+      "Focused frontend work for your product — building UI, integrating APIs, and working alongside your existing backend team.",
+    bestFor: "Existing Teams, Ongoing Products",
     features: [
-      "System Architecture Review",
+      "Frontend Architecture",
+      "API Integration",
       "Performance Optimization",
-      "Tech Debt Strategy",
-      "Team Mentoring",
+      "Collaborative Workflow",
     ],
-    cta: "Book a Consultation",
+    cta: "Get in Touch",
     icon: Shield,
   },
   {
-    title: "Staff Augmentation & Team Lead",
+    title: "Additional Development Capacity",
     description:
-      "Embed with your team as a senior engineer or tech lead. Immediate impact, zero ramp-up time.",
-    bestFor: "Capacity Gaps, Critical Projects",
+      "Join your team as an extra engineer for a project or sprint — contributing code, fixing bugs, and helping you ship faster.",
+    bestFor: "Capacity Gaps, Deadline Crunches",
     features: [
-      "Senior Engineering Capacity",
-      "Code Reviews & Mentoring",
-      "Architecture Decisions",
-      "Delivery Acceleration",
+      "Frontend & Full-Stack Development",
+      "Code Contributions",
+      "Bug Fixes & Improvements",
+      "Flexible Engagement",
     ],
     cta: "Hire Me",
     icon: Users,
@@ -149,7 +141,7 @@ export function ServicesProcess() {
               key={step.number}
               className="relative mb-16 ml-8 last:mb-0 lg:ml-16"
             >
-              <div className="bg-primary text-primary-foreground ring-background absolute top-1 -left-3 flex size-8 items-center justify-center rounded-full font-mono text-sm font-bold ring-4 lg:-left-6">
+              <div className="bg-primary text-primary-foreground ring-background absolute top-1 -left-12 flex size-8 items-center justify-center rounded-full font-mono text-sm font-bold ring-4 lg:-left-16">
                 {step.number}
               </div>
               <p className="text-muted-foreground mb-2 text-xs font-medium tracking-widest uppercase">
@@ -177,9 +169,9 @@ export function ServicesProcess() {
         </ol>
       </div>
 
-      <div className="relative mt-16">
+      <div className="relative my-10 flex items-center justify-center lg:my-24">
         <DashedLine className="text-muted-foreground" />
-        <span className="bg-muted text-muted-foreground absolute left-1/2 -translate-x-1/2 px-3 font-mono text-xs font-medium tracking-wide">
+        <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
           ENGAGEMENT MODELS
         </span>
       </div>

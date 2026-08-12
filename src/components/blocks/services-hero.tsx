@@ -41,9 +41,10 @@ export function ServicesHero() {
         </div>
       </div>
 
-      <div className="relative mt-16">
+      {/* Divider */}
+      <div className="relative my-10 flex items-center justify-center lg:my-24">
         <DashedLine className="text-muted-foreground" />
-        <span className="bg-muted text-muted-foreground absolute left-1/2 -translate-x-1/2 px-3 font-mono text-xs font-medium tracking-wide">
+        <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
           WHAT I DO
         </span>
       </div>

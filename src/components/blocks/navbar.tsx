@@ -64,7 +64,7 @@ const ITEMS = [
     // ],
   },
   { label: "Credentials", href: "/credentials" },
-  // { label: "Services", href: "/services" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ] as NavItem[];
 
@@ -101,7 +101,7 @@ export const Navbar = () => {
   return (
     <header
       className={cn(
-        "bg-background/70 fixed left-1/2 z-50 mt-2.5 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
+        "bg-background/70 fixed left-1/2 z-50 mt-2.5 w-[min(90%,750px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
         "top-5 lg:top-12",
       )}
     >

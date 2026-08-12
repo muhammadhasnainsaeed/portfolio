@@ -58,18 +58,7 @@ export function ServicesGrid() {
                 ))}
               </ul>
               <DashedLine />
-              <div className="flex items-center justify-between pt-2">
-                <div className="flex -space-x-2">
-                  <div className="bg-muted/50 border-background flex h-8 w-8 items-center justify-center rounded-lg border-2">
-                    <Image
-                      src={service.illustration}
-                      alt={service.title}
-                      width={24}
-                      height={24}
-                      className="object-contain opacity-70 dark:invert"
-                    />
-                  </div>
-                </div>
+              <div className="flex items-center justify-end pt-2">
                 <Button
                   variant="ghost"
                   size="sm"
