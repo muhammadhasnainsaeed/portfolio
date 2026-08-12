@@ -189,7 +189,7 @@ export default function CredentialsPage() {
             <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl">
               What I'm Learning Now
             </h1>
-            <p className="text-muted-foreground text-1xl mt-5 md:text-2xl">
+            <p className="text-muted-foreground text-1xl mt-5 max-w-xl md:text-2xl">
               <span className="block">
                 Core computer science fundamentals, strengthened by
                 certifications from Meta, IBM, and other industry platforms.
@@ -254,7 +254,7 @@ export default function CredentialsPage() {
         </section>
 
         {/* Divider */}
-        <div className="relative flex items-center justify-center lg:my-24">
+        <div className="relative my-10 flex items-center justify-center lg:my-24">
           <DashedLine className="text-muted-foreground" />
           <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
             CERTIFICATIONS

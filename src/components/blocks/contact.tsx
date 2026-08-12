@@ -100,7 +100,7 @@ export default function Contact() {
           Have a question? Send me a message and I'll get back to you.
         </p>
 
-        <div className="mt-10 flex gap-8 max-sm:flex-col md:mt-14 lg:mt-20 lg:gap-12">
+        <div className="mt-10 flex gap-8 max-sm:flex-col md:mt-14 lg:mt-18 lg:gap-12">
           {contactInfo.map((info, index) => (
             <div key={index}>
               <h2 className="font-medium">{info.title}</h2>
@@ -109,7 +109,7 @@ export default function Contact() {
           ))}
         </div>
 
-        <DashedLine className="my-12" />
+        <DashedLine className="my-10" />
 
         {/* Inquiry Form */}
         <div className="mx-auto">
