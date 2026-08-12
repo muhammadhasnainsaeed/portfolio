@@ -152,6 +152,14 @@ export const metadata: Metadata = {
   },
 };
 
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Muhammad Hasnain Saeed",
+  alternateName: ["Hasnain Saeed", "Muhammad Hasnain", "mhasnainsaeed"],
+  url: "https://hasnainsaeed.vercel.app",
+};
+
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -189,13 +197,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          async
-          crossOrigin="anonymous"
-          src="https://tweakcn.com/live-preview.min.js"
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(webSiteSchema),
+          }}
         />
-      </head>
-      <body className={`${dmSans.variable} ${inter.variable} antialiased`}>
         <Script
           id="person-schema"
           type="application/ld+json"
@@ -203,6 +211,13 @@ export default function RootLayout({
             __html: JSON.stringify(personSchema),
           }}
         />
+        <script
+          async
+          crossOrigin="anonymous"
+          src="https://tweakcn.com/live-preview.min.js"
+        />
+      </head>
+      <body className={`${dmSans.variable} ${inter.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
