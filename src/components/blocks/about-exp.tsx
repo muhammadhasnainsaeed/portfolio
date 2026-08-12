@@ -26,12 +26,12 @@ function AboutExp() {
       <div className="relative container mt-12 max-w-5xl">
         <DashedLine
           orientation="vertical"
-          className="absolute inset-y-0 left-0 h-full"
+          className="absolute inset-y-0 left-8.5 h-full"
         />
         <ul>
           {experience.map((role) => (
-            <li key={role.period} className="mb-16 ml-8 last:mb-0">
-              <span className="bg-muted-foreground ring-muted absolute -left-2.5 mt-2 flex size-5 items-center justify-center rounded-full ring-4" />
+            <li key={role.period} className="mb-16 ml-9 last:mb-0">
+              <span className="bg-muted-foreground ring-muted absolute left-6 mt-2 flex size-5 items-center justify-center rounded-full ring-4" />
               <p className="text-muted-foreground text-xs font-medium tracking-widest uppercase">
                 {role.period}
               </p>

@@ -2,7 +2,13 @@ import { ToolCase } from "lucide-react";
 
 import { DashedLine } from "../dashed-line";
 import { Badge } from "../ui/badge";
-import { Card, CardContent } from "../ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 
 import { skills } from "@/data/about";
 
@@ -26,27 +32,29 @@ function AboutSkills() {
           </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-5 md:mt-12 md:grid-cols-2">
+        <div className="mt-8 columns-1 gap-2 md:mt-12 md:columns-3 landscape:columns-2 md:landscape:columns-3">
           {skills.map((skill) => (
-            <Card key={skill.category}>
-              <CardContent className="space-y-4 px-6 py-4">
-                <p className="text-lg font-medium text-balance uppercase">
-                  {skill.category}
-                </p>
-                <DashedLine></DashedLine>
-                <div className="flex flex-wrap gap-3">
-                  {skill.list.map((l) => (
-                    <Badge
-                      key={l}
-                      variant={"outline"}
-                      className="bg-muted rounded-md text-[10px] font-semibold tracking-widest uppercase"
-                    >
-                      {l}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <div key={skill.category} className="mb-2 inline-block w-full">
+              <Card className="gap-0 p-4 px-0">
+                <CardHeader className="px-4">
+                  <CardTitle className="uppercase">{skill.category}</CardTitle>
+                </CardHeader>
+                <CardContent className="px-4 py-0!">
+                  <DashedLine className="my-3" />
+                  <CardDescription>
+                    {skill.list.map((l) => (
+                      <Badge
+                        key={l}
+                        variant={"outline"}
+                        className="bg-muted m-1 rounded-md text-[10px] font-semibold tracking-widest uppercase"
+                      >
+                        {l}
+                      </Badge>
+                    ))}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>

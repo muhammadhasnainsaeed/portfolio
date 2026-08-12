@@ -26,7 +26,7 @@ interface Project {
 function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={project.link} className="group block">
-      <Card className="relative w-full max-w-md overflow-hidden pt-0">
+      <Card className="relative h-full w-full max-w-md overflow-hidden pt-0">
         <Image
           src={project.image || "/placeholder.webp"}
           alt={project.title}
@@ -46,9 +46,13 @@ function ProjectCard({ project }: { project: Project }) {
         </CardHeader>
         <CardContent>
           <CardDescription>{project.description}</CardDescription>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="-mx-1 mt-5">
             {project.tags.map((t) => (
-              <Badge variant={"outline"} className="bg-muted rounded" key={t}>
+              <Badge
+                variant={"outline"}
+                className="bg-muted m-1 rounded"
+                key={t}
+              >
                 {t}
               </Badge>
             ))}
