@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Check, ArrowRight } from "lucide-react";
 
 import { Badge } from "../ui/badge";
@@ -18,11 +16,11 @@ import { services } from "@/data/services";
 export function ServicesGrid() {
   return (
     <section id="services" className="container mt-12 max-w-5xl pb-28 lg:pb-32">
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2">
         {services.map((service) => (
           <Card
             key={service.title}
-            className="group hover:border-primary/30 hover:shadow-primary/5 relative overflow-hidden transition-all duration-300 hover:shadow-lg"
+            className="group hover:border-primary/30 hover:shadow-primary/5 relative gap-0 overflow-hidden transition-all duration-300 hover:shadow-lg"
           >
             <CardHeader className="pb-2">
               <div className="flex items-start gap-4">

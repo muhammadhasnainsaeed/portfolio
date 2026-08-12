@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <Background>
+    <Background className="via-muted to-muted/80">
       <div className="py-28 lg:py-32 lg:pt-44">
         <ServicesHero />
         <ServicesGrid />

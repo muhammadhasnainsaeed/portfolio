@@ -179,10 +179,9 @@ export function ServicesProcess() {
       <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
         {engagementModels.map((model) => (
           <Card key={model.title} className="group relative overflow-hidden">
-            <div className="from-primary/50 via-primary to-primary/50 absolute top-0 right-0 left-0 h-1 bg-gradient-to-r opacity-0 transition-opacity group-hover:opacity-100" />
             <CardHeader>
               <div className="mb-2 flex items-center gap-3">
-                <div className="bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground flex h-10 w-10 items-center justify-center rounded-xl transition-all">
+                <div className="bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-all">
                   <model.icon className="size-5" />
                 </div>
                 <CardTitle className="text-lg">{model.title}</CardTitle>
