@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { ChevronRight, Download, Github } from "lucide-react";
+import { ChevronRight, Download, FileUser, Github } from "lucide-react";
 
 import { ThemeTogglerButton } from "../animate-ui/components/buttons/theme-toggler";
 import { buttonVariants } from "../ui/button";
@@ -170,11 +170,11 @@ export const Navbar = () => {
             rel="noopener noreferrer"
             className={buttonVariants({
               variant: "outline",
-              className: "max-lg:hidden",
             })}
           >
-            <span className="relative z-10">Resume</span>
-            <Download />
+            <span className="relative z-10 max-lg:hidden">Resume</span>
+            <Download className="max-lg:hidden" />
+            <FileUser className="lg:hidden" />
           </a>
           <a
             href="https://github.com/muhammadhasnainsaeed"
