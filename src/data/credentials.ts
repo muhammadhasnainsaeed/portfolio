@@ -12,6 +12,7 @@ export const certifications = [
   {
     name: "Introduction to Agile Development and Scrum",
     issuer: "Coursera · IBM",
+    logo: "/credentials/icons/ibm.svg",
     date: "2026",
     credentialId: "ZT783RX69NZ3",
     skills: [
@@ -33,6 +34,7 @@ export const certifications = [
   {
     name: "Introduction to DevOps",
     issuer: "Coursera · IBM",
+    logo: "/credentials/icons/ibm.svg",
     date: "2026",
     credentialId: "S6JLOPT0D0NS",
     skills: [
@@ -54,6 +56,7 @@ export const certifications = [
   {
     name: "Introduction to Software Engineering",
     issuer: "Coursera · IBM",
+    logo: "/credentials/icons/ibm.svg",
     date: "2026",
     credentialId: "WT4WKXEOJMJQ",
     skills: [
@@ -77,6 +80,7 @@ export const certifications = [
   {
     name: "Azure: create a REST API using NodeJS Serverless Functions",
     issuer: "Coursera",
+    logo: "/credentials/icons/coursera.svg",
     date: "2026",
     credentialId: "3ATRAS6K7AQ9",
     skills: [
@@ -97,6 +101,7 @@ export const certifications = [
   {
     name: "Introduction to Back-End Development",
     issuer: "Coursera · Meta",
+    logo: "/credentials/icons/meta.svg",
     date: "2026",
     credentialId: "C7FR3FZDGVAN",
     skills: [
@@ -118,6 +123,7 @@ export const certifications = [
   {
     name: "Programming with JavaScript",
     issuer: "Coursera · Meta",
+    logo: "/credentials/icons/meta.svg",
     date: "2023",
     credentialId: "CCDNNZE5RPAE",
     skills: [
@@ -139,6 +145,7 @@ export const certifications = [
   {
     name: "Introduction to Front-End Development",
     issuer: "Coursera · Meta",
+    logo: "/credentials/icons/meta.svg",
     date: "2023",
     credentialId: "BPLWYEG4W7KV",
     skills: [
@@ -159,7 +166,8 @@ export const certifications = [
   },
   {
     name: "Creating a Serverless Application Using React in AWS",
-    issuer: "LinkedIn · Brett McLaughlin",
+    issuer: "Brett McLaughlin · LinkedIn",
+    logo: "/credentials/icons/linkedin.svg",
     date: "2021",
     credentialId:
       "67ed3b7162b48af51220868965470f4760a2a2677afbeb9c6fcde743ebf503d9",
@@ -168,7 +176,8 @@ export const certifications = [
   },
   {
     name: "Learning Full-Stack JavaScript Development: MongoDB, Node, and React",
-    issuer: "LinkedIn · Samer Buna",
+    issuer: "Samer Buna · LinkedIn",
+    logo: "/credentials/icons/linkedin.svg",
     date: "2022",
     credentialId:
       "78c55be95b933788dd24f96f69b4db7921f32122bf1bcca276b86f0c1c3988d7",
