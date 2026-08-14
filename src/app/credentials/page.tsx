@@ -177,7 +177,7 @@ export default function CredentialsPage() {
     <Background className="via-muted to-muted/80">
       <div className="container max-w-5xl py-32 lg:pt-44">
         {/* Page Header */}
-        <div className="mb-16 flex flex-col justify-center gap-8 md:gap-14 lg:mb-24 lg:flex-row lg:gap-20">
+        <div className="mb-16 flex flex-col justify-center gap-8 md:flex-row md:gap-14 lg:mb-24 lg:gap-20">
           <div className="flex-1">
             <Badge
               variant="default"
