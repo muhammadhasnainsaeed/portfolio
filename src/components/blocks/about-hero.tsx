@@ -14,7 +14,7 @@ const stats = [
     label: "Years of experience",
   },
   {
-    value: "10+",
+    value: "30+",
     label: "Projects shipped",
   },
   {
