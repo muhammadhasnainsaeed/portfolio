@@ -13,14 +13,9 @@ const categories = [
     title: "About Me",
     questions: [
       {
-        question: "What kind of software do you build?",
+        question: "What do you specialize in?",
         answer:
-          "I build modern web applications — from responsive frontends to backend APIs and databases — focused on performance and user experience.",
-      },
-      {
-        question: "What technologies do you work with?",
-        answer:
-          "Modern JavaScript and TypeScript across the stack — React, Next.js, Vue and Nuxt.js on the frontend, Node.js and Laravel on the backend, with PostgreSQL and MongoDB for data.",
+          "I specialize in modern frontend and full-stack JavaScript/TypeScript applications using React, Next.js, Vue, Nuxt.js and Node.js.",
       },
     ],
   },
@@ -33,9 +28,9 @@ const categories = [
           "I start by understanding the problem, then plan the solution, choose the right stack, build, and refine before shipping.",
       },
       {
-        question: "Do you work with existing teams and codebases?",
+        question: "Do you work with existing products?",
         answer:
-          "Yes. I can collaborate with existing teams, adapt to established workflows, and contribute to ongoing products and codebases.",
+          "Yes. I can join existing teams and codebases, work within established architectures and contribute across frontend, APIs and product features.",
       },
     ],
   },
@@ -43,9 +38,9 @@ const categories = [
     title: "Working Together",
     questions: [
       {
-        question: "Are you available for freelance projects?",
+        question: "Are you available for freelance or remote opportunities?",
         answer:
-          "I'm open to select freelance and collaborative opportunities that align with my skills and interests.",
+          "Yes, I help startups and product teams build modern web applications, SaaS products and AI-powered experiences using React, Next.js, Vue, Nuxt.js and Node.js.",
       },
       {
         question: "How can we work together?",

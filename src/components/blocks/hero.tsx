@@ -17,24 +17,23 @@ import { DashedLine } from "@/components/dashed-line";
 
 const features = [
   {
-    title: "Modern Tech Stack",
-    description:
-      "Building with modern technologies to create fast, scalable, and reliable products.",
+    title: "4+ Years Experience",
+    description: "Building production web applications.",
     icon: Code2,
   },
   {
-    title: "Pixel-Perfect UI",
-    description: "Create polished, responsive interfaces.",
+    title: "Frontend + Full-Stack",
+    description: "React, Next.js, Vue, Nuxt & Node.js.",
     icon: PanelsTopLeft,
   },
   {
-    title: "Scalable Architecture",
-    description: "Build clean systems that scale.",
+    title: "SaaS & Payments",
+    description: "Stripe, authentication & subscriptions.",
     icon: Network,
   },
   {
-    title: "Seamless Experiences",
-    description: "Craft smooth, intuitive user experiences.",
+    title: "AI & Real-Time Apps",
+    description: "AI integrations, streaming & desktop apps.",
     icon: Sparkles,
   },
 ];
@@ -47,15 +46,16 @@ export const Hero = () => {
         <div className="flex-1">
           <Badge className="border-secondary-foreground border-dashed max-sm:text-[11px] sm:mb-4">
             <Zap />
-            SOFTWARE ENGINEER • FULL-STACK ENGINEER
+            Senior Frontend & Full-Stack Typescript Engineer
           </Badge>
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Building products that scale.
+            I'm Hasnain Saeed.
           </h1>
 
-          <p className="text-muted-foreground text-1xl mt-5 md:text-2xl">
-            I design and build fast, reliable web applications from polished
-            frontends to the backend systems that power them.
+          <p className="text-muted-foreground mt-5 text-lg md:text-xl">
+            I build production-ready web applications with React, Next.js, Vue,
+            Nuxt.js and Node.js — from high-performance interfaces to the APIs
+            and systems behind them.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
